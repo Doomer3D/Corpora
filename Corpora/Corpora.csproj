@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>Corpora</RootNamespace>
+    <AssemblyName>Corpora</AssemblyName>
+    <Company>Genomancer</Company>
+    <Authors>Doomer3D&lt;doomer.net@gmail.com&gt;</Authors>
+    <RepositoryUrl>https://github.com/Doomer3D/Corpora.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Doomer3D/Corpora</PackageProjectUrl>
+  </PropertyGroup>
+
+</Project>
