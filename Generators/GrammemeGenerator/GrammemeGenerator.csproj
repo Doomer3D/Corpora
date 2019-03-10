@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Company>Genomancer</Company>
+    <Authors>Doomer3D&lt;doomer.net@gmail.com&gt;</Authors>
+    <RepositoryUrl>https://github.com/Doomer3D/Corpora.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Doomer3D/Corpora</PackageProjectUrl>
+    <Description>Генератор описания граммем для движка Corpora</Description>
+    <RootNamespace>Corpora</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\Corpora\G.generated.cs" Link="G.generated.cs" />
+    <Compile Include="..\..\Corpora\Grammeme.cs" Link="Grammeme.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="grammemes.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
