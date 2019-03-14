@@ -56,6 +56,8 @@ namespace Corpora
 
             var sb = new StringBuilder();
 
+            sb.AppendLine("using System.Collections.Generic;");
+            sb.AppendLine();
             sb.AppendLine($"namespace {nameof(Corpora)}");
             sb.AppendLine("{");
             sb.AppendLine($"    public static partial class {className}");
@@ -87,6 +89,15 @@ namespace Corpora
                 }
                 sb.AppendLine(");");
             }
+            sb.AppendLine("            ");
+            sb.AppendLine("            // заполняем словарь граммем");
+            sb.AppendLine($"            _grammemes = new Dictionary<byte, {grammemeClassName}>");
+            sb.AppendLine("            {");
+            foreach (var item in items)
+            {
+                sb.AppendLine($"                {{ {item.ID}, {item.Name} }},");
+            }
+            sb.AppendLine("            };");
             sb.AppendLine("        }");
             sb.AppendLine("    }");
             sb.AppendLine("}");

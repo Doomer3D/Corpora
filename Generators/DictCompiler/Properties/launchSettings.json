@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DictCompiler": {
+      "commandName": "Project",
+      "commandLineArgs": "\"../../../../../Corpora\""
+    }
+  }
+}

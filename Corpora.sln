@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrammemeGenerator", "Genera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordAnalyzer", "Samples\WordAnalyzer\WordAnalyzer.csproj", "{965C7413-6530-404B-97CB-D188798CAA3E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictCompiler", "Generators\DictCompiler\DictCompiler.csproj", "{0D5AD201-DD50-4CB4-99B9-6E270689EEAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,12 +31,17 @@ Global
 		{965C7413-6530-404B-97CB-D188798CAA3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{965C7413-6530-404B-97CB-D188798CAA3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{965C7413-6530-404B-97CB-D188798CAA3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D5AD201-DD50-4CB4-99B9-6E270689EEAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D5AD201-DD50-4CB4-99B9-6E270689EEAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D5AD201-DD50-4CB4-99B9-6E270689EEAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D5AD201-DD50-4CB4-99B9-6E270689EEAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AE59DDFD-FDB0-4564-AB91-924F6B5E93AE} = {0AE122FB-9042-45D6-931C-F47F85EB6895}
+		{0D5AD201-DD50-4CB4-99B9-6E270689EEAF} = {0AE122FB-9042-45D6-931C-F47F85EB6895}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7190FD53-28CF-4F0D-8927-F511675B20AC}

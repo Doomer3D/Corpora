@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<dictionary version="0.92" revision="406585">
+<grammemes>
+    <grammeme parent=""><name>POST</name><alias>ЧР</alias><description>часть речи</description></grammeme>
+    <grammeme parent="POST"><name>NOUN</name><alias>СУЩ</alias><description>имя существительное</description></grammeme>
+    <grammeme parent="POST"><name>ADJF</name><alias>ПРИЛ</alias><description>имя прилагательное (полное)</description></grammeme>
+    <grammeme parent="POST"><name>ADJS</name><alias>КР_ПРИЛ</alias><description>имя прилагательное (краткое)</description></grammeme>
+    <grammeme parent="POST"><name>COMP</name><alias>КОМП</alias><description>компаратив</description></grammeme>
+    <grammeme parent="POST"><name>VERB</name><alias>ГЛ</alias><description>глагол (личная форма)</description></grammeme>
+    <grammeme parent="POST"><name>INFN</name><alias>ИНФ</alias><description>глагол (инфинитив)</description></grammeme>
+    <grammeme parent="POST"><name>PRTF</name><alias>ПРИЧ</alias><description>причастие (полное)</description></grammeme>
+    <grammeme parent="POST"><name>PRTS</name><alias>КР_ПРИЧ</alias><description>причастие (краткое)</description></grammeme>
+    <grammeme parent="POST"><name>GRND</name><alias>ДЕЕПР</alias><description>деепричастие</description></grammeme>
+    <grammeme parent="POST"><name>NUMR</name><alias>ЧИСЛ</alias><description>числительное</description></grammeme>
+    <grammeme parent="POST"><name>ADVB</name><alias>Н</alias><description>наречие</description></grammeme>
+    <grammeme parent="POST"><name>NPRO</name><alias>МС</alias><description>местоимение-существительное</description></grammeme>
+    <grammeme parent="POST"><name>PRED</name><alias>ПРЕДК</alias><description>предикатив</description></grammeme>
+    <grammeme parent="POST"><name>PREP</name><alias>ПР</alias><description>предлог</description></grammeme>
+    <grammeme parent="POST"><name>CONJ</name><alias>СОЮЗ</alias><description>союз</description></grammeme>
+    <grammeme parent="POST"><name>PRCL</name><alias>ЧАСТ</alias><description>частица</description></grammeme>
+    <grammeme parent="POST"><name>INTJ</name><alias>МЕЖД</alias><description>междометие</description></grammeme>
+    <grammeme parent=""><name>ANim</name><alias>Од-неод</alias><description>категория одушевлённости</description></grammeme>
+    <grammeme parent="ANim"><name>anim</name><alias>од</alias><description>одушевлённое</description></grammeme>
+    <grammeme parent="ANim"><name>inan</name><alias>неод</alias><description>неодушевлённое</description></grammeme>
+    <grammeme parent=""><name>GNdr</name><alias>хр</alias><description>род / род не выражен</description></grammeme>
+    <grammeme parent="ms-f"><name>masc</name><alias>мр</alias><description>мужской род</description></grammeme>
+    <grammeme parent="ms-f"><name>femn</name><alias>жр</alias><description>женский род</description></grammeme>
+    <grammeme parent="GNdr"><name>neut</name><alias>ср</alias><description>средний род</description></grammeme>
+    <grammeme parent="GNdr"><name>ms-f</name><alias>мж</alias><description>общий род (м/ж)</description></grammeme>
+    <grammeme parent=""><name>NMbr</name><alias>Число</alias><description>число</description></grammeme>
+    <grammeme parent="NMbr"><name>sing</name><alias>ед</alias><description>единственное число</description></grammeme>
+    <grammeme parent="NMbr"><name>plur</name><alias>мн</alias><description>множественное число</description></grammeme>
+    <grammeme parent=""><name>Sgtm</name><alias>sg</alias><description>singularia tantum</description></grammeme>
+    <grammeme parent=""><name>Pltm</name><alias>pl</alias><description>pluralia tantum</description></grammeme>
+    <grammeme parent=""><name>Fixd</name><alias>0</alias><description>неизменяемое</description></grammeme>
+    <grammeme parent=""><name>CAse</name><alias>Падеж</alias><description>категория падежа</description></grammeme>
+    <grammeme parent="CAse"><name>nomn</name><alias>им</alias><description>именительный падеж</description></grammeme>
+    <grammeme parent="CAse"><name>gent</name><alias>рд</alias><description>родительный падеж</description></grammeme>
+    <grammeme parent="CAse"><name>datv</name><alias>дт</alias><description>дательный падеж</description></grammeme>
+    <grammeme parent="CAse"><name>accs</name><alias>вн</alias><description>винительный падеж</description></grammeme>
+    <grammeme parent="CAse"><name>ablt</name><alias>тв</alias><description>творительный падеж</description></grammeme>
+    <grammeme parent="CAse"><name>loct</name><alias>пр</alias><description>предложный падеж</description></grammeme>
+    <grammeme parent="nomn"><name>voct</name><alias>зв</alias><description>звательный падеж</description></grammeme>
+    <grammeme parent="gent"><name>gen1</name><alias>рд1</alias><description>первый родительный падеж</description></grammeme>
+    <grammeme parent="gent"><name>gen2</name><alias>рд2</alias><description>второй родительный (частичный) падеж</description></grammeme>
+    <grammeme parent="accs"><name>acc2</name><alias>вн2</alias><description>второй винительный падеж</description></grammeme>
+    <grammeme parent="loct"><name>loc1</name><alias>пр1</alias><description>первый предложный падеж</description></grammeme>
+    <grammeme parent="loct"><name>loc2</name><alias>пр2</alias><description>второй предложный (местный) падеж</description></grammeme>
+    <grammeme parent=""><name>Abbr</name><alias>аббр</alias><description>аббревиатура</description></grammeme>
+    <grammeme parent=""><name>Name</name><alias>имя</alias><description>имя</description></grammeme>
+    <grammeme parent=""><name>Surn</name><alias>фам</alias><description>фамилия</description></grammeme>
+    <grammeme parent=""><name>Patr</name><alias>отч</alias><description>отчество</description></grammeme>
+    <grammeme parent=""><name>Geox</name><alias>гео</alias><description>топоним</description></grammeme>
+    <grammeme parent=""><name>Orgn</name><alias>орг</alias><description>организация</description></grammeme>
+    <grammeme parent=""><name>Trad</name><alias>tm</alias><description>торговая марка</description></grammeme>
+    <grammeme parent=""><name>Subx</name><alias>субст?</alias><description>возможна субстантивация</description></grammeme>
+    <grammeme parent=""><name>Supr</name><alias>превосх</alias><description>превосходная степень</description></grammeme>
+    <grammeme parent=""><name>Qual</name><alias>кач</alias><description>качественное</description></grammeme>
+    <grammeme parent=""><name>Apro</name><alias>мест-п</alias><description>местоименное</description></grammeme>
+    <grammeme parent=""><name>Anum</name><alias>числ-п</alias><description>порядковое</description></grammeme>
+    <grammeme parent=""><name>Poss</name><alias>притяж</alias><description>притяжательное</description></grammeme>
+    <grammeme parent=""><name>V-ey</name><alias>*ею</alias><description>форма на -ею</description></grammeme>
+    <grammeme parent=""><name>V-oy</name><alias>*ою</alias><description>форма на -ою</description></grammeme>
+    <grammeme parent=""><name>Cmp2</name><alias>сравн2</alias><description>сравнительная степень на по-</description></grammeme>
+    <grammeme parent=""><name>V-ej</name><alias>*ей</alias><description>форма компаратива на -ей</description></grammeme>
+    <grammeme parent=""><name>ASpc</name><alias>Вид</alias><description>категория вида</description></grammeme>
+    <grammeme parent="ASpc"><name>perf</name><alias>сов</alias><description>совершенный вид</description></grammeme>
+    <grammeme parent="ASpc"><name>impf</name><alias>несов</alias><description>несовершенный вид</description></grammeme>
+    <grammeme parent=""><name>TRns</name><alias>Перех</alias><description>категория переходности</description></grammeme>
+    <grammeme parent="TRns"><name>tran</name><alias>перех</alias><description>переходный</description></grammeme>
+    <grammeme parent="TRns"><name>intr</name><alias>неперех</alias><description>непереходный</description></grammeme>
+    <grammeme parent=""><name>Impe</name><alias>безл</alias><description>безличный</description></grammeme>
+    <grammeme parent=""><name>Impx</name><alias>безл?</alias><description>возможно безличное употребление</description></grammeme>
+    <grammeme parent=""><name>Mult</name><alias>мног</alias><description>многократный</description></grammeme>
+    <grammeme parent=""><name>Refl</name><alias>возвр</alias><description>возвратный</description></grammeme>
+    <grammeme parent=""><name>PErs</name><alias>Лицо</alias><description>категория лица</description></grammeme>
+    <grammeme parent="PErs"><name>1per</name><alias>1л</alias><description>1 лицо</description></grammeme>
+    <grammeme parent="PErs"><name>2per</name><alias>2л</alias><description>2 лицо</description></grammeme>
+    <grammeme parent="PErs"><name>3per</name><alias>3л</alias><description>3 лицо</description></grammeme>
+    <grammeme parent=""><name>TEns</name><alias>Время</alias><description>категория времени</description></grammeme>
+    <grammeme parent="TEns"><name>pres</name><alias>наст</alias><description>настоящее время</description></grammeme>
+    <grammeme parent="TEns"><name>past</name><alias>прош</alias><description>прошедшее время</description></grammeme>
+    <grammeme parent="TEns"><name>futr</name><alias>буд</alias><description>будущее время</description></grammeme>
+    <grammeme parent=""><name>MOod</name><alias>Накл</alias><description>категория наклонения</description></grammeme>
+    <grammeme parent="MOod"><name>indc</name><alias>изъяв</alias><description>изъявительное наклонение</description></grammeme>
+    <grammeme parent="MOod"><name>impr</name><alias>повел</alias><description>повелительное наклонение</description></grammeme>
+    <grammeme parent=""><name>INvl</name><alias>Совм</alias><description>категория совместности</description></grammeme>
+    <grammeme parent="INvl"><name>incl</name><alias>вкл</alias><description>говорящий включён (идем, идемте) </description></grammeme>
+    <grammeme parent="INvl"><name>excl</name><alias>выкл</alias><description>говорящий не включён в действие (иди, идите)</description></grammeme>
+    <grammeme parent=""><name>VOic</name><alias>Залог</alias><description>категория залога</description></grammeme>
+    <grammeme parent="VOic"><name>actv</name><alias>действ</alias><description>действительный залог</description></grammeme>
+    <grammeme parent="VOic"><name>pssv</name><alias>страд</alias><description>страдательный залог</description></grammeme>
+    <grammeme parent=""><name>Infr</name><alias>разг</alias><description>разговорное</description></grammeme>
+    <grammeme parent=""><name>Slng</name><alias>жарг</alias><description>жаргонное</description></grammeme>
+    <grammeme parent=""><name>Arch</name><alias>арх</alias><description>устаревшее</description></grammeme>
+    <grammeme parent=""><name>Litr</name><alias>лит</alias><description>литературный вариант</description></grammeme>
+    <grammeme parent=""><name>Erro</name><alias>опеч</alias><description>опечатка</description></grammeme>
+    <grammeme parent=""><name>Dist</name><alias>искаж</alias><description>искажение</description></grammeme>
+    <grammeme parent=""><name>Ques</name><alias>вопр</alias><description>вопросительное</description></grammeme>
+    <grammeme parent=""><name>Dmns</name><alias>указ</alias><description>указательное</description></grammeme>
+    <grammeme parent=""><name>Prnt</name><alias>вводн</alias><description>вводное слово</description></grammeme>
+    <grammeme parent=""><name>V-be</name><alias>*ье</alias><description>форма на -ье</description></grammeme>
+    <grammeme parent=""><name>V-en</name><alias>*енен</alias><description>форма на -енен</description></grammeme>
+    <grammeme parent=""><name>V-ie</name><alias>*ие</alias><description>форма на -и- (веселие, твердостию); отчество с -ие</description></grammeme>
+    <grammeme parent=""><name>V-bi</name><alias>*ьи</alias><description>форма на -ьи</description></grammeme>
+    <grammeme parent=""><name>Fimp</name><alias>*несов</alias><description>деепричастие от глагола несовершенного вида</description></grammeme>
+    <grammeme parent=""><name>Prdx</name><alias>предк?</alias><description>может выступать в роли предикатива</description></grammeme>
+    <grammeme parent=""><name>Coun</name><alias>счетн</alias><description>счётная форма</description></grammeme>
+    <grammeme parent=""><name>Coll</name><alias>собир</alias><description>собирательное числительное</description></grammeme>
+    <grammeme parent=""><name>V-sh</name><alias>*ши</alias><description>деепричастие на -ши</description></grammeme>
+    <grammeme parent=""><name>Af-p</name><alias>*предл</alias><description>форма после предлога</description></grammeme>
+    <grammeme parent=""><name>Inmx</name><alias>не/одуш?</alias><description>может использоваться как одуш. / неодуш. </description></grammeme>
+    <grammeme parent=""><name>Vpre</name><alias>в_предл</alias><description>Вариант предлога ( со, подо, ...)</description></grammeme>
+    <grammeme parent=""><name>Anph</name><alias>анаф</alias><description>Анафорическое (местоимение)</description></grammeme>
+    <grammeme parent=""><name>Init</name><alias>иниц</alias><description>Инициал</description></grammeme>
+    <grammeme parent=""><name>Adjx</name><alias>прил?</alias><description>может выступать в роли прилагательного</description></grammeme>
+    <grammeme parent=""><name>Ms-f</name><alias>ор</alias><description>общий род (м/ж/с)</description></grammeme>
+    <grammeme parent=""><name>Hypo</name><alias>гипот</alias><description>гипотетическая форма слова (победю, асфальтовее)</description></grammeme>
+</grammemes>
+<restrictions>
+    <restr type="obligatory" auto="0"><left type="lemma"></left><right type="lemma">POST</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">NOUN</left><right type="lemma">ANim</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">NOUN</left><right type="lemma">GNdr</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NOUN</left><right type="lemma">ms-f</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">NOUN</left><right type="form">NMbr</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NOUN</left><right type="lemma">Sgtm</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NOUN</left><right type="lemma">Pltm</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">NOUN</left><right type="form">CAse</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NOUN</left><right type="lemma">Name</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NOUN</left><right type="lemma">Surn</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NOUN</left><right type="lemma">Patr</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NOUN</left><right type="lemma">Geox</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NOUN</left><right type="lemma">Orgn</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NOUN</left><right type="lemma">Trad</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NOUN</left><right type="form">V-ey</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NOUN</left><right type="form">V-oy</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NOUN</left><right type="form">V-be</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADJF</left><right type="form">anim</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADJF</left><right type="form">inan</right></restr>
+    <restr type="obligatory" auto="0"><left type="form">anim</left><right type="form">accs</right></restr>
+    <restr type="obligatory" auto="0"><left type="form">inan</left><right type="form">accs</right></restr>
+    <restr type="forbidden" auto="0"><left type="form">anim</left><right type="form">femn</right></restr>
+    <restr type="forbidden" auto="0"><left type="form">inan</left><right type="form">neut</right></restr>
+    <restr type="forbidden" auto="0"><left type="form">inan</left><right type="form">femn</right></restr>
+    <restr type="forbidden" auto="0"><left type="form">anim</left><right type="form">neut</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">ADJF</left><right type="form">NMbr</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">ADJF</left><right type="form">GNdr</right></restr>
+    <restr type="forbidden" auto="0"><left type="form">plur</left><right type="form">GNdr</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">ADJF</left><right type="form">CAse</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADJF</left><right type="lemma">Fixd</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">ADJF</left><right type="form">voct</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">ADJF</left><right type="form">gen2</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">ADJF</left><right type="form">acc2</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">ADJF</left><right type="form">loc2</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADJF</left><right type="lemma">Subx</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADJF</left><right type="lemma">Supr</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADJF</left><right type="lemma">Qual</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADJF</left><right type="lemma">Apro</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADJF</left><right type="lemma">Anum</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADJF</left><right type="lemma">Poss</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">ADJS</left><right type="form">NMbr</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">ADJS</left><right type="form">GNdr</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">COMP</left><right type="form">Cmp2</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">COMP</left><right type="form">V-ej</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADJF</left><right type="form">V-ey</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADJF</left><right type="form">V-oy</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">VERB</left><right type="lemma">ASpc</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">VERB</left><right type="lemma">TRns</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">VERB</left><right type="lemma">Impe</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">VERB</left><right type="lemma">Mult</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">VERB</left><right type="lemma">Refl</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">VERB</left><right type="form">NMbr</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">VERB</left><right type="form">MOod</right></restr>
+    <restr type="obligatory" auto="0"><left type="form">indc</left><right type="form">TEns</right></restr>
+    <restr type="obligatory" auto="0"><left type="form">impr</left><right type="form">INvl</right></restr>
+    <restr type="obligatory" auto="0"><left type="form">past</left><right type="form">GNdr</right></restr>
+    <restr type="obligatory" auto="0"><left type="form">pres</left><right type="form">PErs</right></restr>
+    <restr type="obligatory" auto="0"><left type="form">futr</left><right type="form">PErs</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">INFN</left><right type="lemma">ASpc</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">INFN</left><right type="lemma">TRns</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">INFN</left><right type="lemma">Impe</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">INFN</left><right type="lemma">Mult</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">INFN</left><right type="lemma">Refl</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">PRTF</left><right type="form">NMbr</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">PRTF</left><right type="form">GNdr</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">PRTF</left><right type="form">anim</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">PRTF</left><right type="form">inan</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">PRTF</left><right type="form">CAse</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">PRTF</left><right type="form">voct</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">PRTF</left><right type="form">acc2</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">PRTF</left><right type="form">gen2</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">PRTF</left><right type="form">loc2</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">PRTF</left><right type="form">V-ey</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">PRTF</left><right type="form">V-oy</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">PRTF</left><right type="lemma">Subx</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">PRTF</left><right type="lemma">ASpc</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">PRTF</left><right type="lemma">TEns</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">PRTF</left><right type="lemma">VOic</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">PRTS</left><right type="form">NMbr</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">PRTS</left><right type="form">GNdr</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">PRTS</left><right type="lemma">ASpc</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">PRTS</left><right type="lemma">TEns</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">PRTS</left><right type="lemma">VOic</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">GRND</left><right type="lemma">ASpc</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">GRND</left><right type="lemma">TRns</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADVB</left><right type="lemma">Apro</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADVB</left><right type="lemma">Ques</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADVB</left><right type="lemma">Dmns</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">CONJ</left><right type="lemma">Prnt</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">GRND</left><right type="form">PErs</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">GRND</left><right type="form">futr</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">GRND</left><right type="form">TEns</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">GRND</left><right type="form">GNdr</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NOUN</left><right type="lemma">Fixd</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">COMP</left><right type="lemma">Qual</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADJS</left><right type="lemma">Qual</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">Impe</left><right type="form">PErs</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma"></left><right type="form">Infr</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADJF</left><right type="lemma">Geox</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma"></left><right type="lemma">Slng</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma"></left><right type="lemma">Erro</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADJS</left><right type="form">V-en</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma"></left><right type="lemma">Infr</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma"></left><right type="lemma">Arch</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">NUMR</left><right type="form">CAse</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">Patr</left><right type="form">V-ie</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NOUN</left><right type="form">V-bi</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">NPRO</left><right type="form">NMbr</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">NPRO</left><right type="form">CAse</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NPRO</left><right type="lemma">GNdr</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NPRO</left><right type="lemma">PErs</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NPRO</left><right type="lemma">Sgtm</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NPRO</left><right type="lemma">Pltm</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">PRED</left><right type="lemma">TEns</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">GRND</left><right type="form">Fimp</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma"></left><right type="form">Arch</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADVB</left><right type="lemma">Prdx</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NUMR</left><right type="form">GNdr</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NOUN</left><right type="form">Coun</right></restr>
+    <restr type="obligatory" auto="0"><left type="form">Coun</left><right type="form">gent</right></restr>
+    <restr type="obligatory" auto="0"><left type="form">Coun</left><right type="form">plur</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma"></left><right type="form">Litr</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma"></left><right type="form">Dist</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NUMR</left><right type="lemma">Coll</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">GRND</left><right type="form">V-sh</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">Coll</left><right type="form">anim</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">Coll</left><right type="form">inan</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NUMR</left><right type="form">anim</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NUMR</left><right type="form">inan</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NPRO</left><right type="form">V-oy</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma"></left><right type="lemma">Dist</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">actv</left><right type="lemma">TRns</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NPRO</left><right type="form">Af-p</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NPRO</left><right type="form">anim</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NPRO</left><right type="form">inan</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">impf</left><right type="form">futr</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">perf</left><right type="form">pres</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">impf</left><right type="form">incl</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">Impe</left><right type="lemma">tran</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">Impe</left><right type="lemma">Mult</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">Impe</left><right type="form">impr</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">Impe</left><right type="form">plur</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">Impe</left><right type="form">masc</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">Impe</left><right type="form">femn</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">perf</left><right type="lemma">Mult</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NPRO</left><right type="form">V-ey</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">Sgtm</left><right type="form">plur</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">Pltm</left><right type="form">sing</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">pssv</left><right type="lemma">intr</right></restr>
+    <restr type="obligatory" auto="0"><left type="lemma">PRTF</left><right type="lemma">TRns</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma"></left><right type="form">Erro</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NOUN</left><right type="lemma">Inmx</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADJS</left><right type="lemma">Apro</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">PREP</left><right type="form">Vpre</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">Inmx</left><right type="form">anim</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">Inmx</left><right type="form">inan</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma"></left><right type="form">Slng</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma"></left><right type="form">Abbr</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NPRO</left><right type="lemma">Anph</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">ADJF</left><right type="lemma">Anph</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">NOUN</left><right type="lemma">Init</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma"></left><right type="lemma">Abbr</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">PRTF</left><right type="lemma">Adjx</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">INFN</left><right type="lemma">Impx</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">VERB</left><right type="lemma">Impx</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">INFN</left><right type="form">Impx</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma">VERB</left><right type="form">Impx</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">Name</left><right type="lemma">Patr</right></restr>
+    <restr type="forbidden" auto="0"><left type="lemma">Name</left><right type="lemma">Geox</right></restr>
+    <restr type="obligatory" auto="0"><left type="form">V-oy</left><right type="form">ablt</right></restr>
+    <restr type="obligatory" auto="0"><left type="form">V-en</left><right type="form">masc</right></restr>
+    <restr type="obligatory" auto="0"><left type="form">V-en</left><right type="form">sing</right></restr>
+    <restr type="obligatory" auto="0"><left type="form">V-ey</left><right type="form">ablt</right></restr>
+    <restr type="obligatory" auto="0"><left type="form">V-bi</left><right type="lemma">neut</right></restr>
+    <restr type="obligatory" auto="0"><left type="form">V-bi</left><right type="form">sing</right></restr>
+    <restr type="obligatory" auto="0"><left type="form">V-bi</left><right type="form">loct</right></restr>
+    <restr type="obligatory" auto="0"><left type="form">V-sh</left><right type="form">past</right></restr>
+    <restr type="maybe" auto="0"><left type="form"></left><right type="form">Hypo</right></restr>
+    <restr type="maybe" auto="0"><left type="lemma"></left><right type="lemma">Hypo</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">POST</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">NOUN</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">ADJF</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">ADJS</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">COMP</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">VERB</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">NUMR</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">INFN</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">PRTF</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">PRTS</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">GRND</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">ADVB</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">NPRO</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">PRED</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">PREP</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">CONJ</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">PRCL</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma"></left><right type="lemma">INTJ</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="lemma">ANim</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="lemma">anim</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="lemma">inan</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="lemma">GNdr</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="lemma">neut</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="lemma">masc</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="lemma">femn</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="form">NMbr</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="form">sing</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="form">plur</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="form">CAse</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="form">nomn</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="form">voct</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="form">gent</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="form">gen2</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="form">gen1</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="form">datv</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="form">accs</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="form">acc2</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="form">ablt</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="form">loct</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="form">loc2</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NOUN</left><right type="form">loc1</right></restr>
+    <restr type="maybe" auto="1"><left type="form">anim</left><right type="form">accs</right></restr>
+    <restr type="maybe" auto="1"><left type="form">anim</left><right type="form">acc2</right></restr>
+    <restr type="maybe" auto="1"><left type="form">inan</left><right type="form">accs</right></restr>
+    <restr type="maybe" auto="1"><left type="form">inan</left><right type="form">acc2</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">NMbr</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">sing</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">plur</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">GNdr</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">neut</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">ms-f</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">masc</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">femn</right></restr>
+    <restr type="forbidden" auto="1"><left type="form">plur</left><right type="form">neut</right></restr>
+    <restr type="forbidden" auto="1"><left type="form">plur</left><right type="form">ms-f</right></restr>
+    <restr type="forbidden" auto="1"><left type="form">plur</left><right type="form">masc</right></restr>
+    <restr type="forbidden" auto="1"><left type="form">plur</left><right type="form">femn</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">CAse</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">nomn</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">voct</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">gent</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">gen2</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">gen1</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">datv</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">accs</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">acc2</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">ablt</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">loct</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">loc2</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJF</left><right type="form">loc1</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJS</left><right type="form">NMbr</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJS</left><right type="form">sing</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJS</left><right type="form">plur</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJS</left><right type="form">GNdr</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJS</left><right type="form">neut</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJS</left><right type="form">ms-f</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJS</left><right type="form">masc</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">ADJS</left><right type="form">femn</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">VERB</left><right type="lemma">ASpc</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">VERB</left><right type="lemma">perf</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">VERB</left><right type="lemma">impf</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">VERB</left><right type="lemma">TRns</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">VERB</left><right type="lemma">tran</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">VERB</left><right type="lemma">intr</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">VERB</left><right type="form">NMbr</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">VERB</left><right type="form">sing</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">VERB</left><right type="form">plur</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">VERB</left><right type="form">MOod</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">VERB</left><right type="form">indc</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">VERB</left><right type="form">impr</right></restr>
+    <restr type="maybe" auto="1"><left type="form">indc</left><right type="form">TEns</right></restr>
+    <restr type="maybe" auto="1"><left type="form">indc</left><right type="form">pres</right></restr>
+    <restr type="maybe" auto="1"><left type="form">indc</left><right type="form">past</right></restr>
+    <restr type="maybe" auto="1"><left type="form">indc</left><right type="form">futr</right></restr>
+    <restr type="maybe" auto="1"><left type="form">impr</left><right type="form">INvl</right></restr>
+    <restr type="maybe" auto="1"><left type="form">impr</left><right type="form">incl</right></restr>
+    <restr type="maybe" auto="1"><left type="form">impr</left><right type="form">excl</right></restr>
+    <restr type="maybe" auto="1"><left type="form">past</left><right type="form">GNdr</right></restr>
+    <restr type="maybe" auto="1"><left type="form">past</left><right type="form">neut</right></restr>
+    <restr type="maybe" auto="1"><left type="form">past</left><right type="form">ms-f</right></restr>
+    <restr type="maybe" auto="1"><left type="form">past</left><right type="form">masc</right></restr>
+    <restr type="maybe" auto="1"><left type="form">past</left><right type="form">femn</right></restr>
+    <restr type="maybe" auto="1"><left type="form">pres</left><right type="form">PErs</right></restr>
+    <restr type="maybe" auto="1"><left type="form">pres</left><right type="form">1per</right></restr>
+    <restr type="maybe" auto="1"><left type="form">pres</left><right type="form">2per</right></restr>
+    <restr type="maybe" auto="1"><left type="form">pres</left><right type="form">3per</right></restr>
+    <restr type="maybe" auto="1"><left type="form">futr</left><right type="form">PErs</right></restr>
+    <restr type="maybe" auto="1"><left type="form">futr</left><right type="form">1per</right></restr>
+    <restr type="maybe" auto="1"><left type="form">futr</left><right type="form">2per</right></restr>
+    <restr type="maybe" auto="1"><left type="form">futr</left><right type="form">3per</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">INFN</left><right type="lemma">ASpc</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">INFN</left><right type="lemma">perf</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">INFN</left><right type="lemma">impf</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">INFN</left><right type="lemma">TRns</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">INFN</left><right type="lemma">tran</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">INFN</left><right type="lemma">intr</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">NMbr</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">sing</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">plur</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">GNdr</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">neut</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">ms-f</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">masc</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">femn</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">CAse</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">nomn</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">voct</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">gent</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">gen2</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">gen1</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">datv</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">accs</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">acc2</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">ablt</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">loct</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">loc2</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="form">loc1</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="lemma">ASpc</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="lemma">perf</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="lemma">impf</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="lemma">TEns</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="lemma">pres</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="lemma">past</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="lemma">futr</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="lemma">VOic</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="lemma">actv</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="lemma">pssv</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="form">NMbr</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="form">sing</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="form">plur</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="form">GNdr</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="form">neut</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="form">ms-f</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="form">masc</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="form">femn</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="lemma">ASpc</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="lemma">perf</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="lemma">impf</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="lemma">TEns</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="lemma">pres</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="lemma">past</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="lemma">futr</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="lemma">VOic</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="lemma">actv</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTS</left><right type="lemma">pssv</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">GRND</left><right type="lemma">ASpc</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">GRND</left><right type="lemma">perf</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">GRND</left><right type="lemma">impf</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">GRND</left><right type="lemma">TRns</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">GRND</left><right type="lemma">tran</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">GRND</left><right type="lemma">intr</right></restr>
+    <restr type="forbidden" auto="1"><left type="lemma">GRND</left><right type="form">1per</right></restr>
+    <restr type="forbidden" auto="1"><left type="lemma">GRND</left><right type="form">2per</right></restr>
+    <restr type="forbidden" auto="1"><left type="lemma">GRND</left><right type="form">3per</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">GRND</left><right type="form">TEns</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">GRND</left><right type="form">pres</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">GRND</left><right type="form">past</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">GRND</left><right type="form">futr</right></restr>
+    <restr type="forbidden" auto="1"><left type="lemma">GRND</left><right type="form">neut</right></restr>
+    <restr type="forbidden" auto="1"><left type="lemma">GRND</left><right type="form">ms-f</right></restr>
+    <restr type="forbidden" auto="1"><left type="lemma">GRND</left><right type="form">masc</right></restr>
+    <restr type="forbidden" auto="1"><left type="lemma">GRND</left><right type="form">femn</right></restr>
+    <restr type="forbidden" auto="1"><left type="lemma">Impe</left><right type="form">1per</right></restr>
+    <restr type="forbidden" auto="1"><left type="lemma">Impe</left><right type="form">2per</right></restr>
+    <restr type="forbidden" auto="1"><left type="lemma">Impe</left><right type="form">3per</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NUMR</left><right type="form">CAse</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NUMR</left><right type="form">nomn</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NUMR</left><right type="form">voct</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NUMR</left><right type="form">gent</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NUMR</left><right type="form">gen2</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NUMR</left><right type="form">gen1</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NUMR</left><right type="form">datv</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NUMR</left><right type="form">accs</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NUMR</left><right type="form">acc2</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NUMR</left><right type="form">ablt</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NUMR</left><right type="form">loct</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NUMR</left><right type="form">loc2</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NUMR</left><right type="form">loc1</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NPRO</left><right type="form">NMbr</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NPRO</left><right type="form">sing</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NPRO</left><right type="form">plur</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NPRO</left><right type="form">CAse</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NPRO</left><right type="form">nomn</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NPRO</left><right type="form">voct</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NPRO</left><right type="form">gent</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NPRO</left><right type="form">gen2</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NPRO</left><right type="form">gen1</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NPRO</left><right type="form">datv</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NPRO</left><right type="form">accs</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NPRO</left><right type="form">acc2</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NPRO</left><right type="form">ablt</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NPRO</left><right type="form">loct</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NPRO</left><right type="form">loc2</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">NPRO</left><right type="form">loc1</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRED</left><right type="lemma">TEns</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRED</left><right type="lemma">pres</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRED</left><right type="lemma">past</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRED</left><right type="lemma">futr</right></restr>
+    <restr type="maybe" auto="1"><left type="form">Coun</left><right type="form">gent</right></restr>
+    <restr type="maybe" auto="1"><left type="form">Coun</left><right type="form">gen2</right></restr>
+    <restr type="maybe" auto="1"><left type="form">Coun</left><right type="form">gen1</right></restr>
+    <restr type="maybe" auto="1"><left type="form">Coun</left><right type="form">plur</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">actv</left><right type="lemma">TRns</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">actv</left><right type="lemma">tran</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">actv</left><right type="lemma">intr</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="lemma">TRns</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="lemma">tran</right></restr>
+    <restr type="maybe" auto="1"><left type="lemma">PRTF</left><right type="lemma">intr</right></restr>
+    <restr type="maybe" auto="1"><left type="form">V-oy</left><right type="form">ablt</right></restr>
+    <restr type="maybe" auto="1"><left type="form">V-en</left><right type="form">masc</right></restr>
+    <restr type="maybe" auto="1"><left type="form">V-en</left><right type="form">sing</right></restr>
+    <restr type="maybe" auto="1"><left type="form">V-ey</left><right type="form">ablt</right></restr>
+    <restr type="maybe" auto="1"><left type="form">V-bi</left><right type="lemma">neut</right></restr>
+    <restr type="maybe" auto="1"><left type="form">V-bi</left><right type="form">sing</right></restr>
+    <restr type="maybe" auto="1"><left type="form">V-bi</left><right type="form">loct</right></restr>
+    <restr type="maybe" auto="1"><left type="form">V-bi</left><right type="form">loc2</right></restr>
+    <restr type="maybe" auto="1"><left type="form">V-bi</left><right type="form">loc1</right></restr>
+    <restr type="maybe" auto="1"><left type="form">V-sh</left><right type="form">past</right></restr>
+</restrictions>
+<lemmata>
+    <lemma id="1" rev="1"><l t="ёж"><g v="NOUN"/><g v="anim"/><g v="masc"/></l><f t="ёж"><g v="sing"/><g v="nomn"/></f><f t="ежа"><g v="sing"/><g v="gent"/></f><f t="ежу"><g v="sing"/><g v="datv"/></f><f t="ежа"><g v="sing"/><g v="accs"/></f><f t="ежом"><g v="sing"/><g v="ablt"/></f><f t="еже"><g v="sing"/><g v="loct"/></f><f t="ежи"><g v="plur"/><g v="nomn"/></f><f t="ежей"><g v="plur"/><g v="gent"/></f><f t="ежам"><g v="plur"/><g v="datv"/></f><f t="ежей"><g v="plur"/><g v="accs"/></f><f t="ежами"><g v="plur"/><g v="ablt"/></f><f t="ежах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="2" rev="2"><l t="ёж"><g v="NOUN"/><g v="inan"/><g v="masc"/></l><f t="ёж"><g v="sing"/><g v="nomn"/></f><f t="ежа"><g v="sing"/><g v="gent"/></f><f t="ежу"><g v="sing"/><g v="datv"/></f><f t="ёж"><g v="sing"/><g v="accs"/></f><f t="ежом"><g v="sing"/><g v="ablt"/></f><f t="еже"><g v="sing"/><g v="loct"/></f><f t="ежи"><g v="plur"/><g v="nomn"/></f><f t="ежей"><g v="plur"/><g v="gent"/></f><f t="ежам"><g v="plur"/><g v="datv"/></f><f t="ежи"><g v="plur"/><g v="accs"/></f><f t="ежами"><g v="plur"/><g v="ablt"/></f><f t="ежах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="3" rev="3"><l t="ёжик"><g v="NOUN"/><g v="anim"/><g v="masc"/></l><f t="ёжик"><g v="sing"/><g v="nomn"/></f><f t="ёжика"><g v="sing"/><g v="gent"/></f><f t="ёжику"><g v="sing"/><g v="datv"/></f><f t="ёжика"><g v="sing"/><g v="accs"/></f><f t="ёжиком"><g v="sing"/><g v="ablt"/></f><f t="ёжике"><g v="sing"/><g v="loct"/></f><f t="ёжики"><g v="plur"/><g v="nomn"/></f><f t="ёжиков"><g v="plur"/><g v="gent"/></f><f t="ёжикам"><g v="plur"/><g v="datv"/></f><f t="ёжиков"><g v="plur"/><g v="accs"/></f><f t="ёжиками"><g v="plur"/><g v="ablt"/></f><f t="ёжиках"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="4" rev="4"><l t="ёжиком"><g v="ADVB"/></l><f t="ёжиком"></f></lemma>
+    <lemma id="5" rev="5"><l t="ёжистый"><g v="ADJF"/><g v="Qual"/></l><f t="ёжистый"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="ёжистого"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="ёжистому"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="ёжистого"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёжистый"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёжистым"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="ёжистом"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="ёжистая"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="ёжистой"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="ёжистой"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="ёжистую"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="ёжистой"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="ёжистою"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-oy"/></f><f t="ёжистой"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="ёжистое"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="ёжистого"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="ёжистому"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="ёжистое"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="ёжистым"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="ёжистом"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="ёжистые"><g v="plur"/><g v="nomn"/></f><f t="ёжистых"><g v="plur"/><g v="gent"/></f><f t="ёжистым"><g v="plur"/><g v="datv"/></f><f t="ёжистых"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="ёжистые"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="ёжистыми"><g v="plur"/><g v="ablt"/></f><f t="ёжистых"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="6" rev="6"><l t="ёжист"><g v="ADJS"/><g v="Qual"/></l><f t="ёжист"><g v="masc"/><g v="sing"/></f><f t="ёжиста"><g v="femn"/><g v="sing"/></f><f t="ёжисто"><g v="neut"/><g v="sing"/></f><f t="ёжисты"><g v="plur"/></f></lemma>
+    <lemma id="7" rev="7"><l t="ёжистее"><g v="COMP"/><g v="Qual"/></l><f t="ёжистее"></f><f t="ёжистей"><g v="V-ej"/></f><f t="поёжистее"><g v="Cmp2"/></f><f t="поёжистей"><g v="Cmp2"/><g v="V-ej"/></f></lemma>
+    <lemma id="8" rev="8"><l t="ёжу"><g v="VERB"/><g v="impf"/><g v="tran"/></l><f t="ёжу"><g v="sing"/><g v="1per"/><g v="pres"/><g v="indc"/></f><f t="ёжим"><g v="plur"/><g v="1per"/><g v="pres"/><g v="indc"/></f><f t="ёжишь"><g v="sing"/><g v="2per"/><g v="pres"/><g v="indc"/></f><f t="ёжите"><g v="plur"/><g v="2per"/><g v="pres"/><g v="indc"/></f><f t="ёжит"><g v="sing"/><g v="3per"/><g v="pres"/><g v="indc"/></f><f t="ёжат"><g v="plur"/><g v="3per"/><g v="pres"/><g v="indc"/></f><f t="ёжил"><g v="masc"/><g v="sing"/><g v="past"/><g v="indc"/></f><f t="ёжила"><g v="femn"/><g v="sing"/><g v="past"/><g v="indc"/></f><f t="ёжило"><g v="neut"/><g v="sing"/><g v="past"/><g v="indc"/></f><f t="ёжили"><g v="plur"/><g v="past"/><g v="indc"/></f><f t="ёжь"><g v="sing"/><g v="impr"/><g v="excl"/></f><f t="ёжьте"><g v="plur"/><g v="impr"/><g v="excl"/></f></lemma>
+    <lemma id="9" rev="9"><l t="ёжить"><g v="INFN"/><g v="impf"/><g v="tran"/></l><f t="ёжить"></f></lemma>
+    <lemma id="10" rev="10"><l t="ёжимый"><g v="PRTF"/><g v="impf"/><g v="tran"/><g v="pres"/><g v="pssv"/></l><f t="ёжимый"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="ёжимого"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="ёжимому"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="ёжимого"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёжимый"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёжимым"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="ёжимом"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="ёжимая"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="ёжимой"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="ёжимой"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="ёжимую"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="ёжимой"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="ёжимою"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-oy"/></f><f t="ёжимой"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="ёжимое"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="ёжимого"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="ёжимому"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="ёжимое"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="ёжимым"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="ёжимом"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="ёжимые"><g v="plur"/><g v="nomn"/></f><f t="ёжимых"><g v="plur"/><g v="gent"/></f><f t="ёжимым"><g v="plur"/><g v="datv"/></f><f t="ёжимых"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="ёжимые"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="ёжимыми"><g v="plur"/><g v="ablt"/></f><f t="ёжимых"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="11" rev="11"><l t="ёжим"><g v="PRTS"/><g v="impf"/><g v="pres"/><g v="pssv"/></l><f t="ёжим"><g v="masc"/><g v="sing"/></f><f t="ёжима"><g v="femn"/><g v="sing"/></f><f t="ёжимо"><g v="neut"/><g v="sing"/></f><f t="ёжимы"><g v="plur"/></f></lemma>
+    <lemma id="12" rev="12"><l t="ёжа"><g v="GRND"/><g v="impf"/><g v="tran"/></l><f t="ёжа"><g v="pres"/></f><f t="ёжив"><g v="past"/></f><f t="ёживши"><g v="past"/><g v="V-sh"/></f></lemma>
+    <lemma id="13" rev="13"><l t="ёжусь"><g v="VERB"/><g v="impf"/><g v="intr"/></l><f t="ёжусь"><g v="sing"/><g v="1per"/><g v="pres"/><g v="indc"/></f><f t="ёжимся"><g v="plur"/><g v="1per"/><g v="pres"/><g v="indc"/></f><f t="ёжишься"><g v="sing"/><g v="2per"/><g v="pres"/><g v="indc"/></f><f t="ёжитесь"><g v="plur"/><g v="2per"/><g v="pres"/><g v="indc"/></f><f t="ёжится"><g v="sing"/><g v="3per"/><g v="pres"/><g v="indc"/></f><f t="ёжатся"><g v="plur"/><g v="3per"/><g v="pres"/><g v="indc"/></f><f t="ёжился"><g v="masc"/><g v="sing"/><g v="past"/><g v="indc"/></f><f t="ёжилась"><g v="femn"/><g v="sing"/><g v="past"/><g v="indc"/></f><f t="ёжилось"><g v="neut"/><g v="sing"/><g v="past"/><g v="indc"/></f><f t="ёжились"><g v="plur"/><g v="past"/><g v="indc"/></f><f t="ёжься"><g v="sing"/><g v="impr"/><g v="excl"/></f><f t="ёжьтесь"><g v="plur"/><g v="impr"/><g v="excl"/></f></lemma>
+    <lemma id="14" rev="14"><l t="ёжиться"><g v="INFN"/><g v="impf"/><g v="intr"/></l><f t="ёжиться"></f></lemma>
+    <lemma id="15" rev="15"><l t="ёжащийся"><g v="PRTF"/><g v="impf"/><g v="intr"/><g v="pres"/><g v="actv"/></l><f t="ёжащийся"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="ёжащегося"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="ёжащемуся"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="ёжащегося"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёжащийся"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёжащимся"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="ёжащемся"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="ёжащаяся"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="ёжащейся"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="ёжащейся"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="ёжащуюся"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="ёжащейся"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="ёжащеюся"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-ey"/></f><f t="ёжащейся"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="ёжащееся"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="ёжащегося"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="ёжащемуся"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="ёжащееся"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="ёжащимся"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="ёжащемся"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="ёжащиеся"><g v="plur"/><g v="nomn"/></f><f t="ёжащихся"><g v="plur"/><g v="gent"/></f><f t="ёжащимся"><g v="plur"/><g v="datv"/></f><f t="ёжащихся"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="ёжащиеся"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="ёжащимися"><g v="plur"/><g v="ablt"/></f><f t="ёжащихся"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="16" rev="16"><l t="ёжившийся"><g v="PRTF"/><g v="impf"/><g v="intr"/><g v="past"/><g v="actv"/></l><f t="ёжившийся"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="ёжившегося"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="ёжившемуся"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="ёжившегося"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёжившийся"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёжившимся"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="ёжившемся"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="ёжившаяся"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="ёжившейся"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="ёжившейся"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="ёжившуюся"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="ёжившейся"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="ёжившеюся"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-ey"/></f><f t="ёжившейся"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="ёжившееся"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="ёжившегося"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="ёжившемуся"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="ёжившееся"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="ёжившимся"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="ёжившемся"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="ёжившиеся"><g v="plur"/><g v="nomn"/></f><f t="ёжившихся"><g v="plur"/><g v="gent"/></f><f t="ёжившимся"><g v="plur"/><g v="datv"/></f><f t="ёжившихся"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="ёжившиеся"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="ёжившимися"><g v="plur"/><g v="ablt"/></f><f t="ёжившихся"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="17" rev="17"><l t="ёжась"><g v="GRND"/><g v="impf"/><g v="intr"/></l><f t="ёжась"><g v="pres"/></f><f t="ёжившись"><g v="past"/><g v="V-sh"/></f></lemma>
+    <lemma id="18" rev="18"><l t="ёкнул"><g v="VERB"/><g v="perf"/><g v="intr"/></l><f t="ёкнул"><g v="masc"/><g v="sing"/><g v="past"/><g v="indc"/></f><f t="ёкнула"><g v="femn"/><g v="sing"/><g v="past"/><g v="indc"/></f><f t="ёкнуло"><g v="neut"/><g v="sing"/><g v="past"/><g v="indc"/></f><f t="ёкнули"><g v="plur"/><g v="past"/><g v="indc"/></f><f t="ёкну"><g v="sing"/><g v="1per"/><g v="futr"/><g v="indc"/></f><f t="ёкнем"><g v="plur"/><g v="1per"/><g v="futr"/><g v="indc"/></f><f t="ёкнешь"><g v="sing"/><g v="2per"/><g v="futr"/><g v="indc"/></f><f t="ёкнете"><g v="plur"/><g v="2per"/><g v="futr"/><g v="indc"/></f><f t="ёкнет"><g v="sing"/><g v="3per"/><g v="futr"/><g v="indc"/></f><f t="ёкнут"><g v="plur"/><g v="3per"/><g v="futr"/><g v="indc"/></f><f t="ёкнем"><g v="sing"/><g v="impr"/><g v="incl"/></f><f t="ёкнемте"><g v="plur"/><g v="impr"/><g v="incl"/></f><f t="ёкни"><g v="sing"/><g v="impr"/><g v="excl"/></f><f t="ёкните"><g v="plur"/><g v="impr"/><g v="excl"/></f></lemma>
+    <lemma id="19" rev="19"><l t="ёкнуть"><g v="INFN"/><g v="perf"/><g v="intr"/></l><f t="ёкнуть"></f></lemma>
+    <lemma id="20" rev="20"><l t="ёкнувший"><g v="PRTF"/><g v="perf"/><g v="intr"/><g v="past"/><g v="actv"/></l><f t="ёкнувший"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="ёкнувшего"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="ёкнувшему"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="ёкнувшего"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёкнувший"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёкнувшим"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="ёкнувшем"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="ёкнувшая"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="ёкнувшей"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="ёкнувшей"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="ёкнувшую"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="ёкнувшей"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="ёкнувшею"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-ey"/></f><f t="ёкнувшей"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="ёкнувшее"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="ёкнувшего"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="ёкнувшему"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="ёкнувшее"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="ёкнувшим"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="ёкнувшем"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="ёкнувшие"><g v="plur"/><g v="nomn"/></f><f t="ёкнувших"><g v="plur"/><g v="gent"/></f><f t="ёкнувшим"><g v="plur"/><g v="datv"/></f><f t="ёкнувших"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="ёкнувшие"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="ёкнувшими"><g v="plur"/><g v="ablt"/></f><f t="ёкнувших"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="21" rev="21"><l t="ёкнув"><g v="GRND"/><g v="perf"/><g v="intr"/></l><f t="ёкнув"><g v="past"/></f><f t="ёкнувши"><g v="past"/><g v="V-sh"/></f></lemma>
+    <lemma id="22" rev="22"><l t="ёлка"><g v="NOUN"/><g v="inan"/><g v="femn"/></l><f t="ёлка"><g v="sing"/><g v="nomn"/></f><f t="ёлки"><g v="sing"/><g v="gent"/></f><f t="ёлке"><g v="sing"/><g v="datv"/></f><f t="ёлку"><g v="sing"/><g v="accs"/></f><f t="ёлкой"><g v="sing"/><g v="ablt"/></f><f t="ёлкою"><g v="sing"/><g v="ablt"/><g v="V-oy"/></f><f t="ёлке"><g v="sing"/><g v="loct"/></f><f t="ёлки"><g v="plur"/><g v="nomn"/></f><f t="ёлок"><g v="plur"/><g v="gent"/></f><f t="ёлкам"><g v="plur"/><g v="datv"/></f><f t="ёлки"><g v="plur"/><g v="accs"/></f><f t="ёлками"><g v="plur"/><g v="ablt"/></f><f t="ёлках"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="23" rev="23"><l t="ёлочка"><g v="NOUN"/><g v="inan"/><g v="femn"/></l><f t="ёлочка"><g v="sing"/><g v="nomn"/></f><f t="ёлочки"><g v="sing"/><g v="gent"/></f><f t="ёлочке"><g v="sing"/><g v="datv"/></f><f t="ёлочку"><g v="sing"/><g v="accs"/></f><f t="ёлочкой"><g v="sing"/><g v="ablt"/></f><f t="ёлочкою"><g v="sing"/><g v="ablt"/><g v="V-oy"/></f><f t="ёлочке"><g v="sing"/><g v="loct"/></f><f t="ёлочки"><g v="plur"/><g v="nomn"/></f><f t="ёлочек"><g v="plur"/><g v="gent"/></f><f t="ёлочкам"><g v="plur"/><g v="datv"/></f><f t="ёлочки"><g v="plur"/><g v="accs"/></f><f t="ёлочками"><g v="plur"/><g v="ablt"/></f><f t="ёлочках"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="24" rev="393214"><l t="ёлочный"><g v="ADJF"/></l><f t="ёлочный"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="ёлочного"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="ёлочному"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="ёлочного"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёлочный"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёлочным"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="ёлочном"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="ёлочная"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="ёлочной"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="ёлочной"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="ёлочную"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="ёлочной"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="ёлочною"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-oy"/></f><f t="ёлочной"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="ёлочное"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="ёлочного"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="ёлочному"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="ёлочное"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="ёлочным"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="ёлочном"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="ёлочные"><g v="plur"/><g v="nomn"/></f><f t="ёлочных"><g v="plur"/><g v="gent"/></f><f t="ёлочным"><g v="plur"/><g v="datv"/></f><f t="ёлочных"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="ёлочные"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="ёлочными"><g v="plur"/><g v="ablt"/></f><f t="ёлочных"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="27" rev="27"><l t="ёмкий"><g v="ADJF"/><g v="Qual"/></l><f t="ёмкий"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="ёмкого"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="ёмкому"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="ёмкого"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёмкий"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёмким"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="ёмком"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="ёмкая"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="ёмкой"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="ёмкой"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="ёмкую"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="ёмкой"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="ёмкою"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-oy"/></f><f t="ёмкой"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="ёмкое"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="ёмкого"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="ёмкому"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="ёмкое"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="ёмким"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="ёмком"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="ёмкие"><g v="plur"/><g v="nomn"/></f><f t="ёмких"><g v="plur"/><g v="gent"/></f><f t="ёмким"><g v="plur"/><g v="datv"/></f><f t="ёмких"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="ёмкие"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="ёмкими"><g v="plur"/><g v="ablt"/></f><f t="ёмких"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="28" rev="28"><l t="ёмок"><g v="ADJS"/><g v="Qual"/></l><f t="ёмок"><g v="masc"/><g v="sing"/></f><f t="ёмка"><g v="femn"/><g v="sing"/></f><f t="ёмко"><g v="neut"/><g v="sing"/></f><f t="ёмки"><g v="plur"/></f></lemma>
+    <lemma id="29" rev="29"><l t="ёмче"><g v="COMP"/><g v="Qual"/></l><f t="ёмче"></f><f t="поёмче"><g v="Cmp2"/></f></lemma>
+    <lemma id="30" rev="30"><l t="ёмкостный"><g v="ADJF"/><g v="Qual"/></l><f t="ёмкостный"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="ёмкостного"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="ёмкостному"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="ёмкостного"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёмкостный"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёмкостным"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="ёмкостном"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="ёмкостная"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="ёмкостной"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="ёмкостной"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="ёмкостную"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="ёмкостной"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="ёмкостною"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-oy"/></f><f t="ёмкостной"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="ёмкостное"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="ёмкостного"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="ёмкостному"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="ёмкостное"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="ёмкостным"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="ёмкостном"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="ёмкостные"><g v="plur"/><g v="nomn"/></f><f t="ёмкостных"><g v="plur"/><g v="gent"/></f><f t="ёмкостным"><g v="plur"/><g v="datv"/></f><f t="ёмкостных"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="ёмкостные"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="ёмкостными"><g v="plur"/><g v="ablt"/></f><f t="ёмкостных"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="31" rev="31"><l t="ёмкостен"><g v="ADJS"/><g v="Qual"/></l><f t="ёмкостен"><g v="masc"/><g v="sing"/></f><f t="ёмкостна"><g v="femn"/><g v="sing"/></f><f t="ёмкостно"><g v="neut"/><g v="sing"/></f><f t="ёмкостны"><g v="plur"/></f></lemma>
+    <lemma id="32" rev="32"><l t="ёмкостнее"><g v="COMP"/><g v="Qual"/></l><f t="ёмкостнее"></f><f t="ёмкостней"><g v="V-ej"/></f><f t="поёмкостнее"><g v="Cmp2"/></f><f t="поёмкостней"><g v="Cmp2"/><g v="V-ej"/></f></lemma>
+    <lemma id="33" rev="33"><l t="ёмкость"><g v="NOUN"/><g v="inan"/><g v="femn"/></l><f t="ёмкость"><g v="sing"/><g v="nomn"/></f><f t="ёмкости"><g v="sing"/><g v="gent"/></f><f t="ёмкости"><g v="sing"/><g v="datv"/></f><f t="ёмкость"><g v="sing"/><g v="accs"/></f><f t="ёмкостью"><g v="sing"/><g v="ablt"/></f><f t="ёмкости"><g v="sing"/><g v="loct"/></f><f t="ёмкости"><g v="plur"/><g v="nomn"/></f><f t="ёмкостей"><g v="plur"/><g v="gent"/></f><f t="ёмкостям"><g v="plur"/><g v="datv"/></f><f t="ёмкости"><g v="plur"/><g v="accs"/></f><f t="ёмкостями"><g v="plur"/><g v="ablt"/></f><f t="ёмкостях"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="34" rev="388491"><l t="ёра"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Arch"/></l><f t="ёра"><g v="sing"/><g v="nomn"/></f><f t="ёры"><g v="sing"/><g v="gent"/></f><f t="ёре"><g v="sing"/><g v="datv"/></f><f t="ёру"><g v="sing"/><g v="accs"/></f><f t="ёрой"><g v="sing"/><g v="ablt"/></f><f t="ёрою"><g v="sing"/><g v="ablt"/><g v="V-oy"/></f><f t="ёре"><g v="sing"/><g v="loct"/></f><f t="ёры"><g v="plur"/><g v="nomn"/></f><f t="ёр"><g v="plur"/><g v="gent"/></f><f t="ёрам"><g v="plur"/><g v="datv"/></f><f t="ёр"><g v="plur"/><g v="accs"/></f><f t="ёрами"><g v="plur"/><g v="ablt"/></f><f t="ёрах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="35" rev="35"><l t="ёрзаю"><g v="VERB"/><g v="impf"/><g v="intr"/></l><f t="ёрзаю"><g v="sing"/><g v="1per"/><g v="pres"/><g v="indc"/></f><f t="ёрзаем"><g v="plur"/><g v="1per"/><g v="pres"/><g v="indc"/></f><f t="ёрзаешь"><g v="sing"/><g v="2per"/><g v="pres"/><g v="indc"/></f><f t="ёрзаете"><g v="plur"/><g v="2per"/><g v="pres"/><g v="indc"/></f><f t="ёрзает"><g v="sing"/><g v="3per"/><g v="pres"/><g v="indc"/></f><f t="ёрзают"><g v="plur"/><g v="3per"/><g v="pres"/><g v="indc"/></f><f t="ёрзал"><g v="masc"/><g v="sing"/><g v="past"/><g v="indc"/></f><f t="ёрзала"><g v="femn"/><g v="sing"/><g v="past"/><g v="indc"/></f><f t="ёрзало"><g v="neut"/><g v="sing"/><g v="past"/><g v="indc"/></f><f t="ёрзали"><g v="plur"/><g v="past"/><g v="indc"/></f><f t="ёрзай"><g v="sing"/><g v="impr"/><g v="excl"/></f><f t="ёрзайте"><g v="plur"/><g v="impr"/><g v="excl"/></f></lemma>
+    <lemma id="36" rev="36"><l t="ёрзать"><g v="INFN"/><g v="impf"/><g v="intr"/></l><f t="ёрзать"></f></lemma>
+    <lemma id="37" rev="37"><l t="ёрзающий"><g v="PRTF"/><g v="impf"/><g v="intr"/><g v="pres"/><g v="actv"/></l><f t="ёрзающий"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="ёрзающего"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="ёрзающему"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="ёрзающего"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёрзающий"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёрзающим"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="ёрзающем"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="ёрзающая"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="ёрзающей"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="ёрзающей"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="ёрзающую"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="ёрзающей"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="ёрзающею"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-ey"/></f><f t="ёрзающей"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="ёрзающее"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="ёрзающего"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="ёрзающему"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="ёрзающее"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="ёрзающим"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="ёрзающем"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="ёрзающие"><g v="plur"/><g v="nomn"/></f><f t="ёрзающих"><g v="plur"/><g v="gent"/></f><f t="ёрзающим"><g v="plur"/><g v="datv"/></f><f t="ёрзающих"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="ёрзающие"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="ёрзающими"><g v="plur"/><g v="ablt"/></f><f t="ёрзающих"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="38" rev="38"><l t="ёрзавший"><g v="PRTF"/><g v="impf"/><g v="intr"/><g v="past"/><g v="actv"/></l><f t="ёрзавший"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="ёрзавшего"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="ёрзавшему"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="ёрзавшего"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёрзавший"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёрзавшим"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="ёрзавшем"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="ёрзавшая"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="ёрзавшей"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="ёрзавшей"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="ёрзавшую"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="ёрзавшей"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="ёрзавшею"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-ey"/></f><f t="ёрзавшей"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="ёрзавшее"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="ёрзавшего"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="ёрзавшему"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="ёрзавшее"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="ёрзавшим"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="ёрзавшем"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="ёрзавшие"><g v="plur"/><g v="nomn"/></f><f t="ёрзавших"><g v="plur"/><g v="gent"/></f><f t="ёрзавшим"><g v="plur"/><g v="datv"/></f><f t="ёрзавших"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="ёрзавшие"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="ёрзавшими"><g v="plur"/><g v="ablt"/></f><f t="ёрзавших"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="39" rev="39"><l t="ёрзая"><g v="GRND"/><g v="impf"/><g v="intr"/></l><f t="ёрзая"><g v="pres"/></f><f t="ёрзав"><g v="past"/></f><f t="ёрзавши"><g v="past"/><g v="V-sh"/></f></lemma>
+    <lemma id="40" rev="40"><l t="ёрник"><g v="NOUN"/><g v="anim"/><g v="masc"/></l><f t="ёрник"><g v="sing"/><g v="nomn"/></f><f t="ёрника"><g v="sing"/><g v="gent"/></f><f t="ёрнику"><g v="sing"/><g v="datv"/></f><f t="ёрника"><g v="sing"/><g v="accs"/></f><f t="ёрником"><g v="sing"/><g v="ablt"/></f><f t="ёрнике"><g v="sing"/><g v="loct"/></f><f t="ёрники"><g v="plur"/><g v="nomn"/></f><f t="ёрников"><g v="plur"/><g v="gent"/></f><f t="ёрникам"><g v="plur"/><g v="datv"/></f><f t="ёрников"><g v="plur"/><g v="accs"/></f><f t="ёрниками"><g v="plur"/><g v="ablt"/></f><f t="ёрниках"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="41" rev="41"><l t="ёрничаю"><g v="VERB"/><g v="impf"/><g v="intr"/></l><f t="ёрничаю"><g v="sing"/><g v="1per"/><g v="pres"/><g v="indc"/></f><f t="ёрничаем"><g v="plur"/><g v="1per"/><g v="pres"/><g v="indc"/></f><f t="ёрничаешь"><g v="sing"/><g v="2per"/><g v="pres"/><g v="indc"/></f><f t="ёрничаете"><g v="plur"/><g v="2per"/><g v="pres"/><g v="indc"/></f><f t="ёрничает"><g v="sing"/><g v="3per"/><g v="pres"/><g v="indc"/></f><f t="ёрничают"><g v="plur"/><g v="3per"/><g v="pres"/><g v="indc"/></f><f t="ёрничал"><g v="masc"/><g v="sing"/><g v="past"/><g v="indc"/></f><f t="ёрничала"><g v="femn"/><g v="sing"/><g v="past"/><g v="indc"/></f><f t="ёрничало"><g v="neut"/><g v="sing"/><g v="past"/><g v="indc"/></f><f t="ёрничали"><g v="plur"/><g v="past"/><g v="indc"/></f><f t="ёрничай"><g v="sing"/><g v="impr"/><g v="excl"/></f><f t="ёрничайте"><g v="plur"/><g v="impr"/><g v="excl"/></f></lemma>
+    <lemma id="42" rev="42"><l t="ёрничать"><g v="INFN"/><g v="impf"/><g v="intr"/></l><f t="ёрничать"></f></lemma>
+    <lemma id="43" rev="43"><l t="ёрничающий"><g v="PRTF"/><g v="impf"/><g v="intr"/><g v="pres"/><g v="actv"/></l><f t="ёрничающий"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="ёрничающего"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="ёрничающему"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="ёрничающего"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёрничающий"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёрничающим"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="ёрничающем"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="ёрничающая"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="ёрничающей"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="ёрничающей"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="ёрничающую"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="ёрничающей"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="ёрничающею"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-ey"/></f><f t="ёрничающей"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="ёрничающее"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="ёрничающего"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="ёрничающему"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="ёрничающее"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="ёрничающим"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="ёрничающем"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="ёрничающие"><g v="plur"/><g v="nomn"/></f><f t="ёрничающих"><g v="plur"/><g v="gent"/></f><f t="ёрничающим"><g v="plur"/><g v="datv"/></f><f t="ёрничающих"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="ёрничающие"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="ёрничающими"><g v="plur"/><g v="ablt"/></f><f t="ёрничающих"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="44" rev="44"><l t="ёрничавший"><g v="PRTF"/><g v="impf"/><g v="intr"/><g v="past"/><g v="actv"/></l><f t="ёрничавший"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="ёрничавшего"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="ёрничавшему"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="ёрничавшего"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёрничавший"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёрничавшим"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="ёрничавшем"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="ёрничавшая"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="ёрничавшей"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="ёрничавшей"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="ёрничавшую"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="ёрничавшей"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="ёрничавшею"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-ey"/></f><f t="ёрничавшей"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="ёрничавшее"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="ёрничавшего"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="ёрничавшему"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="ёрничавшее"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="ёрничавшим"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="ёрничавшем"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="ёрничавшие"><g v="plur"/><g v="nomn"/></f><f t="ёрничавших"><g v="plur"/><g v="gent"/></f><f t="ёрничавшим"><g v="plur"/><g v="datv"/></f><f t="ёрничавших"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="ёрничавшие"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="ёрничавшими"><g v="plur"/><g v="ablt"/></f><f t="ёрничавших"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="45" rev="45"><l t="ёрничая"><g v="GRND"/><g v="impf"/><g v="intr"/></l><f t="ёрничая"><g v="pres"/></f><f t="ёрничав"><g v="past"/></f><f t="ёрничавши"><g v="past"/><g v="V-sh"/></f></lemma>
+    <lemma id="46" rev="46"><l t="ёрнический"><g v="ADJF"/></l><f t="ёрнический"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="ёрнического"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="ёрническому"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="ёрнического"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёрнический"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="ёрническим"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="ёрническом"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="ёрническая"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="ёрнической"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="ёрнической"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="ёрническую"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="ёрнической"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="ёрническою"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-oy"/></f><f t="ёрнической"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="ёрническое"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="ёрнического"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="ёрническому"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="ёрническое"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="ёрническим"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="ёрническом"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="ёрнические"><g v="plur"/><g v="nomn"/></f><f t="ёрнических"><g v="plur"/><g v="gent"/></f><f t="ёрническим"><g v="plur"/><g v="datv"/></f><f t="ёрнических"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="ёрнические"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="ёрническими"><g v="plur"/><g v="ablt"/></f><f t="ёрнических"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="47" rev="47"><l t="ёрш"><g v="NOUN"/><g v="anim"/><g v="masc"/></l><f t="ёрш"><g v="sing"/><g v="nomn"/></f><f t="ерша"><g v="sing"/><g v="gent"/></f><f t="ершу"><g v="sing"/><g v="datv"/></f><f t="ерша"><g v="sing"/><g v="accs"/></f><f t="ершом"><g v="sing"/><g v="ablt"/></f><f t="ерше"><g v="sing"/><g v="loct"/></f><f t="ерши"><g v="plur"/><g v="nomn"/></f><f t="ершей"><g v="plur"/><g v="gent"/></f><f t="ершам"><g v="plur"/><g v="datv"/></f><f t="ершей"><g v="plur"/><g v="accs"/></f><f t="ершами"><g v="plur"/><g v="ablt"/></f><f t="ершах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="48" rev="48"><l t="ёрш"><g v="NOUN"/><g v="inan"/><g v="masc"/></l><f t="ёрш"><g v="sing"/><g v="nomn"/></f><f t="ерша"><g v="sing"/><g v="gent"/></f><f t="ершу"><g v="sing"/><g v="datv"/></f><f t="ёрш"><g v="sing"/><g v="accs"/></f><f t="ершом"><g v="sing"/><g v="ablt"/></f><f t="ерше"><g v="sing"/><g v="loct"/></f><f t="ерши"><g v="plur"/><g v="nomn"/></f><f t="ершей"><g v="plur"/><g v="gent"/></f><f t="ершам"><g v="plur"/><g v="datv"/></f><f t="ерши"><g v="plur"/><g v="accs"/></f><f t="ершами"><g v="plur"/><g v="ablt"/></f><f t="ершах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="49" rev="49"><l t="ёршик"><g v="NOUN"/><g v="anim"/><g v="masc"/></l><f t="ёршик"><g v="sing"/><g v="nomn"/></f><f t="ёршика"><g v="sing"/><g v="gent"/></f><f t="ёршику"><g v="sing"/><g v="datv"/></f><f t="ёршика"><g v="sing"/><g v="accs"/></f><f t="ёршиком"><g v="sing"/><g v="ablt"/></f><f t="ёршике"><g v="sing"/><g v="loct"/></f><f t="ёршики"><g v="plur"/><g v="nomn"/></f><f t="ёршиков"><g v="plur"/><g v="gent"/></f><f t="ёршикам"><g v="plur"/><g v="datv"/></f><f t="ёршиков"><g v="plur"/><g v="accs"/></f><f t="ёршиками"><g v="plur"/><g v="ablt"/></f><f t="ёршиках"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="50" rev="50"><l t="ёршик"><g v="NOUN"/><g v="inan"/><g v="masc"/></l><f t="ёршик"><g v="sing"/><g v="nomn"/></f><f t="ёршика"><g v="sing"/><g v="gent"/></f><f t="ёршику"><g v="sing"/><g v="datv"/></f><f t="ёршик"><g v="sing"/><g v="accs"/></f><f t="ёршиком"><g v="sing"/><g v="ablt"/></f><f t="ёршике"><g v="sing"/><g v="loct"/></f><f t="ёршики"><g v="plur"/><g v="nomn"/></f><f t="ёршиков"><g v="plur"/><g v="gent"/></f><f t="ёршикам"><g v="plur"/><g v="datv"/></f><f t="ёршики"><g v="plur"/><g v="accs"/></f><f t="ёршиками"><g v="plur"/><g v="ablt"/></f><f t="ёршиках"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="51" rev="51"><l t="а"><g v="CONJ"/></l><f t="а"></f></lemma>
+    <lemma id="52" rev="52"><l t="а"><g v="INTJ"/></l><f t="а"></f></lemma>
+    <lemma id="53" rev="53"><l t="а"><g v="PRCL"/></l><f t="а"></f></lemma>
+    <lemma id="54" rev="54"><l t="а-конто"><g v="NOUN"/><g v="inan"/><g v="neut"/><g v="Fixd"/></l><f t="а-конто"><g v="sing"/><g v="nomn"/></f><f t="а-конто"><g v="sing"/><g v="gent"/></f><f t="а-конто"><g v="sing"/><g v="datv"/></f><f t="а-конто"><g v="sing"/><g v="accs"/></f><f t="а-конто"><g v="sing"/><g v="ablt"/></f><f t="а-конто"><g v="sing"/><g v="loct"/></f><f t="а-конто"><g v="plur"/><g v="nomn"/></f><f t="а-конто"><g v="plur"/><g v="gent"/></f><f t="а-конто"><g v="plur"/><g v="datv"/></f><f t="а-конто"><g v="plur"/><g v="accs"/></f><f t="а-конто"><g v="plur"/><g v="ablt"/></f><f t="а-конто"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="55" rev="55"><l t="а-ля"><g v="PREP"/></l><f t="а-ля"></f></lemma>
+    <lemma id="56" rev="56"><l t="а-ось"><g v="NOUN"/><g v="inan"/><g v="femn"/></l><f t="а-ось"><g v="sing"/><g v="nomn"/></f><f t="а-оси"><g v="sing"/><g v="gent"/></f><f t="а-оси"><g v="sing"/><g v="datv"/></f><f t="а-ось"><g v="sing"/><g v="accs"/></f><f t="а-осью"><g v="sing"/><g v="ablt"/></f><f t="а-оси"><g v="sing"/><g v="loct"/></f><f t="а-оси"><g v="plur"/><g v="nomn"/></f><f t="а-осей"><g v="plur"/><g v="gent"/></f><f t="а-осям"><g v="plur"/><g v="datv"/></f><f t="а-оси"><g v="plur"/><g v="accs"/></f><f t="а-осями"><g v="plur"/><g v="ablt"/></f><f t="а-осях"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="57" rev="57"><l t="ааво"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Sgtm"/><g v="Fixd"/><g v="Name"/></l><f t="ааво"><g v="sing"/><g v="nomn"/></f><f t="ааво"><g v="sing"/><g v="gent"/></f><f t="ааво"><g v="sing"/><g v="datv"/></f><f t="ааво"><g v="sing"/><g v="accs"/></f><f t="ааво"><g v="sing"/><g v="ablt"/></f><f t="ааво"><g v="sing"/><g v="loct"/></f></lemma>
+    <lemma id="58" rev="58"><l t="аавович"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Patr"/></l><f t="аавович"><g v="sing"/><g v="nomn"/></f><f t="аавовича"><g v="sing"/><g v="gent"/></f><f t="аавовичу"><g v="sing"/><g v="datv"/></f><f t="аавовича"><g v="sing"/><g v="accs"/></f><f t="аавовичем"><g v="sing"/><g v="ablt"/></f><f t="аавовиче"><g v="sing"/><g v="loct"/></f><f t="аавовичи"><g v="plur"/><g v="nomn"/></f><f t="аавовичей"><g v="plur"/><g v="gent"/></f><f t="аавовичам"><g v="plur"/><g v="datv"/></f><f t="аавовичей"><g v="plur"/><g v="accs"/></f><f t="аавовичами"><g v="plur"/><g v="ablt"/></f><f t="аавовичах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="59" rev="59"><l t="аавовна"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Patr"/></l><f t="аавовна"><g v="sing"/><g v="nomn"/></f><f t="аавовны"><g v="sing"/><g v="gent"/></f><f t="аавовне"><g v="sing"/><g v="datv"/></f><f t="аавовну"><g v="sing"/><g v="accs"/></f><f t="аавовной"><g v="sing"/><g v="ablt"/></f><f t="аавовне"><g v="sing"/><g v="loct"/></f><f t="аавовны"><g v="plur"/><g v="nomn"/></f><f t="аавовен"><g v="plur"/><g v="gent"/></f><f t="аавовнам"><g v="plur"/><g v="datv"/></f><f t="аавовен"><g v="plur"/><g v="accs"/></f><f t="аавовнами"><g v="plur"/><g v="ablt"/></f><f t="аавовнах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="60" rev="60"><l t="аамир"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Name"/></l><f t="аамир"><g v="sing"/><g v="nomn"/></f><f t="аамира"><g v="sing"/><g v="gent"/></f><f t="аамиру"><g v="sing"/><g v="datv"/></f><f t="аамира"><g v="sing"/><g v="accs"/></f><f t="аамиром"><g v="sing"/><g v="ablt"/></f><f t="аамире"><g v="sing"/><g v="loct"/></f><f t="аамиры"><g v="plur"/><g v="nomn"/></f><f t="аамиров"><g v="plur"/><g v="gent"/></f><f t="аамирам"><g v="plur"/><g v="datv"/></f><f t="аамиров"><g v="plur"/><g v="accs"/></f><f t="аамирами"><g v="plur"/><g v="ablt"/></f><f t="аамирах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="61" rev="61"><l t="аамирович"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Patr"/></l><f t="аамирович"><g v="sing"/><g v="nomn"/></f><f t="аамировича"><g v="sing"/><g v="gent"/></f><f t="аамировичу"><g v="sing"/><g v="datv"/></f><f t="аамировича"><g v="sing"/><g v="accs"/></f><f t="аамировичем"><g v="sing"/><g v="ablt"/></f><f t="аамировиче"><g v="sing"/><g v="loct"/></f><f t="аамировичи"><g v="plur"/><g v="nomn"/></f><f t="аамировичей"><g v="plur"/><g v="gent"/></f><f t="аамировичам"><g v="plur"/><g v="datv"/></f><f t="аамировичей"><g v="plur"/><g v="accs"/></f><f t="аамировичами"><g v="plur"/><g v="ablt"/></f><f t="аамировичах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="62" rev="62"><l t="аамировна"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Patr"/></l><f t="аамировна"><g v="sing"/><g v="nomn"/></f><f t="аамировны"><g v="sing"/><g v="gent"/></f><f t="аамировне"><g v="sing"/><g v="datv"/></f><f t="аамировну"><g v="sing"/><g v="accs"/></f><f t="аамировной"><g v="sing"/><g v="ablt"/></f><f t="аамировне"><g v="sing"/><g v="loct"/></f><f t="аамировны"><g v="plur"/><g v="nomn"/></f><f t="аамировен"><g v="plur"/><g v="gent"/></f><f t="аамировнам"><g v="plur"/><g v="datv"/></f><f t="аамировен"><g v="plur"/><g v="accs"/></f><f t="аамировнами"><g v="plur"/><g v="ablt"/></f><f t="аамировнах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="63" rev="63"><l t="ааре"><g v="NOUN"/><g v="inan"/><g v="femn"/><g v="Fixd"/><g v="Geox"/></l><f t="ааре"><g v="sing"/><g v="nomn"/></f><f t="ааре"><g v="sing"/><g v="gent"/></f><f t="ааре"><g v="sing"/><g v="datv"/></f><f t="ааре"><g v="sing"/><g v="accs"/></f><f t="ааре"><g v="sing"/><g v="ablt"/></f><f t="ааре"><g v="sing"/><g v="loct"/></f><f t="ааре"><g v="plur"/><g v="nomn"/></f><f t="ааре"><g v="plur"/><g v="gent"/></f><f t="ааре"><g v="plur"/><g v="datv"/></f><f t="ааре"><g v="plur"/><g v="accs"/></f><f t="ааре"><g v="plur"/><g v="ablt"/></f><f t="ааре"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="64" rev="64"><l t="аарон"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Sgtm"/><g v="Surn"/></l><f t="аарон"><g v="sing"/><g v="nomn"/></f><f t="аарона"><g v="sing"/><g v="gent"/></f><f t="аарону"><g v="sing"/><g v="datv"/></f><f t="аарона"><g v="sing"/><g v="accs"/></f><f t="аароном"><g v="sing"/><g v="ablt"/></f><f t="аароне"><g v="sing"/><g v="loct"/></f></lemma>
+    <lemma id="65" rev="65"><l t="аарон"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Sgtm"/><g v="Fixd"/><g v="Surn"/></l><f t="аарон"><g v="sing"/><g v="nomn"/></f><f t="аарон"><g v="sing"/><g v="gent"/></f><f t="аарон"><g v="sing"/><g v="datv"/></f><f t="аарон"><g v="sing"/><g v="accs"/></f><f t="аарон"><g v="sing"/><g v="ablt"/></f><f t="аарон"><g v="sing"/><g v="loct"/></f></lemma>
+    <lemma id="66" rev="394928"><l t="аароны"><g v="NOUN"/><g v="anim"/><g v="ms-f"/><g v="Pltm"/><g v="Surn"/></l><f t="аароны"><g v="plur"/><g v="nomn"/></f><f t="ааронов"><g v="plur"/><g v="gent"/></f><f t="ааронам"><g v="plur"/><g v="datv"/></f><f t="ааронов"><g v="plur"/><g v="accs"/></f><f t="ааронами"><g v="plur"/><g v="ablt"/></f><f t="ааронах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="67" rev="67"><l t="аба"><g v="NOUN"/><g v="inan"/><g v="femn"/><g v="Sgtm"/></l><f t="аба"><g v="sing"/><g v="nomn"/></f><f t="абы"><g v="sing"/><g v="gent"/></f><f t="абе"><g v="sing"/><g v="datv"/></f><f t="абу"><g v="sing"/><g v="accs"/></f><f t="абой"><g v="sing"/><g v="ablt"/></f><f t="абою"><g v="sing"/><g v="ablt"/><g v="V-oy"/></f><f t="абе"><g v="sing"/><g v="loct"/></f></lemma>
+    <lemma id="68" rev="68"><l t="аба"><g v="NOUN"/><g v="inan"/><g v="masc"/><g v="Sgtm"/><g v="Fixd"/><g v="Geox"/></l><f t="аба"><g v="sing"/><g v="nomn"/></f><f t="аба"><g v="sing"/><g v="gent"/></f><f t="аба"><g v="sing"/><g v="datv"/></f><f t="аба"><g v="sing"/><g v="accs"/></f><f t="аба"><g v="sing"/><g v="ablt"/></f><f t="аба"><g v="sing"/><g v="loct"/></f></lemma>
+    <lemma id="69" rev="69"><l t="аба"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Name"/></l><f t="аба"><g v="sing"/><g v="nomn"/></f><f t="абы"><g v="sing"/><g v="gent"/></f><f t="абе"><g v="sing"/><g v="datv"/></f><f t="абу"><g v="sing"/><g v="accs"/></f><f t="абой"><g v="sing"/><g v="ablt"/></f><f t="абою"><g v="sing"/><g v="ablt"/><g v="V-oy"/></f><f t="абе"><g v="sing"/><g v="loct"/></f><f t="абы"><g v="plur"/><g v="nomn"/></f><f t="аб"><g v="plur"/><g v="gent"/></f><f t="абам"><g v="plur"/><g v="datv"/></f><f t="аб"><g v="plur"/><g v="accs"/></f><f t="абами"><g v="plur"/><g v="ablt"/></f><f t="абах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="70" rev="70"><l t="абович"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Patr"/></l><f t="абович"><g v="sing"/><g v="nomn"/></f><f t="абовича"><g v="sing"/><g v="gent"/></f><f t="абовичу"><g v="sing"/><g v="datv"/></f><f t="абовича"><g v="sing"/><g v="accs"/></f><f t="абовичем"><g v="sing"/><g v="ablt"/></f><f t="абовиче"><g v="sing"/><g v="loct"/></f><f t="абовичи"><g v="plur"/><g v="nomn"/></f><f t="абовичей"><g v="plur"/><g v="gent"/></f><f t="абовичам"><g v="plur"/><g v="datv"/></f><f t="абовичей"><g v="plur"/><g v="accs"/></f><f t="абовичами"><g v="plur"/><g v="ablt"/></f><f t="абовичах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="71" rev="71"><l t="абовна"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Patr"/></l><f t="абовна"><g v="sing"/><g v="nomn"/></f><f t="абовны"><g v="sing"/><g v="gent"/></f><f t="абовне"><g v="sing"/><g v="datv"/></f><f t="абовну"><g v="sing"/><g v="accs"/></f><f t="абовной"><g v="sing"/><g v="ablt"/></f><f t="абовне"><g v="sing"/><g v="loct"/></f><f t="абовны"><g v="plur"/><g v="nomn"/></f><f t="абовен"><g v="plur"/><g v="gent"/></f><f t="абовнам"><g v="plur"/><g v="datv"/></f><f t="абовен"><g v="plur"/><g v="accs"/></f><f t="абовнами"><g v="plur"/><g v="ablt"/></f><f t="абовнах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="72" rev="72"><l t="абабакар"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Name"/></l><f t="абабакар"><g v="sing"/><g v="nomn"/></f><f t="абабакара"><g v="sing"/><g v="gent"/></f><f t="абабакару"><g v="sing"/><g v="datv"/></f><f t="абабакара"><g v="sing"/><g v="accs"/></f><f t="абабакаром"><g v="sing"/><g v="ablt"/></f><f t="абабакаре"><g v="sing"/><g v="loct"/></f><f t="абабакары"><g v="plur"/><g v="nomn"/></f><f t="абабакаров"><g v="plur"/><g v="gent"/></f><f t="абабакарам"><g v="plur"/><g v="datv"/></f><f t="абабакаров"><g v="plur"/><g v="accs"/></f><f t="абабакарами"><g v="plur"/><g v="ablt"/></f><f t="абабакарах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="73" rev="73"><l t="абабакарович"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Patr"/></l><f t="абабакарович"><g v="sing"/><g v="nomn"/></f><f t="абабакаровича"><g v="sing"/><g v="gent"/></f><f t="абабакаровичу"><g v="sing"/><g v="datv"/></f><f t="абабакаровича"><g v="sing"/><g v="accs"/></f><f t="абабакаровичем"><g v="sing"/><g v="ablt"/></f><f t="абабакаровиче"><g v="sing"/><g v="loct"/></f><f t="абабакаровичи"><g v="plur"/><g v="nomn"/></f><f t="абабакаровичей"><g v="plur"/><g v="gent"/></f><f t="абабакаровичам"><g v="plur"/><g v="datv"/></f><f t="абабакаровичей"><g v="plur"/><g v="accs"/></f><f t="абабакаровичами"><g v="plur"/><g v="ablt"/></f><f t="абабакаровичах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="74" rev="74"><l t="абабакаровна"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Patr"/></l><f t="абабакаровна"><g v="sing"/><g v="nomn"/></f><f t="абабакаровны"><g v="sing"/><g v="gent"/></f><f t="абабакаровне"><g v="sing"/><g v="datv"/></f><f t="абабакаровну"><g v="sing"/><g v="accs"/></f><f t="абабакаровной"><g v="sing"/><g v="ablt"/></f><f t="абабакаровне"><g v="sing"/><g v="loct"/></f><f t="абабакаровны"><g v="plur"/><g v="nomn"/></f><f t="абабакаровен"><g v="plur"/><g v="gent"/></f><f t="абабакаровнам"><g v="plur"/><g v="datv"/></f><f t="абабакаровен"><g v="plur"/><g v="accs"/></f><f t="абабакаровнами"><g v="plur"/><g v="ablt"/></f><f t="абабакаровнах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="75" rev="75"><l t="абабакир"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Name"/></l><f t="абабакир"><g v="sing"/><g v="nomn"/></f><f t="абабакира"><g v="sing"/><g v="gent"/></f><f t="абабакиру"><g v="sing"/><g v="datv"/></f><f t="абабакира"><g v="sing"/><g v="accs"/></f><f t="абабакиром"><g v="sing"/><g v="ablt"/></f><f t="абабакире"><g v="sing"/><g v="loct"/></f><f t="абабакиры"><g v="plur"/><g v="nomn"/></f><f t="абабакиров"><g v="plur"/><g v="gent"/></f><f t="абабакирам"><g v="plur"/><g v="datv"/></f><f t="абабакиров"><g v="plur"/><g v="accs"/></f><f t="абабакирами"><g v="plur"/><g v="ablt"/></f><f t="абабакирах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="76" rev="76"><l t="абабакирович"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Patr"/></l><f t="абабакирович"><g v="sing"/><g v="nomn"/></f><f t="абабакировича"><g v="sing"/><g v="gent"/></f><f t="абабакировичу"><g v="sing"/><g v="datv"/></f><f t="абабакировича"><g v="sing"/><g v="accs"/></f><f t="абабакировичем"><g v="sing"/><g v="ablt"/></f><f t="абабакировиче"><g v="sing"/><g v="loct"/></f><f t="абабакировичи"><g v="plur"/><g v="nomn"/></f><f t="абабакировичей"><g v="plur"/><g v="gent"/></f><f t="абабакировичам"><g v="plur"/><g v="datv"/></f><f t="абабакировичей"><g v="plur"/><g v="accs"/></f><f t="абабакировичами"><g v="plur"/><g v="ablt"/></f><f t="абабакировичах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="77" rev="77"><l t="абабакировна"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Patr"/></l><f t="абабакировна"><g v="sing"/><g v="nomn"/></f><f t="абабакировны"><g v="sing"/><g v="gent"/></f><f t="абабакировне"><g v="sing"/><g v="datv"/></f><f t="абабакировну"><g v="sing"/><g v="accs"/></f><f t="абабакировной"><g v="sing"/><g v="ablt"/></f><f t="абабакировне"><g v="sing"/><g v="loct"/></f><f t="абабакировны"><g v="plur"/><g v="nomn"/></f><f t="абабакировен"><g v="plur"/><g v="gent"/></f><f t="абабакировнам"><g v="plur"/><g v="datv"/></f><f t="абабакировен"><g v="plur"/><g v="accs"/></f><f t="абабакировнами"><g v="plur"/><g v="ablt"/></f><f t="абабакировнах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="78" rev="78"><l t="абабковский"><g v="ADJF"/></l><f t="абабковский"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="абабковского"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="абабковскому"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="абабковского"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="абабковский"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="абабковским"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="абабковском"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="абабковская"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="абабковской"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="абабковской"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="абабковскую"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="абабковской"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="абабковскою"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-oy"/></f><f t="абабковской"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="абабковское"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="абабковского"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="абабковскому"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="абабковское"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="абабковским"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="абабковском"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="абабковские"><g v="plur"/><g v="nomn"/></f><f t="абабковских"><g v="plur"/><g v="gent"/></f><f t="абабковским"><g v="plur"/><g v="datv"/></f><f t="абабковских"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="абабковские"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="абабковскими"><g v="plur"/><g v="ablt"/></f><f t="абабковских"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="79" rev="79"><l t="абагайтуйский"><g v="ADJF"/></l><f t="абагайтуйский"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="абагайтуйского"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="абагайтуйскому"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="абагайтуйского"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="абагайтуйский"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="абагайтуйским"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="абагайтуйском"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="абагайтуйская"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="абагайтуйской"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="абагайтуйской"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="абагайтуйскую"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="абагайтуйской"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="абагайтуйскою"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-oy"/></f><f t="абагайтуйской"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="абагайтуйское"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="абагайтуйского"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="абагайтуйскому"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="абагайтуйское"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="абагайтуйским"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="абагайтуйском"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="абагайтуйские"><g v="plur"/><g v="nomn"/></f><f t="абагайтуйских"><g v="plur"/><g v="gent"/></f><f t="абагайтуйским"><g v="plur"/><g v="datv"/></f><f t="абагайтуйских"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="абагайтуйские"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="абагайтуйскими"><g v="plur"/><g v="ablt"/></f><f t="абагайтуйских"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="80" rev="80"><l t="абагурский"><g v="ADJF"/></l><f t="абагурский"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="абагурского"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="абагурскому"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="абагурского"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="абагурский"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="абагурским"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="абагурском"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="абагурская"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="абагурской"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="абагурской"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="абагурскую"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="абагурской"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="абагурскою"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-oy"/></f><f t="абагурской"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="абагурское"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="абагурского"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="абагурскому"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="абагурское"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="абагурским"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="абагурском"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="абагурские"><g v="plur"/><g v="nomn"/></f><f t="абагурских"><g v="plur"/><g v="gent"/></f><f t="абагурским"><g v="plur"/><g v="datv"/></f><f t="абагурских"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="абагурские"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="абагурскими"><g v="plur"/><g v="ablt"/></f><f t="абагурских"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="81" rev="81"><l t="абад"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Name"/></l><f t="абад"><g v="sing"/><g v="nomn"/></f><f t="абада"><g v="sing"/><g v="gent"/></f><f t="абаду"><g v="sing"/><g v="datv"/></f><f t="абада"><g v="sing"/><g v="accs"/></f><f t="абадом"><g v="sing"/><g v="ablt"/></f><f t="абаде"><g v="sing"/><g v="loct"/></f><f t="абады"><g v="plur"/><g v="nomn"/></f><f t="абадов"><g v="plur"/><g v="gent"/></f><f t="абадам"><g v="plur"/><g v="datv"/></f><f t="абадов"><g v="plur"/><g v="accs"/></f><f t="абадами"><g v="plur"/><g v="ablt"/></f><f t="абадах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="82" rev="82"><l t="абадович"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Patr"/></l><f t="абадович"><g v="sing"/><g v="nomn"/></f><f t="абадовича"><g v="sing"/><g v="gent"/></f><f t="абадовичу"><g v="sing"/><g v="datv"/></f><f t="абадовича"><g v="sing"/><g v="accs"/></f><f t="абадовичем"><g v="sing"/><g v="ablt"/></f><f t="абадовиче"><g v="sing"/><g v="loct"/></f><f t="абадовичи"><g v="plur"/><g v="nomn"/></f><f t="абадовичей"><g v="plur"/><g v="gent"/></f><f t="абадовичам"><g v="plur"/><g v="datv"/></f><f t="абадовичей"><g v="plur"/><g v="accs"/></f><f t="абадовичами"><g v="plur"/><g v="ablt"/></f><f t="абадовичах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="83" rev="83"><l t="абадовна"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Patr"/></l><f t="абадовна"><g v="sing"/><g v="nomn"/></f><f t="абадовны"><g v="sing"/><g v="gent"/></f><f t="абадовне"><g v="sing"/><g v="datv"/></f><f t="абадовну"><g v="sing"/><g v="accs"/></f><f t="абадовной"><g v="sing"/><g v="ablt"/></f><f t="абадовне"><g v="sing"/><g v="loct"/></f><f t="абадовны"><g v="plur"/><g v="nomn"/></f><f t="абадовен"><g v="plur"/><g v="gent"/></f><f t="абадовнам"><g v="plur"/><g v="datv"/></f><f t="абадовен"><g v="plur"/><g v="accs"/></f><f t="абадовнами"><g v="plur"/><g v="ablt"/></f><f t="абадовнах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="84" rev="84"><l t="абадан"><g v="NOUN"/><g v="inan"/><g v="masc"/><g v="Geox"/></l><f t="абадан"><g v="sing"/><g v="nomn"/></f><f t="абадана"><g v="sing"/><g v="gent"/></f><f t="абадану"><g v="sing"/><g v="datv"/></f><f t="абадан"><g v="sing"/><g v="accs"/></f><f t="абаданом"><g v="sing"/><g v="ablt"/></f><f t="абадане"><g v="sing"/><g v="loct"/></f><f t="абаданы"><g v="plur"/><g v="nomn"/></f><f t="абаданов"><g v="plur"/><g v="gent"/></f><f t="абаданам"><g v="plur"/><g v="datv"/></f><f t="абаданы"><g v="plur"/><g v="accs"/></f><f t="абаданами"><g v="plur"/><g v="ablt"/></f><f t="абаданах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="85" rev="85"><l t="абадзехский"><g v="ADJF"/></l><f t="абадзехский"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="абадзехского"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="абадзехскому"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="абадзехского"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="абадзехский"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="абадзехским"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="абадзехском"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="абадзехская"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="абадзехской"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="абадзехской"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="абадзехскую"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="абадзехской"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="абадзехскою"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-oy"/></f><f t="абадзехской"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="абадзехское"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="абадзехского"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="абадзехскому"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="абадзехское"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="абадзехским"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="абадзехском"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="абадзехские"><g v="plur"/><g v="nomn"/></f><f t="абадзехских"><g v="plur"/><g v="gent"/></f><f t="абадзехским"><g v="plur"/><g v="datv"/></f><f t="абадзехских"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="абадзехские"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="абадзехскими"><g v="plur"/><g v="ablt"/></f><f t="абадзехских"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="86" rev="86"><l t="абажур"><g v="NOUN"/><g v="inan"/><g v="masc"/></l><f t="абажур"><g v="sing"/><g v="nomn"/></f><f t="абажура"><g v="sing"/><g v="gent"/></f><f t="абажуру"><g v="sing"/><g v="datv"/></f><f t="абажур"><g v="sing"/><g v="accs"/></f><f t="абажуром"><g v="sing"/><g v="ablt"/></f><f t="абажуре"><g v="sing"/><g v="loct"/></f><f t="абажуры"><g v="plur"/><g v="nomn"/></f><f t="абажуров"><g v="plur"/><g v="gent"/></f><f t="абажурам"><g v="plur"/><g v="datv"/></f><f t="абажуры"><g v="plur"/><g v="accs"/></f><f t="абажурами"><g v="plur"/><g v="ablt"/></f><f t="абажурах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="87" rev="87"><l t="абажурный"><g v="ADJF"/></l><f t="абажурный"><g v="masc"/><g v="sing"/><g v="nomn"/></f><f t="абажурного"><g v="masc"/><g v="sing"/><g v="gent"/></f><f t="абажурному"><g v="masc"/><g v="sing"/><g v="datv"/></f><f t="абажурного"><g v="anim"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="абажурный"><g v="inan"/><g v="masc"/><g v="sing"/><g v="accs"/></f><f t="абажурным"><g v="masc"/><g v="sing"/><g v="ablt"/></f><f t="абажурном"><g v="masc"/><g v="sing"/><g v="loct"/></f><f t="абажурная"><g v="femn"/><g v="sing"/><g v="nomn"/></f><f t="абажурной"><g v="femn"/><g v="sing"/><g v="gent"/></f><f t="абажурной"><g v="femn"/><g v="sing"/><g v="datv"/></f><f t="абажурную"><g v="femn"/><g v="sing"/><g v="accs"/></f><f t="абажурной"><g v="femn"/><g v="sing"/><g v="ablt"/></f><f t="абажурною"><g v="femn"/><g v="sing"/><g v="ablt"/><g v="V-oy"/></f><f t="абажурной"><g v="femn"/><g v="sing"/><g v="loct"/></f><f t="абажурное"><g v="neut"/><g v="sing"/><g v="nomn"/></f><f t="абажурного"><g v="neut"/><g v="sing"/><g v="gent"/></f><f t="абажурному"><g v="neut"/><g v="sing"/><g v="datv"/></f><f t="абажурное"><g v="neut"/><g v="sing"/><g v="accs"/></f><f t="абажурным"><g v="neut"/><g v="sing"/><g v="ablt"/></f><f t="абажурном"><g v="neut"/><g v="sing"/><g v="loct"/></f><f t="абажурные"><g v="plur"/><g v="nomn"/></f><f t="абажурных"><g v="plur"/><g v="gent"/></f><f t="абажурным"><g v="plur"/><g v="datv"/></f><f t="абажурных"><g v="anim"/><g v="plur"/><g v="accs"/></f><f t="абажурные"><g v="inan"/><g v="plur"/><g v="accs"/></f><f t="абажурными"><g v="plur"/><g v="ablt"/></f><f t="абажурных"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="88" rev="88"><l t="абажурен"><g v="ADJS"/></l><f t="абажурен"><g v="masc"/><g v="sing"/></f><f t="абажурна"><g v="femn"/><g v="sing"/></f><f t="абажурно"><g v="neut"/><g v="sing"/></f><f t="абажурны"><g v="plur"/></f></lemma>
+    <lemma id="89" rev="89"><l t="абажурнее"><g v="COMP"/></l><f t="абажурнее"></f><f t="абажурней"><g v="V-ej"/></f><f t="поабажурнее"><g v="Cmp2"/></f><f t="поабажурней"><g v="Cmp2"/><g v="V-ej"/></f></lemma>
+    <lemma id="90" rev="90"><l t="абажурчик"><g v="NOUN"/><g v="inan"/><g v="masc"/></l><f t="абажурчик"><g v="sing"/><g v="nomn"/></f><f t="абажурчика"><g v="sing"/><g v="gent"/></f><f t="абажурчику"><g v="sing"/><g v="datv"/></f><f t="абажурчик"><g v="sing"/><g v="accs"/></f><f t="абажурчиком"><g v="sing"/><g v="ablt"/></f><f t="абажурчике"><g v="sing"/><g v="loct"/></f><f t="абажурчики"><g v="plur"/><g v="nomn"/></f><f t="абажурчиков"><g v="plur"/><g v="gent"/></f><f t="абажурчикам"><g v="plur"/><g v="datv"/></f><f t="абажурчики"><g v="plur"/><g v="accs"/></f><f t="абажурчиками"><g v="plur"/><g v="ablt"/></f><f t="абажурчиках"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="91" rev="91"><l t="абаз"><g v="NOUN"/><g v="inan"/><g v="masc"/></l><f t="абаз"><g v="sing"/><g v="nomn"/></f><f t="абаза"><g v="sing"/><g v="gent"/></f><f t="абазу"><g v="sing"/><g v="datv"/></f><f t="абаз"><g v="sing"/><g v="accs"/></f><f t="абазом"><g v="sing"/><g v="ablt"/></f><f t="абазе"><g v="sing"/><g v="loct"/></f><f t="абазы"><g v="plur"/><g v="nomn"/></f><f t="абазов"><g v="plur"/><g v="gent"/></f><f t="абазам"><g v="plur"/><g v="datv"/></f><f t="абазы"><g v="plur"/><g v="accs"/></f><f t="абазами"><g v="plur"/><g v="ablt"/></f><f t="абазах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="92" rev="92"><l t="абаза"><g v="NOUN"/><g v="inan"/><g v="femn"/><g v="Sgtm"/><g v="Geox"/></l><f t="абаза"><g v="sing"/><g v="nomn"/></f><f t="абазы"><g v="sing"/><g v="gent"/></f><f t="абазе"><g v="sing"/><g v="datv"/></f><f t="абазу"><g v="sing"/><g v="accs"/></f><f t="абазой"><g v="sing"/><g v="ablt"/></f><f t="абазою"><g v="sing"/><g v="ablt"/><g v="V-oy"/></f><f t="абазе"><g v="sing"/><g v="loct"/></f></lemma>
+    <lemma id="93" rev="93"><l t="абазашт"><g v="NOUN"/><g v="inan"/><g v="masc"/><g v="Geox"/></l><f t="абазашт"><g v="sing"/><g v="nomn"/></f><f t="абазашта"><g v="sing"/><g v="gent"/></f><f t="абазашту"><g v="sing"/><g v="datv"/></f><f t="абазашт"><g v="sing"/><g v="accs"/></f><f t="абазаштом"><g v="sing"/><g v="ablt"/></f><f t="абазаште"><g v="sing"/><g v="loct"/></f><f t="абазашты"><g v="plur"/><g v="nomn"/></f><f t="абазаштов"><g v="plur"/><g v="gent"/></f><f t="абазаштам"><g v="plur"/><g v="datv"/></f><f t="абазашты"><g v="plur"/><g v="accs"/></f><f t="абазаштами"><g v="plur"/><g v="ablt"/></f><f t="абазаштах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="94" rev="94"><l t="абазев"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Sgtm"/><g v="Surn"/></l><f t="абазев"><g v="sing"/><g v="nomn"/></f><f t="абазева"><g v="sing"/><g v="gent"/></f><f t="абазеву"><g v="sing"/><g v="datv"/></f><f t="абазева"><g v="sing"/><g v="accs"/></f><f t="абазевым"><g v="sing"/><g v="ablt"/></f><f t="абазеве"><g v="sing"/><g v="loct"/></f></lemma>
+    <lemma id="95" rev="95"><l t="абазева"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Sgtm"/><g v="Surn"/></l><f t="абазева"><g v="sing"/><g v="nomn"/></f><f t="абазевой"><g v="sing"/><g v="gent"/></f><f t="абазевой"><g v="sing"/><g v="datv"/></f><f t="абазеву"><g v="sing"/><g v="accs"/></f><f t="абазевой"><g v="sing"/><g v="ablt"/></f><f t="абазевой"><g v="sing"/><g v="loct"/></f></lemma>
+    <lemma id="96" rev="394929"><l t="абазевы"><g v="NOUN"/><g v="anim"/><g v="ms-f"/><g v="Pltm"/><g v="Surn"/></l><f t="абазевы"><g v="plur"/><g v="nomn"/></f><f t="абазевых"><g v="plur"/><g v="gent"/></f><f t="абазевым"><g v="plur"/><g v="datv"/></f><f t="абазевых"><g v="plur"/><g v="accs"/></f><f t="абазевыми"><g v="plur"/><g v="ablt"/></f><f t="абазевых"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="97" rev="97"><l t="абазер"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Name"/></l><f t="абазер"><g v="sing"/><g v="nomn"/></f><f t="абазера"><g v="sing"/><g v="gent"/></f><f t="абазеру"><g v="sing"/><g v="datv"/></f><f t="абазера"><g v="sing"/><g v="accs"/></f><f t="абазером"><g v="sing"/><g v="ablt"/></f><f t="абазере"><g v="sing"/><g v="loct"/></f><f t="абазеры"><g v="plur"/><g v="nomn"/></f><f t="абазеров"><g v="plur"/><g v="gent"/></f><f t="абазерам"><g v="plur"/><g v="datv"/></f><f t="абазеров"><g v="plur"/><g v="accs"/></f><f t="абазерами"><g v="plur"/><g v="ablt"/></f><f t="абазерах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="98" rev="98"><l t="абазерович"><g v="NOUN"/><g v="anim"/><g v="masc"/><g v="Patr"/></l><f t="абазерович"><g v="sing"/><g v="nomn"/></f><f t="абазеровича"><g v="sing"/><g v="gent"/></f><f t="абазеровичу"><g v="sing"/><g v="datv"/></f><f t="абазеровича"><g v="sing"/><g v="accs"/></f><f t="абазеровичем"><g v="sing"/><g v="ablt"/></f><f t="абазеровиче"><g v="sing"/><g v="loct"/></f><f t="абазеровичи"><g v="plur"/><g v="nomn"/></f><f t="абазеровичей"><g v="plur"/><g v="gent"/></f><f t="абазеровичам"><g v="plur"/><g v="datv"/></f><f t="абазеровичей"><g v="plur"/><g v="accs"/></f><f t="абазеровичами"><g v="plur"/><g v="ablt"/></f><f t="абазеровичах"><g v="plur"/><g v="loct"/></f></lemma>
+    <lemma id="99" rev="99"><l t="абазеровна"><g v="NOUN"/><g v="anim"/><g v="femn"/><g v="Patr"/></l><f t="абазеровна"><g v="sing"/><g v="nomn"/></f><f t="абазеровны"><g v="sing"/><g v="gent"/></f><f t="абазеровне"><g v="sing"/><g v="datv"/></f><f t="абазеровну"><g v="sing"/><g v="accs"/></f><f t="абазеровной"><g v="sing"/><g v="ablt"/></f><f t="абазеровне"><g v="sing"/><g v="loct"/></f><f t="абазеровны"><g v="plur"/><g v="nomn"/></f><f t="абазеровен"><g v="plur"/><g v="gent"/></f><f t="абазеровнам"><g v="plur"/><g v="datv"/></f><f t="абазеровен"><g v="plur"/><g v="accs"/></f><f t="абазеровнами"><g v="plur"/><g v="ablt"/></f><f t="абазеровнах"><g v="plur"/><g v="loct"/></f></lemma>
+</lemmata>
+<link_types>
+<type id="1">ADJF-ADJS</type>
+<type id="2">ADJF-COMP</type>
+<type id="3">INFN-VERB</type>
+<type id="4">INFN-PRTF</type>
+<type id="5">INFN-GRND</type>
+<type id="6">PRTF-PRTS</type>
+<type id="7">NAME-PATR</type>
+<type id="8">PATR_MASC-PATR_FEMN</type>
+<type id="9">SURN_MASC-SURN_FEMN</type>
+<type id="10">SURN_MASC-SURN_PLUR</type>
+<type id="11">PERF-IMPF</type>
+<type id="12">ADJF-SUPR_ejsh</type>
+<type id="13">PATR_MASC_FORM-PATR_MASC_INFR</type>
+<type id="14">PATR_FEMN_FORM-PATR_FEMN_INFR</type>
+<type id="15">ADJF_eish-SUPR_nai_eish</type>
+<type id="16">ADJF-SUPR_ajsh</type>
+<type id="17">ADJF_aish-SUPR_nai_aish</type>
+<type id="18">ADJF-SUPR_suppl</type>
+<type id="19">ADJF-SUPR_nai</type>
+<type id="20">ADJF-SUPR_slng</type>
+<type id="21">FULL-CONTRACTED</type>
+<type id="22">NORM-ORPHOVAR</type>
+<type id="23">CARDINAL-ORDINAL</type>
+<type id="24">SBST_MASC-SBST_FEMN</type>
+<type id="25">SBST_MASC-SBST_PLUR</type>
+<type id="26">ADVB-COMP</type>
+<type id="27">ADJF_TEXT-ADJF_NUMBER</type>
+</link_types>
+<links>
+    <link id="1" from="5" to="6" type="1"/>
+    <link id="2" from="5" to="7" type="2"/>
+    <link id="3" from="9" to="8" type="3"/>
+    <link id="4" from="9" to="10" type="4"/>
+    <link id="5" from="9" to="12" type="5"/>
+    <link id="6" from="10" to="11" type="6"/>
+    <link id="7" from="14" to="13" type="3"/>
+    <link id="8" from="14" to="15" type="4"/>
+    <link id="9" from="14" to="16" type="4"/>
+    <link id="10" from="14" to="17" type="5"/>
+    <link id="11" from="19" to="18" type="3"/>
+    <link id="12" from="19" to="20" type="4"/>
+    <link id="13" from="19" to="21" type="5"/>
+    <link id="16" from="27" to="28" type="1"/>
+    <link id="17" from="27" to="29" type="2"/>
+    <link id="18" from="30" to="31" type="1"/>
+    <link id="19" from="30" to="32" type="2"/>
+    <link id="20" from="36" to="35" type="3"/>
+    <link id="21" from="36" to="37" type="4"/>
+    <link id="22" from="36" to="38" type="4"/>
+    <link id="23" from="36" to="39" type="5"/>
+    <link id="24" from="42" to="41" type="3"/>
+    <link id="25" from="42" to="43" type="4"/>
+    <link id="26" from="42" to="44" type="4"/>
+    <link id="27" from="42" to="45" type="5"/>
+    <link id="29" from="57" to="58" type="7"/>
+    <link id="30" from="57" to="59" type="7"/>
+    <link id="31" from="58" to="59" type="8"/>
+    <link id="32" from="60" to="61" type="7"/>
+    <link id="33" from="60" to="62" type="7"/>
+    <link id="34" from="61" to="62" type="8"/>
+    <link id="35" from="64" to="65" type="9"/>
+    <link id="36" from="64" to="66" type="10"/>
+    <link id="37" from="69" to="70" type="7"/>
+    <link id="38" from="69" to="71" type="7"/>
+    <link id="39" from="70" to="71" type="8"/>
+    <link id="40" from="72" to="73" type="7"/>
+    <link id="41" from="72" to="74" type="7"/>
+    <link id="42" from="73" to="74" type="8"/>
+    <link id="43" from="75" to="76" type="7"/>
+    <link id="44" from="75" to="77" type="7"/>
+    <link id="45" from="76" to="77" type="8"/>
+    <link id="49" from="81" to="82" type="7"/>
+    <link id="50" from="81" to="83" type="7"/>
+    <link id="51" from="82" to="83" type="8"/>
+    <link id="53" from="87" to="88" type="1"/>
+    <link id="54" from="87" to="89" type="2"/>
+    <link id="55" from="94" to="95" type="9"/>
+    <link id="56" from="94" to="96" type="10"/>
+    <link id="57" from="97" to="98" type="7"/>
+    <link id="58" from="97" to="99" type="7"/>
+    <link id="59" from="98" to="99" type="8"/>
+</links>
+</dictionary>

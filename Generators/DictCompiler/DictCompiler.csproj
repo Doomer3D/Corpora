@@ -8,7 +8,7 @@
     <Company>Genomancer</Company>
     <PackageProjectUrl>https://github.com/Doomer3D/Corpora</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Doomer3D/Corpora.git</RepositoryUrl>
-    <Description>Генератор словаря для движка Corpora</Description>
+    <RootNamespace>Corpora</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

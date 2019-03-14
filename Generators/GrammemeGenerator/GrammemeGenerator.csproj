@@ -13,8 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\Corpora\G.generated.cs" Link="G.generated.cs" />
-    <Compile Include="..\..\Corpora\Grammeme.cs" Link="Grammeme.cs" />
+    <ProjectReference Include="..\..\Corpora\Corpora.csproj" />
   </ItemGroup>
 
   <ItemGroup>
