@@ -2,7 +2,7 @@
   "profiles": {
     "DictCompiler": {
       "commandName": "Project",
-      "commandLineArgs": "\"../../../../../Corpora\""
+      "commandLineArgs": "\"../../../../../Output/data.bin\""
     }
   }
 }

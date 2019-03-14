@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.IO;
 
 namespace Corpora
 {
@@ -10,14 +10,9 @@ namespace Corpora
     public class DictionaryGenerator
     {
         /// <summary>
-        /// путь к входным данным
+        /// настройки генератора
         /// </summary>
-        public string InputPath { get; set; }
-
-        /// <summary>
-        /// путь к выходным данным
-        /// </summary>
-        public string OutputPath { get; set; }
+        public Options Options { get; set; }
 
         /// <summary>
         /// конструктор
@@ -29,12 +24,10 @@ namespace Corpora
         /// <summary>
         /// конструктор
         /// </summary>
-        /// <param name="inputPath"> путь к входным данным </param>
-        /// <param name="outputPath"> путь к выходным данным </param>
-        public DictionaryGenerator(string inputPath, string outputPath)
+        /// <param name="options"> настройки генератора </param>
+        public DictionaryGenerator(Options options)
         {
-            this.InputPath = inputPath;
-            this.OutputPath = outputPath;
+            this.Options = options;
         }
 
         /// <summary>
@@ -42,6 +35,23 @@ namespace Corpora
         /// </summary>
         public void Run()
         {
+            ////////////////////////////////////////////////////////////////
+            // проверяем настройки
+            ////////////////////////////////////////////////////////////////
+
+            // файл словаря
+            var dictPath = Options.DictPath;
+            if (string.IsNullOrWhiteSpace(dictPath)) throw new Exception("Не указан файл словаря");
+
+            dictPath = dictPath.Trim();
+            dictPath = Path.GetFullPath(Path.IsPathRooted(dictPath) ? dictPath : Path.Combine(AppContext.BaseDirectory, dictPath));
+            if (!File.Exists(dictPath)) throw new FileNotFoundException($"Файл словаря на найден: {dictPath}", dictPath);
+
+            // выходной файл
+            var outputFileName = Options.OutputFileName;
+            outputFileName = Path.GetFullPath(Path.IsPathRooted(outputFileName) ? outputFileName : Path.Combine(AppContext.BaseDirectory, outputFileName));
+            var outputDirectory = Path.GetDirectoryName(outputFileName);
+            if (!Directory.Exists(outputDirectory)) Directory.CreateDirectory(outputDirectory);
         }
     }
 }
