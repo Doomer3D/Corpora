@@ -28,6 +28,19 @@ namespace Corpora
             // создаем каталог, если он еще не существует
             if (!Directory.Exists(path)) Directory.CreateDirectory(path);
 
+            // генерируем файл с описанием граммем
+            GenerateGrammemes(path);
+
+            // генерируем файл с описанием типов связей
+            //GenerateLinkTypes(path);
+        }
+
+        /// <summary>
+        /// генерировать файл с описанием граммем
+        /// </summary>
+        /// <param name="path"> путь </param>
+        private static void GenerateGrammemes(string path)
+        {
             ////////////////////////////////////////////////////////////////
             // читаем файл с описанием граммем
             ////////////////////////////////////////////////////////////////
@@ -108,6 +121,15 @@ namespace Corpora
 
             // сохраняем код
             File.WriteAllText(Path.Combine(path, "G.generated.cs"), sb.ToString(), Encoding.UTF8);
+        }
+
+        /// <summary>
+        /// генерировать файл с описанием типов связей
+        /// </summary>
+        /// <param name="path"> путь </param>
+        private static void GenerateLinkTypes(string path)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>

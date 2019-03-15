@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corpora", "Corpora\Corpora.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{0AE122FB-9042-45D6-931C-F47F85EB6895}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrammemeGenerator", "Generators\GrammemeGenerator\GrammemeGenerator.csproj", "{AE59DDFD-FDB0-4564-AB91-924F6B5E93AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeGenerator", "Generators\CodeGenerator\CodeGenerator.csproj", "{AE59DDFD-FDB0-4564-AB91-924F6B5E93AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordAnalyzer", "Samples\WordAnalyzer\WordAnalyzer.csproj", "{965C7413-6530-404B-97CB-D188798CAA3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordAnalyzer", "Samples\WordAnalyzer\WordAnalyzer.csproj", "{965C7413-6530-404B-97CB-D188798CAA3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictCompiler", "Generators\DictCompiler\DictCompiler.csproj", "{0D5AD201-DD50-4CB4-99B9-6E270689EEAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DictCompiler", "Generators\DictCompiler\DictCompiler.csproj", "{0D5AD201-DD50-4CB4-99B9-6E270689EEAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

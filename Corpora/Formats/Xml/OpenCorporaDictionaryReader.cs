@@ -114,9 +114,7 @@ namespace Corpora.Formats.Xml
                             ////////////////////////////////////////////////////////////////
                             // лексема
                             ////////////////////////////////////////////////////////////////
-                            {
-                                OnLexeme?.Invoke(ReadLexeme());
-                            }
+                            OnLexeme?.Invoke(ReadLexeme());
                             break;
                     }
                 }
