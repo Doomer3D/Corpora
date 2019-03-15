@@ -7,691 +7,691 @@ namespace Corpora
         /// <summary>
         /// Часть речи
         /// </summary>
-        /// <remarks>ID = 1</remarks>
+        /// <remarks> ID = 1 </remarks>
         public static Grammeme POST { get; private set; }
 
         /// <summary>
         /// Имя существительное
         /// </summary>
-        /// <remarks>ID = 2</remarks>
+        /// <remarks> ID = 2 </remarks>
         public static Grammeme NOUN { get; private set; }
 
         /// <summary>
         /// Имя прилагательное (полное)
         /// </summary>
-        /// <remarks>ID = 3</remarks>
+        /// <remarks> ID = 3 </remarks>
         public static Grammeme ADJF { get; private set; }
 
         /// <summary>
         /// Имя прилагательное (краткое)
         /// </summary>
-        /// <remarks>ID = 4</remarks>
+        /// <remarks> ID = 4 </remarks>
         public static Grammeme ADJS { get; private set; }
 
         /// <summary>
         /// Компаратив
         /// </summary>
-        /// <remarks>ID = 5</remarks>
+        /// <remarks> ID = 5 </remarks>
         public static Grammeme COMP { get; private set; }
 
         /// <summary>
         /// Глагол (личная форма)
         /// </summary>
-        /// <remarks>ID = 6</remarks>
+        /// <remarks> ID = 6 </remarks>
         public static Grammeme VERB { get; private set; }
 
         /// <summary>
         /// Глагол (инфинитив)
         /// </summary>
-        /// <remarks>ID = 7</remarks>
+        /// <remarks> ID = 7 </remarks>
         public static Grammeme INFN { get; private set; }
 
         /// <summary>
         /// Причастие (полное)
         /// </summary>
-        /// <remarks>ID = 8</remarks>
+        /// <remarks> ID = 8 </remarks>
         public static Grammeme PRTF { get; private set; }
 
         /// <summary>
         /// Причастие (краткое)
         /// </summary>
-        /// <remarks>ID = 9</remarks>
+        /// <remarks> ID = 9 </remarks>
         public static Grammeme PRTS { get; private set; }
 
         /// <summary>
         /// Деепричастие
         /// </summary>
-        /// <remarks>ID = 10</remarks>
+        /// <remarks> ID = 10 </remarks>
         public static Grammeme GRND { get; private set; }
 
         /// <summary>
         /// Числительное
         /// </summary>
-        /// <remarks>ID = 11</remarks>
+        /// <remarks> ID = 11 </remarks>
         public static Grammeme NUMR { get; private set; }
 
         /// <summary>
         /// Наречие
         /// </summary>
-        /// <remarks>ID = 12</remarks>
+        /// <remarks> ID = 12 </remarks>
         public static Grammeme ADVB { get; private set; }
 
         /// <summary>
         /// Местоимение-существительное
         /// </summary>
-        /// <remarks>ID = 13</remarks>
+        /// <remarks> ID = 13 </remarks>
         public static Grammeme NPRO { get; private set; }
 
         /// <summary>
         /// Предикатив
         /// </summary>
-        /// <remarks>ID = 14</remarks>
+        /// <remarks> ID = 14 </remarks>
         public static Grammeme PRED { get; private set; }
 
         /// <summary>
         /// Предлог
         /// </summary>
-        /// <remarks>ID = 15</remarks>
+        /// <remarks> ID = 15 </remarks>
         public static Grammeme PREP { get; private set; }
 
         /// <summary>
         /// Союз
         /// </summary>
-        /// <remarks>ID = 16</remarks>
+        /// <remarks> ID = 16 </remarks>
         public static Grammeme CONJ { get; private set; }
 
         /// <summary>
         /// Частица
         /// </summary>
-        /// <remarks>ID = 17</remarks>
+        /// <remarks> ID = 17 </remarks>
         public static Grammeme PRCL { get; private set; }
 
         /// <summary>
         /// Междометие
         /// </summary>
-        /// <remarks>ID = 18</remarks>
+        /// <remarks> ID = 18 </remarks>
         public static Grammeme INTJ { get; private set; }
 
         /// <summary>
         /// Категория одушевлённости
         /// </summary>
-        /// <remarks>ID = 19</remarks>
+        /// <remarks> ID = 19 </remarks>
         public static Grammeme ANim { get; private set; }
 
         /// <summary>
         /// Одушевлённое
         /// </summary>
-        /// <remarks>ID = 20</remarks>
+        /// <remarks> ID = 20 </remarks>
         public static Grammeme anim { get; private set; }
 
         /// <summary>
         /// Неодушевлённое
         /// </summary>
-        /// <remarks>ID = 21</remarks>
+        /// <remarks> ID = 21 </remarks>
         public static Grammeme inan { get; private set; }
 
         /// <summary>
         /// Род / род не выражен
         /// </summary>
-        /// <remarks>ID = 22</remarks>
+        /// <remarks> ID = 22 </remarks>
         public static Grammeme GNdr { get; private set; }
 
         /// <summary>
         /// Мужской род
         /// </summary>
-        /// <remarks>ID = 23</remarks>
+        /// <remarks> ID = 23 </remarks>
         public static Grammeme masc { get; private set; }
 
         /// <summary>
         /// Женский род
         /// </summary>
-        /// <remarks>ID = 24</remarks>
+        /// <remarks> ID = 24 </remarks>
         public static Grammeme femn { get; private set; }
 
         /// <summary>
         /// Средний род
         /// </summary>
-        /// <remarks>ID = 25</remarks>
+        /// <remarks> ID = 25 </remarks>
         public static Grammeme neut { get; private set; }
 
         /// <summary>
         /// Общий род (м/ж)
         /// </summary>
-        /// <remarks>ID = 26</remarks>
+        /// <remarks> ID = 26 </remarks>
         public static Grammeme ms_f { get; private set; }
 
         /// <summary>
         /// Число
         /// </summary>
-        /// <remarks>ID = 27</remarks>
+        /// <remarks> ID = 27 </remarks>
         public static Grammeme NMbr { get; private set; }
 
         /// <summary>
         /// Единственное число
         /// </summary>
-        /// <remarks>ID = 28</remarks>
+        /// <remarks> ID = 28 </remarks>
         public static Grammeme sing { get; private set; }
 
         /// <summary>
         /// Множественное число
         /// </summary>
-        /// <remarks>ID = 29</remarks>
+        /// <remarks> ID = 29 </remarks>
         public static Grammeme plur { get; private set; }
 
         /// <summary>
         /// Singularia tantum
         /// </summary>
-        /// <remarks>ID = 30</remarks>
+        /// <remarks> ID = 30 </remarks>
         public static Grammeme Sgtm { get; private set; }
 
         /// <summary>
         /// Pluralia tantum
         /// </summary>
-        /// <remarks>ID = 31</remarks>
+        /// <remarks> ID = 31 </remarks>
         public static Grammeme Pltm { get; private set; }
 
         /// <summary>
         /// Неизменяемое
         /// </summary>
-        /// <remarks>ID = 32</remarks>
+        /// <remarks> ID = 32 </remarks>
         public static Grammeme Fixd { get; private set; }
 
         /// <summary>
         /// Категория падежа
         /// </summary>
-        /// <remarks>ID = 33</remarks>
+        /// <remarks> ID = 33 </remarks>
         public static Grammeme CAse { get; private set; }
 
         /// <summary>
         /// Именительный падеж
         /// </summary>
-        /// <remarks>ID = 34</remarks>
+        /// <remarks> ID = 34 </remarks>
         public static Grammeme nomn { get; private set; }
 
         /// <summary>
         /// Родительный падеж
         /// </summary>
-        /// <remarks>ID = 35</remarks>
+        /// <remarks> ID = 35 </remarks>
         public static Grammeme gent { get; private set; }
 
         /// <summary>
         /// Дательный падеж
         /// </summary>
-        /// <remarks>ID = 36</remarks>
+        /// <remarks> ID = 36 </remarks>
         public static Grammeme datv { get; private set; }
 
         /// <summary>
         /// Винительный падеж
         /// </summary>
-        /// <remarks>ID = 37</remarks>
+        /// <remarks> ID = 37 </remarks>
         public static Grammeme accs { get; private set; }
 
         /// <summary>
         /// Творительный падеж
         /// </summary>
-        /// <remarks>ID = 38</remarks>
+        /// <remarks> ID = 38 </remarks>
         public static Grammeme ablt { get; private set; }
 
         /// <summary>
         /// Предложный падеж
         /// </summary>
-        /// <remarks>ID = 39</remarks>
+        /// <remarks> ID = 39 </remarks>
         public static Grammeme loct { get; private set; }
 
         /// <summary>
         /// Звательный падеж
         /// </summary>
-        /// <remarks>ID = 40</remarks>
+        /// <remarks> ID = 40 </remarks>
         public static Grammeme voct { get; private set; }
 
         /// <summary>
         /// Первый родительный падеж
         /// </summary>
-        /// <remarks>ID = 41</remarks>
+        /// <remarks> ID = 41 </remarks>
         public static Grammeme gen1 { get; private set; }
 
         /// <summary>
         /// Второй родительный (частичный) падеж
         /// </summary>
-        /// <remarks>ID = 42</remarks>
+        /// <remarks> ID = 42 </remarks>
         public static Grammeme gen2 { get; private set; }
 
         /// <summary>
         /// Второй винительный падеж
         /// </summary>
-        /// <remarks>ID = 43</remarks>
+        /// <remarks> ID = 43 </remarks>
         public static Grammeme acc2 { get; private set; }
 
         /// <summary>
         /// Первый предложный падеж
         /// </summary>
-        /// <remarks>ID = 44</remarks>
+        /// <remarks> ID = 44 </remarks>
         public static Grammeme loc1 { get; private set; }
 
         /// <summary>
         /// Второй предложный (местный) падеж
         /// </summary>
-        /// <remarks>ID = 45</remarks>
+        /// <remarks> ID = 45 </remarks>
         public static Grammeme loc2 { get; private set; }
 
         /// <summary>
         /// Аббревиатура
         /// </summary>
-        /// <remarks>ID = 46</remarks>
+        /// <remarks> ID = 46 </remarks>
         public static Grammeme Abbr { get; private set; }
 
         /// <summary>
         /// Имя
         /// </summary>
-        /// <remarks>ID = 47</remarks>
+        /// <remarks> ID = 47 </remarks>
         public static Grammeme Name { get; private set; }
 
         /// <summary>
         /// Фамилия
         /// </summary>
-        /// <remarks>ID = 48</remarks>
+        /// <remarks> ID = 48 </remarks>
         public static Grammeme Surn { get; private set; }
 
         /// <summary>
         /// Отчество
         /// </summary>
-        /// <remarks>ID = 49</remarks>
+        /// <remarks> ID = 49 </remarks>
         public static Grammeme Patr { get; private set; }
 
         /// <summary>
         /// Топоним
         /// </summary>
-        /// <remarks>ID = 50</remarks>
+        /// <remarks> ID = 50 </remarks>
         public static Grammeme Geox { get; private set; }
 
         /// <summary>
         /// Организация
         /// </summary>
-        /// <remarks>ID = 51</remarks>
+        /// <remarks> ID = 51 </remarks>
         public static Grammeme Orgn { get; private set; }
 
         /// <summary>
         /// Торговая марка
         /// </summary>
-        /// <remarks>ID = 52</remarks>
+        /// <remarks> ID = 52 </remarks>
         public static Grammeme Trad { get; private set; }
 
         /// <summary>
         /// Возможна субстантивация
         /// </summary>
-        /// <remarks>ID = 53</remarks>
+        /// <remarks> ID = 53 </remarks>
         public static Grammeme Subx { get; private set; }
 
         /// <summary>
         /// Превосходная степень
         /// </summary>
-        /// <remarks>ID = 54</remarks>
+        /// <remarks> ID = 54 </remarks>
         public static Grammeme Supr { get; private set; }
 
         /// <summary>
         /// Качественное
         /// </summary>
-        /// <remarks>ID = 55</remarks>
+        /// <remarks> ID = 55 </remarks>
         public static Grammeme Qual { get; private set; }
 
         /// <summary>
         /// Местоименное
         /// </summary>
-        /// <remarks>ID = 56</remarks>
+        /// <remarks> ID = 56 </remarks>
         public static Grammeme Apro { get; private set; }
 
         /// <summary>
         /// Порядковое
         /// </summary>
-        /// <remarks>ID = 57</remarks>
+        /// <remarks> ID = 57 </remarks>
         public static Grammeme Anum { get; private set; }
 
         /// <summary>
         /// Притяжательное
         /// </summary>
-        /// <remarks>ID = 58</remarks>
+        /// <remarks> ID = 58 </remarks>
         public static Grammeme Poss { get; private set; }
 
         /// <summary>
         /// Форма на -ею
         /// </summary>
-        /// <remarks>ID = 59</remarks>
+        /// <remarks> ID = 59 </remarks>
         public static Grammeme V_ey { get; private set; }
 
         /// <summary>
         /// Форма на -ою
         /// </summary>
-        /// <remarks>ID = 60</remarks>
+        /// <remarks> ID = 60 </remarks>
         public static Grammeme V_oy { get; private set; }
 
         /// <summary>
         /// Сравнительная степень на по-
         /// </summary>
-        /// <remarks>ID = 61</remarks>
+        /// <remarks> ID = 61 </remarks>
         public static Grammeme Cmp2 { get; private set; }
 
         /// <summary>
         /// Форма компаратива на -ей
         /// </summary>
-        /// <remarks>ID = 62</remarks>
+        /// <remarks> ID = 62 </remarks>
         public static Grammeme V_ej { get; private set; }
 
         /// <summary>
         /// Категория вида
         /// </summary>
-        /// <remarks>ID = 63</remarks>
+        /// <remarks> ID = 63 </remarks>
         public static Grammeme ASpc { get; private set; }
 
         /// <summary>
         /// Совершенный вид
         /// </summary>
-        /// <remarks>ID = 64</remarks>
+        /// <remarks> ID = 64 </remarks>
         public static Grammeme perf { get; private set; }
 
         /// <summary>
         /// Несовершенный вид
         /// </summary>
-        /// <remarks>ID = 65</remarks>
+        /// <remarks> ID = 65 </remarks>
         public static Grammeme impf { get; private set; }
 
         /// <summary>
         /// Категория переходности
         /// </summary>
-        /// <remarks>ID = 66</remarks>
+        /// <remarks> ID = 66 </remarks>
         public static Grammeme TRns { get; private set; }
 
         /// <summary>
         /// Переходный
         /// </summary>
-        /// <remarks>ID = 67</remarks>
+        /// <remarks> ID = 67 </remarks>
         public static Grammeme tran { get; private set; }
 
         /// <summary>
         /// Непереходный
         /// </summary>
-        /// <remarks>ID = 68</remarks>
+        /// <remarks> ID = 68 </remarks>
         public static Grammeme intr { get; private set; }
 
         /// <summary>
         /// Безличный
         /// </summary>
-        /// <remarks>ID = 69</remarks>
+        /// <remarks> ID = 69 </remarks>
         public static Grammeme Impe { get; private set; }
 
         /// <summary>
         /// Возможно безличное употребление
         /// </summary>
-        /// <remarks>ID = 70</remarks>
+        /// <remarks> ID = 70 </remarks>
         public static Grammeme Impx { get; private set; }
 
         /// <summary>
         /// Многократный
         /// </summary>
-        /// <remarks>ID = 71</remarks>
+        /// <remarks> ID = 71 </remarks>
         public static Grammeme Mult { get; private set; }
 
         /// <summary>
         /// Возвратный
         /// </summary>
-        /// <remarks>ID = 72</remarks>
+        /// <remarks> ID = 72 </remarks>
         public static Grammeme Refl { get; private set; }
 
         /// <summary>
         /// Категория лица
         /// </summary>
-        /// <remarks>ID = 73</remarks>
+        /// <remarks> ID = 73 </remarks>
         public static Grammeme PErs { get; private set; }
 
         /// <summary>
         /// 1 лицо
         /// </summary>
-        /// <remarks>ID = 74</remarks>
+        /// <remarks> ID = 74 </remarks>
         public static Grammeme per1 { get; private set; }
 
         /// <summary>
         /// 2 лицо
         /// </summary>
-        /// <remarks>ID = 75</remarks>
+        /// <remarks> ID = 75 </remarks>
         public static Grammeme per2 { get; private set; }
 
         /// <summary>
         /// 3 лицо
         /// </summary>
-        /// <remarks>ID = 76</remarks>
+        /// <remarks> ID = 76 </remarks>
         public static Grammeme per3 { get; private set; }
 
         /// <summary>
         /// Категория времени
         /// </summary>
-        /// <remarks>ID = 77</remarks>
+        /// <remarks> ID = 77 </remarks>
         public static Grammeme TEns { get; private set; }
 
         /// <summary>
         /// Настоящее время
         /// </summary>
-        /// <remarks>ID = 78</remarks>
+        /// <remarks> ID = 78 </remarks>
         public static Grammeme pres { get; private set; }
 
         /// <summary>
         /// Прошедшее время
         /// </summary>
-        /// <remarks>ID = 79</remarks>
+        /// <remarks> ID = 79 </remarks>
         public static Grammeme past { get; private set; }
 
         /// <summary>
         /// Будущее время
         /// </summary>
-        /// <remarks>ID = 80</remarks>
+        /// <remarks> ID = 80 </remarks>
         public static Grammeme futr { get; private set; }
 
         /// <summary>
         /// Категория наклонения
         /// </summary>
-        /// <remarks>ID = 81</remarks>
+        /// <remarks> ID = 81 </remarks>
         public static Grammeme MOod { get; private set; }
 
         /// <summary>
         /// Изъявительное наклонение
         /// </summary>
-        /// <remarks>ID = 82</remarks>
+        /// <remarks> ID = 82 </remarks>
         public static Grammeme indc { get; private set; }
 
         /// <summary>
         /// Повелительное наклонение
         /// </summary>
-        /// <remarks>ID = 83</remarks>
+        /// <remarks> ID = 83 </remarks>
         public static Grammeme impr { get; private set; }
 
         /// <summary>
         /// Категория совместности
         /// </summary>
-        /// <remarks>ID = 84</remarks>
+        /// <remarks> ID = 84 </remarks>
         public static Grammeme INvl { get; private set; }
 
         /// <summary>
         /// Говорящий включён (идем, идемте)
         /// </summary>
-        /// <remarks>ID = 85</remarks>
+        /// <remarks> ID = 85 </remarks>
         public static Grammeme incl { get; private set; }
 
         /// <summary>
         /// Говорящий не включён в действие (иди, идите)
         /// </summary>
-        /// <remarks>ID = 86</remarks>
+        /// <remarks> ID = 86 </remarks>
         public static Grammeme excl { get; private set; }
 
         /// <summary>
         /// Категория залога
         /// </summary>
-        /// <remarks>ID = 87</remarks>
+        /// <remarks> ID = 87 </remarks>
         public static Grammeme VOic { get; private set; }
 
         /// <summary>
         /// Действительный залог
         /// </summary>
-        /// <remarks>ID = 88</remarks>
+        /// <remarks> ID = 88 </remarks>
         public static Grammeme actv { get; private set; }
 
         /// <summary>
         /// Страдательный залог
         /// </summary>
-        /// <remarks>ID = 89</remarks>
+        /// <remarks> ID = 89 </remarks>
         public static Grammeme pssv { get; private set; }
 
         /// <summary>
         /// Разговорное
         /// </summary>
-        /// <remarks>ID = 90</remarks>
+        /// <remarks> ID = 90 </remarks>
         public static Grammeme Infr { get; private set; }
 
         /// <summary>
         /// Жаргонное
         /// </summary>
-        /// <remarks>ID = 91</remarks>
+        /// <remarks> ID = 91 </remarks>
         public static Grammeme Slng { get; private set; }
 
         /// <summary>
         /// Устаревшее
         /// </summary>
-        /// <remarks>ID = 92</remarks>
+        /// <remarks> ID = 92 </remarks>
         public static Grammeme Arch { get; private set; }
 
         /// <summary>
         /// Литературный вариант
         /// </summary>
-        /// <remarks>ID = 93</remarks>
+        /// <remarks> ID = 93 </remarks>
         public static Grammeme Litr { get; private set; }
 
         /// <summary>
         /// Опечатка
         /// </summary>
-        /// <remarks>ID = 94</remarks>
+        /// <remarks> ID = 94 </remarks>
         public static Grammeme Erro { get; private set; }
 
         /// <summary>
         /// Искажение
         /// </summary>
-        /// <remarks>ID = 95</remarks>
+        /// <remarks> ID = 95 </remarks>
         public static Grammeme Dist { get; private set; }
 
         /// <summary>
         /// Вопросительное
         /// </summary>
-        /// <remarks>ID = 96</remarks>
+        /// <remarks> ID = 96 </remarks>
         public static Grammeme Ques { get; private set; }
 
         /// <summary>
         /// Указательное
         /// </summary>
-        /// <remarks>ID = 97</remarks>
+        /// <remarks> ID = 97 </remarks>
         public static Grammeme Dmns { get; private set; }
 
         /// <summary>
         /// Вводное слово
         /// </summary>
-        /// <remarks>ID = 98</remarks>
+        /// <remarks> ID = 98 </remarks>
         public static Grammeme Prnt { get; private set; }
 
         /// <summary>
         /// Форма на -ье
         /// </summary>
-        /// <remarks>ID = 99</remarks>
+        /// <remarks> ID = 99 </remarks>
         public static Grammeme V_be { get; private set; }
 
         /// <summary>
         /// Форма на -енен
         /// </summary>
-        /// <remarks>ID = 100</remarks>
+        /// <remarks> ID = 100 </remarks>
         public static Grammeme V_en { get; private set; }
 
         /// <summary>
         /// Форма на -и- (веселие, твердостию); отчество с -ие
         /// </summary>
-        /// <remarks>ID = 101</remarks>
+        /// <remarks> ID = 101 </remarks>
         public static Grammeme V_ie { get; private set; }
 
         /// <summary>
         /// Форма на -ьи
         /// </summary>
-        /// <remarks>ID = 102</remarks>
+        /// <remarks> ID = 102 </remarks>
         public static Grammeme V_bi { get; private set; }
 
         /// <summary>
         /// Деепричастие от глагола несовершенного вида
         /// </summary>
-        /// <remarks>ID = 103</remarks>
+        /// <remarks> ID = 103 </remarks>
         public static Grammeme Fimp { get; private set; }
 
         /// <summary>
         /// Может выступать в роли предикатива
         /// </summary>
-        /// <remarks>ID = 104</remarks>
+        /// <remarks> ID = 104 </remarks>
         public static Grammeme Prdx { get; private set; }
 
         /// <summary>
         /// Счётная форма
         /// </summary>
-        /// <remarks>ID = 105</remarks>
+        /// <remarks> ID = 105 </remarks>
         public static Grammeme Coun { get; private set; }
 
         /// <summary>
         /// Собирательное числительное
         /// </summary>
-        /// <remarks>ID = 106</remarks>
+        /// <remarks> ID = 106 </remarks>
         public static Grammeme Coll { get; private set; }
 
         /// <summary>
         /// Деепричастие на -ши
         /// </summary>
-        /// <remarks>ID = 107</remarks>
+        /// <remarks> ID = 107 </remarks>
         public static Grammeme V_sh { get; private set; }
 
         /// <summary>
         /// Форма после предлога
         /// </summary>
-        /// <remarks>ID = 108</remarks>
+        /// <remarks> ID = 108 </remarks>
         public static Grammeme Af_p { get; private set; }
 
         /// <summary>
         /// Может использоваться как одуш. / неодуш.
         /// </summary>
-        /// <remarks>ID = 109</remarks>
+        /// <remarks> ID = 109 </remarks>
         public static Grammeme Inmx { get; private set; }
 
         /// <summary>
         /// Вариант предлога ( со, подо, ...)
         /// </summary>
-        /// <remarks>ID = 110</remarks>
+        /// <remarks> ID = 110 </remarks>
         public static Grammeme Vpre { get; private set; }
 
         /// <summary>
         /// Анафорическое (местоимение)
         /// </summary>
-        /// <remarks>ID = 111</remarks>
+        /// <remarks> ID = 111 </remarks>
         public static Grammeme Anph { get; private set; }
 
         /// <summary>
         /// Инициал
         /// </summary>
-        /// <remarks>ID = 112</remarks>
+        /// <remarks> ID = 112 </remarks>
         public static Grammeme Init { get; private set; }
 
         /// <summary>
         /// Может выступать в роли прилагательного
         /// </summary>
-        /// <remarks>ID = 113</remarks>
+        /// <remarks> ID = 113 </remarks>
         public static Grammeme Adjx { get; private set; }
 
         /// <summary>
         /// Общий род (м/ж/с)
         /// </summary>
-        /// <remarks>ID = 114</remarks>
+        /// <remarks> ID = 114 </remarks>
         public static Grammeme Ms_f { get; private set; }
 
         /// <summary>
         /// Гипотетическая форма слова (победю, асфальтовее)
         /// </summary>
-        /// <remarks>ID = 115</remarks>
+        /// <remarks> ID = 115 </remarks>
         public static Grammeme Hypo { get; private set; }
 
         /// <summary>
@@ -815,124 +815,128 @@ namespace Corpora
             Ms_f = new Grammeme(114, "Ms-f", "ор", "Общий род (м/ж/с)");
             Hypo = new Grammeme(115, "Hypo", "гипот", "Гипотетическая форма слова (победю, асфальтовее)");
             
-            // заполняем словарь граммем
-            _grammemes = new Dictionary<byte, Grammeme>
+            // инициализируем коллекции
+            _grammemes = new List<Grammeme>(115);
+            _grammemesByID = new Dictionary<byte, Grammeme>(115);
+            _grammemesByName = new Dictionary<string, Grammeme>(115);
+            
+            // регистрируем граммемы
             {
-                { 1, POST },
-                { 2, NOUN },
-                { 3, ADJF },
-                { 4, ADJS },
-                { 5, COMP },
-                { 6, VERB },
-                { 7, INFN },
-                { 8, PRTF },
-                { 9, PRTS },
-                { 10, GRND },
-                { 11, NUMR },
-                { 12, ADVB },
-                { 13, NPRO },
-                { 14, PRED },
-                { 15, PREP },
-                { 16, CONJ },
-                { 17, PRCL },
-                { 18, INTJ },
-                { 19, ANim },
-                { 20, anim },
-                { 21, inan },
-                { 22, GNdr },
-                { 23, masc },
-                { 24, femn },
-                { 25, neut },
-                { 26, ms_f },
-                { 27, NMbr },
-                { 28, sing },
-                { 29, plur },
-                { 30, Sgtm },
-                { 31, Pltm },
-                { 32, Fixd },
-                { 33, CAse },
-                { 34, nomn },
-                { 35, gent },
-                { 36, datv },
-                { 37, accs },
-                { 38, ablt },
-                { 39, loct },
-                { 40, voct },
-                { 41, gen1 },
-                { 42, gen2 },
-                { 43, acc2 },
-                { 44, loc1 },
-                { 45, loc2 },
-                { 46, Abbr },
-                { 47, Name },
-                { 48, Surn },
-                { 49, Patr },
-                { 50, Geox },
-                { 51, Orgn },
-                { 52, Trad },
-                { 53, Subx },
-                { 54, Supr },
-                { 55, Qual },
-                { 56, Apro },
-                { 57, Anum },
-                { 58, Poss },
-                { 59, V_ey },
-                { 60, V_oy },
-                { 61, Cmp2 },
-                { 62, V_ej },
-                { 63, ASpc },
-                { 64, perf },
-                { 65, impf },
-                { 66, TRns },
-                { 67, tran },
-                { 68, intr },
-                { 69, Impe },
-                { 70, Impx },
-                { 71, Mult },
-                { 72, Refl },
-                { 73, PErs },
-                { 74, per1 },
-                { 75, per2 },
-                { 76, per3 },
-                { 77, TEns },
-                { 78, pres },
-                { 79, past },
-                { 80, futr },
-                { 81, MOod },
-                { 82, indc },
-                { 83, impr },
-                { 84, INvl },
-                { 85, incl },
-                { 86, excl },
-                { 87, VOic },
-                { 88, actv },
-                { 89, pssv },
-                { 90, Infr },
-                { 91, Slng },
-                { 92, Arch },
-                { 93, Litr },
-                { 94, Erro },
-                { 95, Dist },
-                { 96, Ques },
-                { 97, Dmns },
-                { 98, Prnt },
-                { 99, V_be },
-                { 100, V_en },
-                { 101, V_ie },
-                { 102, V_bi },
-                { 103, Fimp },
-                { 104, Prdx },
-                { 105, Coun },
-                { 106, Coll },
-                { 107, V_sh },
-                { 108, Af_p },
-                { 109, Inmx },
-                { 110, Vpre },
-                { 111, Anph },
-                { 112, Init },
-                { 113, Adjx },
-                { 114, Ms_f },
-                { 115, Hypo },
+                Register(POST);
+                Register(NOUN);
+                Register(ADJF);
+                Register(ADJS);
+                Register(COMP);
+                Register(VERB);
+                Register(INFN);
+                Register(PRTF);
+                Register(PRTS);
+                Register(GRND);
+                Register(NUMR);
+                Register(ADVB);
+                Register(NPRO);
+                Register(PRED);
+                Register(PREP);
+                Register(CONJ);
+                Register(PRCL);
+                Register(INTJ);
+                Register(ANim);
+                Register(anim);
+                Register(inan);
+                Register(GNdr);
+                Register(masc);
+                Register(femn);
+                Register(neut);
+                Register(ms_f);
+                Register(NMbr);
+                Register(sing);
+                Register(plur);
+                Register(Sgtm);
+                Register(Pltm);
+                Register(Fixd);
+                Register(CAse);
+                Register(nomn);
+                Register(gent);
+                Register(datv);
+                Register(accs);
+                Register(ablt);
+                Register(loct);
+                Register(voct);
+                Register(gen1);
+                Register(gen2);
+                Register(acc2);
+                Register(loc1);
+                Register(loc2);
+                Register(Abbr);
+                Register(Name);
+                Register(Surn);
+                Register(Patr);
+                Register(Geox);
+                Register(Orgn);
+                Register(Trad);
+                Register(Subx);
+                Register(Supr);
+                Register(Qual);
+                Register(Apro);
+                Register(Anum);
+                Register(Poss);
+                Register(V_ey);
+                Register(V_oy);
+                Register(Cmp2);
+                Register(V_ej);
+                Register(ASpc);
+                Register(perf);
+                Register(impf);
+                Register(TRns);
+                Register(tran);
+                Register(intr);
+                Register(Impe);
+                Register(Impx);
+                Register(Mult);
+                Register(Refl);
+                Register(PErs);
+                Register(per1);
+                Register(per2);
+                Register(per3);
+                Register(TEns);
+                Register(pres);
+                Register(past);
+                Register(futr);
+                Register(MOod);
+                Register(indc);
+                Register(impr);
+                Register(INvl);
+                Register(incl);
+                Register(excl);
+                Register(VOic);
+                Register(actv);
+                Register(pssv);
+                Register(Infr);
+                Register(Slng);
+                Register(Arch);
+                Register(Litr);
+                Register(Erro);
+                Register(Dist);
+                Register(Ques);
+                Register(Dmns);
+                Register(Prnt);
+                Register(V_be);
+                Register(V_en);
+                Register(V_ie);
+                Register(V_bi);
+                Register(Fimp);
+                Register(Prdx);
+                Register(Coun);
+                Register(Coll);
+                Register(V_sh);
+                Register(Af_p);
+                Register(Inmx);
+                Register(Vpre);
+                Register(Anph);
+                Register(Init);
+                Register(Adjx);
+                Register(Ms_f);
+                Register(Hypo);
             };
         }
     }

@@ -69,7 +69,7 @@ namespace Corpora
                 sb.AppendLine("        /// <summary>");
                 sb.AppendLine($"        /// {item.Description}");
                 sb.AppendLine("        /// </summary>");
-                sb.AppendLine($"        /// <remarks>{nameof(item.ID)} = {item.ID}</remarks>");
+                sb.AppendLine($"        /// <remarks> {nameof(item.ID)} = {item.ID} </remarks>");
                 sb.AppendLine($"        public static {grammemeClassName} {item.Name} {{ get; private set; }}");
                 sb.AppendLine();
             }
@@ -90,12 +90,16 @@ namespace Corpora
                 sb.AppendLine(");");
             }
             sb.AppendLine("            ");
-            sb.AppendLine("            // заполняем словарь граммем");
-            sb.AppendLine($"            _grammemes = new Dictionary<byte, {grammemeClassName}>");
+            sb.AppendLine("            // инициализируем коллекции");
+            sb.AppendLine($"            _grammemes = new List<{grammemeClassName}>({id});");
+            sb.AppendLine($"            _grammemesByID = new Dictionary<byte, {grammemeClassName}>({id});");
+            sb.AppendLine($"            _grammemesByName = new Dictionary<string, {grammemeClassName}>({id});");
+            sb.AppendLine("            ");
+            sb.AppendLine("            // регистрируем граммемы");
             sb.AppendLine("            {");
             foreach (var item in items)
             {
-                sb.AppendLine($"                {{ {item.ID}, {item.Name} }},");
+                sb.AppendLine($"                Register({item.Name});");
             }
             sb.AppendLine("            };");
             sb.AppendLine("        }");

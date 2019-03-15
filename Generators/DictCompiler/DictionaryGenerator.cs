@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 
+using Corpora.Formats.Xml;
+
 namespace Corpora
 {
     /// <summary>
@@ -52,6 +54,26 @@ namespace Corpora
             outputFileName = Path.GetFullPath(Path.IsPathRooted(outputFileName) ? outputFileName : Path.Combine(AppContext.BaseDirectory, outputFileName));
             var outputDirectory = Path.GetDirectoryName(outputFileName);
             if (!Directory.Exists(outputDirectory)) Directory.CreateDirectory(outputDirectory);
+
+            ////////////////////////////////////////////////////////////////
+            // читаем данные
+            ////////////////////////////////////////////////////////////////
+
+            using (var stream = File.Open(dictPath, FileMode.Open, FileAccess.Read))
+            {
+                using (var reader = new OpenCorporaDictionaryReader(stream))
+                {
+                    reader.OnGrammeme += item =>
+                    {
+                    };
+
+                    reader.OnLexeme += item =>
+                    {
+                    };
+
+                    reader.ReadAll();
+                }
+            }
         }
     }
 }

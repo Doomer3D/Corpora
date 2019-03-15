@@ -52,6 +52,8 @@
             this.Parent = parent;
         }
 
+        public override int GetHashCode() => ID != 0 ? ID : (Name ?? "").GetHashCode();
+
         public override string ToString() => $"{Name} - {Description}";
     }
 }

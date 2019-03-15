@@ -16,6 +16,16 @@ namespace Corpora.Formats.Xml
         protected XmlReader _reader;
 
         /// <summary>
+        /// обработчик сущности: граммема
+        /// </summary>
+        public event Action<Grammeme> OnGrammeme;
+
+        /// <summary>
+        /// обработчик сущности: лексема
+        /// </summary>
+        public event Action<Lexeme> OnLexeme;
+
+        /// <summary>
         /// конструктор
         /// </summary>
         /// <param name="inputUri"> URI </param>
@@ -89,41 +99,170 @@ namespace Corpora.Formats.Xml
         {
             while (_reader.Read())
             {
-                if (_reader.NodeType == XmlNodeType.Element)
+                if (_reader.IsStartElement() && !_reader.IsEmptyElement)
                 {
                     switch (_reader.Name)
                     {
                         case "grammeme":
+                            ////////////////////////////////////////////////////////////////
                             // граммема
+                            ////////////////////////////////////////////////////////////////
+                            OnGrammeme?.Invoke(ReadGrammeme());
+                            break;
+
+                        case "lemma":
+                            ////////////////////////////////////////////////////////////////
+                            // лексема
+                            ////////////////////////////////////////////////////////////////
                             {
-                                Grammeme item = new Grammeme();
+                                OnLexeme?.Invoke(ReadLexeme());
+                            }
+                            break;
+                    }
+                }
+            }
+        }
 
-                                //byte id, string name, string alias, string description, Grammeme parent = null;
+        /// <summary>
+        /// прочитать граммему
+        /// </summary>
+        /// <returns></returns>
+        protected virtual Grammeme ReadGrammeme()
+        {
+            string name = null;
+            //string alias;
+            string description = null;
 
-                                if (_reader.HasAttributes)
+            // читаем атрибуты
+            if (_reader.HasAttributes)
+            {
+                while (_reader.MoveToNextAttribute())
+                {
+                    switch (_reader.Name)
+                    {
+                        case "parent":
+                            break;
+                    }
+                }
+            }
+
+            while (_reader.Read() && !(_reader.NodeType == XmlNodeType.EndElement && _reader.Name == "grammeme"))
+            {
+                if (_reader.IsStartElement() && !_reader.IsEmptyElement)
+                {
+                    switch (_reader.Name)
+                    {
+                        case "name":
+                            _reader.Read();
+                            name = _reader.Value;
+                            break;
+                        case "alias":
+                            _reader.Read();
+                            //alias = _reader.Value;
+                            break;
+                        case "description":
+                            _reader.Read();
+                            description = _reader.Value;
+                            break;
+                    }
+                }
+            }
+
+            if (G.TryGetByName(name, out var item))
+            {
+                return item;
+            }
+            else
+            {
+                throw new KeyNotFoundException($"Незарегистрированная граммема: {name} ({description})");
+            }
+        }
+
+        /// <summary>
+        /// прочитать лексему
+        /// </summary>
+        /// <returns></returns>
+        protected virtual Lexeme ReadLexeme()
+        {
+            Lexeme item = new Lexeme();
+
+            // читаем атрибуты
+            if (_reader.HasAttributes)
+            {
+                while (_reader.MoveToNextAttribute())
+                {
+                    switch (_reader.Name)
+                    {
+                        case "id":
+                            item.ID = int.Parse(_reader.Value);
+                            break;
+                        case "rev":
+                            item.Revision = int.Parse(_reader.Value);
+                            break;
+                    }
+                }
+            }
+
+            while (_reader.Read() && !(_reader.NodeType == XmlNodeType.EndElement && _reader.Name == "lemma"))
+            {
+                if (_reader.IsStartElement() && !_reader.IsEmptyElement)
+                {
+                    switch (_reader.Name)
+                    {
+                        case "l":
+                            // лемма
+                            item.Lemma = ReadForm();
+                            break;
+                        case "f":
+                            // форма слова
+                            item.AddForm(ReadForm());
+                            break;
+                    }
+                }
+            }
+
+            return item;
+        }
+
+        /// <summary>
+        /// прочитаь форму слова
+        /// </summary>
+        /// <returns></returns>
+        protected virtual Form ReadForm()
+        {
+            Form item = new Form();
+
+            var finish = _reader.Name;
+
+            // читаем атрибуты
+            if (_reader.HasAttributes)
+            {
+                while (_reader.MoveToNextAttribute())
+                {
+                    switch (_reader.Name)
+                    {
+                        case "t":
+                            item.Text = _reader.Value;
+                            break;
+                    }
+                }
+            }
+
+            while (_reader.Read() && !(_reader.NodeType == XmlNodeType.EndElement && _reader.Name == finish))
+            {
+                if (_reader.IsStartElement())
+                {
+                    switch (_reader.Name)
+                    {
+                        case "g":
+                            // граммема
+                            if (_reader.HasAttributes)
+                            {
+                                while (_reader.MoveToNextAttribute())
                                 {
-                                    while (_reader.MoveToNextAttribute())
+                                    if (_reader.Name == "v")
                                     {
-                                        switch (_reader.Name)
-                                        {
-                                            case "parent":
-                                                break;
-                                        }
-                                    }
-                                }
-                                while (_reader.NodeType != XmlNodeType.EndElement)
-                                {
-                                    while (_reader.Read())
-                                    {
-                                        if (_reader.NodeType == XmlNodeType.Element)
-                                        {
-                                            switch (_reader.Name)
-                                            {
-                                                case "name":
-                                                    //item.Name = _reader.ReadContentAsString();
-                                                    break;
-                                            }
-                                        }
+                                        item.AddGrammeme(G.GetByName(_reader.Value));
                                     }
                                 }
                             }
@@ -131,6 +270,8 @@ namespace Corpora.Formats.Xml
                     }
                 }
             }
+
+            return item;
         }
 
         /// <summary>
