@@ -71,6 +71,10 @@ namespace Corpora
                     {
                     };
 
+                    reader.OnLink += item =>
+                    {
+                    };
+
                     reader.ReadAll();
                 }
             }

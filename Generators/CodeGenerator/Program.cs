@@ -32,7 +32,7 @@ namespace Corpora
             GenerateGrammemes(path);
 
             // генерируем файл с описанием типов связей
-            //GenerateLinkTypes(path);
+            GenerateLinkTypes(path);
         }
 
         /// <summary>
@@ -104,9 +104,9 @@ namespace Corpora
             }
             sb.AppendLine("            ");
             sb.AppendLine("            // инициализируем коллекции");
-            sb.AppendLine($"            _grammemes = new List<{grammemeClassName}>({id});");
-            sb.AppendLine($"            _grammemesByID = new Dictionary<byte, {grammemeClassName}>({id});");
-            sb.AppendLine($"            _grammemesByName = new Dictionary<string, {grammemeClassName}>({id});");
+            sb.AppendLine($"            _grammemes = new List<{grammemeClassName}>({dic.Count});");
+            sb.AppendLine($"            _grammemesByID = new Dictionary<byte, {grammemeClassName}>({dic.Count});");
+            sb.AppendLine($"            _grammemesByName = new Dictionary<string, {grammemeClassName}>({dic.Count});");
             sb.AppendLine("            ");
             sb.AppendLine("            // регистрируем граммемы");
             sb.AppendLine("            {");
@@ -120,7 +120,7 @@ namespace Corpora
             sb.AppendLine("}");
 
             // сохраняем код
-            File.WriteAllText(Path.Combine(path, "G.generated.cs"), sb.ToString(), Encoding.UTF8);
+            File.WriteAllText(Path.Combine(path, $"{className}.generated.cs"), sb.ToString(), Encoding.UTF8);
         }
 
         /// <summary>
@@ -129,7 +129,77 @@ namespace Corpora
         /// <param name="path"> путь </param>
         private static void GenerateLinkTypes(string path)
         {
-            throw new NotImplementedException();
+            ////////////////////////////////////////////////////////////////
+            // читаем файл с описанием граммем
+            ////////////////////////////////////////////////////////////////
+
+            var dic = new Dictionary<string, ExtendedLinkType>();
+
+            var doc = XDocument.Load(Path.Combine(AppContext.BaseDirectory, "links.xml"));
+            foreach (XElement node in doc.Element("link_types").Nodes())
+            {
+                var item = new ExtendedLinkType(byte.Parse(node.Attribute("id").Value), FormatName(node.Value))
+                {
+                    OriginName = node.Value
+                };
+                dic[item.Name] = item;
+            }
+
+            ////////////////////////////////////////////////////////////////
+            // генерируем файл с описанием граммем
+            ////////////////////////////////////////////////////////////////
+            
+            var className = nameof(LinkType);
+            var items = dic.Values.OrderBy(e => e.ID);
+
+            var sb = new StringBuilder();
+
+            sb.AppendLine("using System.Collections.Generic;");
+            sb.AppendLine();
+            sb.AppendLine($"namespace {nameof(Corpora)}");
+            sb.AppendLine("{");
+            sb.AppendLine($"    public partial class {className}");
+            sb.AppendLine("    {");
+
+            // статические свойства
+            foreach (var item in items)
+            {
+                sb.AppendLine("        /// <summary>");
+                sb.AppendLine($"        /// {item.OriginName}");
+                sb.AppendLine("        /// </summary>");
+                sb.AppendLine($"        /// <remarks> {nameof(item.ID)} = {item.ID} </remarks>");
+                sb.AppendLine($"        public static {className} {item.Name} {{ get; private set; }}");
+                sb.AppendLine();
+            }
+
+            // статический конструктор
+            sb.AppendLine("        /// <summary>");
+            sb.AppendLine("        /// статический конструктор");
+            sb.AppendLine("        /// </summary>");
+            sb.AppendLine($"        static {className}()");
+            sb.AppendLine("        {");
+            foreach (var item in items)
+            {
+                sb.AppendLine($"            {item.Name} = new {className}({item.ID}, {QuoteString(item.OriginName)});");
+            }
+            sb.AppendLine("            ");
+            sb.AppendLine("            // инициализируем коллекции");
+            sb.AppendLine($"            _links = new List<{className}>({dic.Count});");
+            sb.AppendLine($"            _linksByID = new Dictionary<byte, {className}>({dic.Count});");
+            sb.AppendLine("            ");
+            sb.AppendLine("            // регистрируем типы связей");
+            sb.AppendLine("            {");
+            foreach (var item in items)
+            {
+                sb.AppendLine($"                Register({item.Name});");
+            }
+            sb.AppendLine("            };");
+            sb.AppendLine("        }");
+            sb.AppendLine("    }");
+            sb.AppendLine("}");
+
+            // сохраняем код
+            File.WriteAllText(Path.Combine(path, $"{className}.generated.cs"), sb.ToString(), Encoding.UTF8);
         }
 
         /// <summary>

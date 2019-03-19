@@ -26,6 +26,16 @@ namespace Corpora.Formats.Xml
         public event Action<Lexeme> OnLexeme;
 
         /// <summary>
+        /// обработчик сущности: связь
+        /// </summary>
+        public event Action<Link> OnLink;
+
+        /// <summary>
+        /// хеш лексем
+        /// </summary>
+        protected Dictionary<int, Lexeme> _hash = new Dictionary<int, Lexeme>();
+
+        /// <summary>
         /// конструктор
         /// </summary>
         /// <param name="inputUri"> URI </param>
@@ -99,7 +109,7 @@ namespace Corpora.Formats.Xml
         {
             while (_reader.Read())
             {
-                if (_reader.IsStartElement() && !_reader.IsEmptyElement)
+                if (_reader.IsStartElement())
                 {
                     switch (_reader.Name)
                     {
@@ -115,6 +125,13 @@ namespace Corpora.Formats.Xml
                             // лексема
                             ////////////////////////////////////////////////////////////////
                             OnLexeme?.Invoke(ReadLexeme());
+                            break;
+
+                        case "link":
+                            ////////////////////////////////////////////////////////////////
+                            // связь
+                            ////////////////////////////////////////////////////////////////
+                            OnLink?.Invoke(ReadLink());
                             break;
                     }
                 }
@@ -219,6 +236,9 @@ namespace Corpora.Formats.Xml
                 }
             }
 
+            // сохраняем в хеш
+            _hash.Add(item.ID, item);
+
             return item;
         }
 
@@ -270,6 +290,50 @@ namespace Corpora.Formats.Xml
             }
 
             return item;
+        }
+
+        /// <summary>
+        /// прочитать связь
+        /// </summary>
+        /// <returns></returns>
+        protected virtual Link ReadLink()
+        {
+            Lexeme source = null;
+            Lexeme target = null;
+            LinkType linkType = null;
+            int id;
+
+            // читаем атрибуты
+            if (_reader.HasAttributes)
+            {
+                while (_reader.MoveToNextAttribute())
+                {
+                    switch (_reader.Name)
+                    {
+                        case "from":
+                            id = int.Parse(_reader.Value);
+                            if (!_hash.TryGetValue(id, out source))
+                            {
+                                throw new KeyNotFoundException($"Не найдена лексема с идентификатором {id}");
+                            }
+                            break;
+                        case "to":
+                            id = int.Parse(_reader.Value);
+                            if (!_hash.TryGetValue(id, out target))
+                            {
+                                throw new KeyNotFoundException($"Не найдена лексема с идентификатором {id}");
+                            }
+                            break;
+                        case "type":
+                            linkType = LinkType.GetByID(byte.Parse(_reader.Value));
+                            break;
+                    }
+                }
+            }
+
+            while (_reader.Read() && !(_reader.NodeType == XmlNodeType.EndElement && _reader.Name == "link")) { }
+
+            return new Link(source, target, linkType);
         }
 
         /// <summary>
