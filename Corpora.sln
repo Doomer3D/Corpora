@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordAnalyzer", "Samples\Wor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DictCompiler", "Generators\DictCompiler\DictCompiler.csproj", "{0D5AD201-DD50-4CB4-99B9-6E270689EEAF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corpora.QuickDAFSA", "Corpora.QuickDAFSA\Corpora.QuickDAFSA.csproj", "{CFEFDE16-E181-480B-AF34-7DF11D6E32DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{0D5AD201-DD50-4CB4-99B9-6E270689EEAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D5AD201-DD50-4CB4-99B9-6E270689EEAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D5AD201-DD50-4CB4-99B9-6E270689EEAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFEFDE16-E181-480B-AF34-7DF11D6E32DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFEFDE16-E181-480B-AF34-7DF11D6E32DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFEFDE16-E181-480B-AF34-7DF11D6E32DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFEFDE16-E181-480B-AF34-7DF11D6E32DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,8 +7,11 @@
     <Authors>Doomer3D&lt;doomer.net@gmail.com&gt;</Authors>
     <Company>Genomancer</Company>
     <PackageProjectUrl>https://github.com/Doomer3D/Corpora</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Doomer3D/Corpora.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Doomer3D/Corpora</RepositoryUrl>
     <Description>Генератор словаря для движка Corpora</Description>
+    <Copyright>2019 Копытов Дмитрий</Copyright>
+    <PackageLicenseUrl>https://github.com/Doomer3D/Corpora/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://github.com/Doomer3D/Corpora/blob/master/icon.png?raw=true</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>

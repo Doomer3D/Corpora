@@ -6,10 +6,13 @@
     <LangVersion>latest</LangVersion>
     <Company>Genomancer</Company>
     <Authors>Doomer3D&lt;doomer.net@gmail.com&gt;</Authors>
-    <RepositoryUrl>https://github.com/Doomer3D/Corpora.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Doomer3D/Corpora</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Doomer3D/Corpora</PackageProjectUrl>
     <Description>Генератор описания граммем для движка Corpora</Description>
     <RootNamespace>Corpora</RootNamespace>
+    <Copyright>2019 Копытов Дмитрий</Copyright>
+    <PackageLicenseUrl>https://github.com/Doomer3D/Corpora/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://github.com/Doomer3D/Corpora/blob/master/icon.png?raw=true</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
