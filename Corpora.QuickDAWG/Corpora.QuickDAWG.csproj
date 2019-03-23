@@ -1,32 +1,38 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <LangVersion>latest</LangVersion>
+    <Copyright>2019 Копытов Дмитрий</Copyright>
     <Authors>Doomer3D&lt;doomer.net@gmail.com&gt;</Authors>
     <Company>Genomancer</Company>
     <PackageProjectUrl>https://github.com/Doomer3D/Corpora</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Doomer3D/Corpora</RepositoryUrl>
-    <RootNamespace>Corpora</RootNamespace>
-    <Copyright>2019 Копытов Дмитрий</Copyright>
     <PackageLicenseUrl>https://github.com/Doomer3D/Corpora/blob/master/LICENSE</PackageLicenseUrl>
     <PackageIconUrl>https://github.com/Doomer3D/Corpora/blob/master/icon.png?raw=true</PackageIconUrl>
+    <ApplicationIcon />
+    <StartupObject />
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>Corpora.QuickDAWG</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CommandLineParser" Version="2.4.3" />
+    <ProjectReference Include="..\Corpora\Corpora.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Corpora.QuickDAWG\Corpora.QuickDAWG.csproj" />
-    <ProjectReference Include="..\..\Corpora\Corpora.csproj" />
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="dict.opcorpora.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

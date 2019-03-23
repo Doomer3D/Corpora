@@ -3,7 +3,7 @@
 namespace Corpora
 {
     /// <summary>
-    /// Лексема
+    /// лексема
     /// </summary>
     public partial class Lexeme
     {

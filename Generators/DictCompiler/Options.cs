@@ -12,7 +12,8 @@ namespace Corpora
         /// <summary>
         /// путь к словарю OpenCorpora
         /// </summary>
-        [Option('d', "dict", Required = false, Default = "dict.opcorpora.xml", HelpText = "OpenCorpora dictionary path.")]
+        //[Option('d', "dict", Required = false, Default = "dict.opcorpora.xml", HelpText = "OpenCorpora dictionary path.")]
+        [Option('d', "dict", Required = false, Default = "dict.opcorpora_full.xml", HelpText = "OpenCorpora dictionary path.")]
         public string DictPath { get; set; }
 
         /// <summary>

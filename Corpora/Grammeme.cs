@@ -1,7 +1,7 @@
 ﻿namespace Corpora
 {
     /// <summary>
-    /// Граммема
+    /// граммема
     /// </summary>
     public partial class Grammeme
     {

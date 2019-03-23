@@ -12,9 +12,13 @@ namespace Corpora
                 .WithParsed(opts =>
                 {
                     // запускаем генератор
+#if !DEBUG
                     try
                     {
-                        new DictionaryGenerator(opts).Run();
+#endif
+                    new DawgCompiler(opts).Run();
+                    //new DictionaryGenerator(opts).Run();
+#if !DEBUG
                     }
                     catch (Exception ex)
                     {
@@ -30,25 +34,8 @@ namespace Corpora
                         Console.WriteLine("StackTrace:");
                         Console.WriteLine(ex.StackTrace);
                     }
+#endif
                 });
-
-            //if (args == null || args.Length == 0)
-            //{
-            //    Console.WriteLine("Не указан путь к выходному каталогу");
-            //    return;
-            //}
-
-            //// определяем путь к входному файлу
-            //var inputPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "dict.opcorpora.xml"));
-
-            //// определяем путь к выходному каталогу
-            //var pathPart = args[0];
-            //var outputPath = Path.GetFullPath(Path.IsPathRooted(pathPart) ? pathPart : Path.Combine(AppDomain.CurrentDomain.BaseDirectory, args[0]));
-
-            //// создаем каталог, если он еще не существует
-            //if (!Directory.Exists(outputPath)) Directory.CreateDirectory(outputPath);
-
-            //new DictionaryGenerator(inputPath, outputPath).Run();
         }
     }
 }

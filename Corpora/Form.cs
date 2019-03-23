@@ -3,7 +3,7 @@
 namespace Corpora
 {
     /// <summary>
-    /// Форма слова
+    /// форма слова
     /// </summary>
     public partial class Form
     {
@@ -30,6 +30,17 @@ namespace Corpora
         {
             if (this.Grammemes == null) this.Grammemes = new List<Grammeme>();
             this.Grammemes.Add(item);
+        }
+
+        /// <summary>
+        /// деконструировать класс
+        /// </summary>
+        /// <param name="text"> форма слова </param>
+        /// <param name="grammemes"> набор граммем (тег) </param>
+        public void Deconstruct(out string text, out List<Grammeme> grammemes)
+        {
+            text = this.Text;
+            grammemes = this.Grammemes;
         }
 
         public override int GetHashCode() => (Text ?? "").GetHashCode();

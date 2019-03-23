@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Corpora
 {
@@ -67,6 +68,26 @@ namespace Corpora
                 }
                 return a;
             }
+        }
+
+        /// <summary>
+        /// найти максимальную подстроку у множества
+        /// </summary>
+        /// <param name="strings"> перечисление строк </param>
+        /// <returns></returns>
+        public string FindMaximumSubstring(IEnumerable<string> strings)
+        {
+            if (strings == null) return "";
+
+            var enumerator = strings.GetEnumerator();
+            if (!enumerator.MoveNext()) return "";
+
+            string a = enumerator.Current;
+            while (enumerator.MoveNext())
+            {
+                a = FindMaximumSubstring(a, enumerator.Current);
+            }
+            return a;
         }
     }
 }
