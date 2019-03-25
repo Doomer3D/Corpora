@@ -57,7 +57,7 @@ namespace Corpora.QuickDAWG
         /// <param name="prefixLength"> длина префикса </param>
         private void AddSuffix(string key, int prefixLength)
         {
-            //if (key == "ёрничающими") System.Diagnostics.Debugger.Break();
+            //if (key == "азазелловичем_1") System.Diagnostics.Debugger.Break();
 
             int last = prefixLength, len = key.Length, i, j,
                 cloneIndex = -1,

@@ -1,4 +1,6 @@
-﻿using System;
+﻿#define BINARY_IMAGE                            // используем двоичный образ
+
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -71,7 +73,9 @@ namespace Corpora.QuickDAWG
         public string LastImage;
 
         private byte _imageIsActual = 0;        // признак актуальности образа
+#if !BINARY_IMAGE
         private StringBuilder _imageBuilder;    // сохраненный построитель образа
+#endif
 
         /// <summary>
         /// конструктор
@@ -148,6 +152,86 @@ namespace Corpora.QuickDAWG
             }
         }
 
+#if BINARY_IMAGE
+
+        /// <summary>
+        /// получить образ объекта
+        /// </summary>
+        /// <param name="force"> признак принудительного обновления </param>
+        /// <returns></returns>
+        public string GetObjectImage(bool force = false)
+        {
+            if (_imageIsActual == default || LastImage == default || force)
+            {
+                int count = count = this.Children.Count;
+                if (count == 0)
+                {
+                    LastImage = FINAL_STRING;
+                }
+                else
+                {
+                    int i = 1, len = count * 6 + 1;
+                    byte[] buffer = new byte[len];
+
+                    short keyID;
+                    int id;
+
+                    buffer[0] = (byte)(IsFinal == 0 ? NON_FINAL_CHAR : FINAL_CHAR);
+                    foreach (var (key, value) in Children)
+                    {
+                        // ключ
+                        buffer[i++] = (byte)((keyID = (short)key) >> 8);
+                        buffer[i++] = (byte)(keyID);
+
+                        // идентификатор вершины
+                        buffer[i++] = (byte)((id = value.ID) >> 24);
+                        buffer[i++] = (byte)(id >> 16);
+                        buffer[i++] = (byte)(id >> 8);
+                        buffer[i++] = (byte)id;
+                    }
+                    LastImage = Convert.ToBase64String(buffer, 0, len);
+                    _imageIsActual = 1;
+                }
+            }
+            return LastImage;
+        }
+
+        /// <summary>
+        /// получить предварительный образ объекта для вершины
+        /// </summary>
+        /// <param name="isFinal"> признак финальной вершины </param>
+        /// <param name="key"> ключ </param>
+        /// <param name="id"> идентификатор вершины </param>
+        /// <returns></returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static string GetObjectImage(bool isFinal, char key, int id)
+        {
+            if (isFinal)
+            {
+                return FINAL_STRING;
+            }
+            else
+            {
+                byte[] buffer = new byte[7];
+                buffer[0] = (byte)NON_FINAL_CHAR;
+                short keyID = (short)key;
+
+                // ключ
+                buffer[1] = (byte)(keyID >> 8);
+                buffer[2] = (byte)(keyID);
+
+                // идентификатор вершины
+                buffer[3] = (byte)(id >> 24);
+                buffer[4] = (byte)(id >> 16);
+                buffer[5] = (byte)(id >> 8);
+                buffer[6] = (byte)id;
+
+                return Convert.ToBase64String(buffer, 0, 7);
+            }
+        }
+
+#else
+
         /// <summary>
         /// получить образ объекта
         /// </summary>
@@ -203,54 +287,7 @@ namespace Corpora.QuickDAWG
             }
         }
 
-        ///// <summary>
-        ///// получить образ объекта
-        ///// </summary>
-        ///// <param name="force"> признак принудительного обновления </param>
-        ///// <returns></returns>
-        //public string GetObjectImage(bool force = false)
-        //{
-        //    if (_imageIsActual == default || LastImage == default || force)
-        //    {
-        //        int i = 0, count = this.Children.Count;
-        //        var sb = new StringBuilder(count * 4 + 1);
-        //        sb.Append(IsFinal == 0 ? '^' : '*');
-        //        foreach (var (key, value) in Children)
-        //        {
-        //            sb.Append(key);
-        //            //sb.Append(value.GetObjectImage());
-        //            sb.Append(value.ID);
-        //            if (++i <= count) sb.Append(';');
-        //        }
-        //        LastImage = sb.ToString();
-        //        _imageIsActual = 1;
-        //    }
-        //    return LastImage;
-        //}
-
-        ///// <summary>
-        ///// получить бинарный образ объекта
-        ///// </summary>
-        ///// <param name="force"> признак принудительного обновления </param>
-        ///// <returns></returns>
-        //public string GetObjectImage(bool force = false)
-        //{
-        //    if (_imageIsActual == default || LastImage == default || force)
-        //    {
-        //        int i = 0, count = this.Children.Count;
-        //        byte[] buffer = new byte[count * 6 + 1];
-        //        buffer[0] = IsFinal;
-        //        foreach (var (key, value) in Children)
-        //        {
-        //            Array.Copy(BitConverter.GetBytes((short)key), 0, buffer, i * 6 + 1, 2);
-        //            Array.Copy(BitConverter.GetBytes(value.ID), 0, buffer, i * 6 + 3, 4);
-        //            i++;
-        //        }
-        //        LastImage = _encoding.GetString(buffer);
-        //        _imageIsActual = 1;
-        //    }
-        //    return LastImage;
-        //}
+#endif
 
         /// <summary>
         /// клонировать вершину
@@ -277,8 +314,5 @@ namespace Corpora.QuickDAWG
             if (ID == 0) return "ROOT";
             else return $"{ID}{(IsFinal == default ? NON_FINAL_STRING : FINAL_STRING)}";
         }
-
-        private static Encoding _encoding = Encoding.ASCII;
-        //private static byte _buffer = new byte[1000];
     }
 }
