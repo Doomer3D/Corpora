@@ -1,4 +1,7 @@
-﻿using System;
+﻿//#define TEST
+//#define TEST2
+
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -67,27 +70,41 @@ namespace Corpora
 
             var builder = new DawgBuilder();
 
-            //builder.Add("fox", default, default);
-            //builder.Add("box", default, default);
-            //builder.Add("foxes", default, default);
-            //builder.Add("boxes", default, default);
-            //builder.Add("boxer", default, default);
+            var add = new Action<string>(str =>
+            {
+                builder.Add(str, default, default);
+                Console.WriteLine($"{str.PadRight(10)}: Всего вершин в графе: {builder.CountNodes()}");
+            });
+
+#if TEST
+            //add("fox");
+            //add("box");
+            //add("foxes");
+            //add("boxes");
+            //add("boxer");
+            add("abd");
+            add("bad");
+            add("bae");
+            Console.WriteLine();
+#endif
 
             //builder.Add("ёж", default, default);
             //builder.Add("ежа", default, default);
             //builder.Add("ежу", default, default);
             //builder.Add("ежа", default, default);
+            //Console.WriteLine();
 
-            //builder.Add("салл", default, default);
-            //builder.Add("салло", default, default);
-            //builder.Add("саллой", default, default);
-            //builder.Add("велиор", default, default);
-            //builder.Add("велита", default, default);
-            //builder.Add("велиулла", default, default);
-            //builder.Add("велиуллы", default, default);
-            //builder.Add("велиуллe", default, default);
-            //builder.Add("велиуллу", default, default);
-            //builder.Add("велиуллой", default, default);
+#if TEST2
+            add("тор");
+            add("вор");
+            add("торик");
+            add("ворик");
+            add("торт");
+            add("тортул");
+            add("ул");
+            add("гул");
+            Console.WriteLine();
+#endif
 
             //Console.WriteLine($"Всего вершин в графе: {builder.CountNodes()}");
 

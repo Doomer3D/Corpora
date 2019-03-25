@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace Corpora.QuickDAWG
@@ -7,23 +8,42 @@ namespace Corpora.QuickDAWG
     /// <summary>
     /// вершина
     /// </summary>
-    public class Node
+    public sealed class Node
     {
         /// <summary>
         /// символ-разделитель
         /// </summary>
         public const char SEPARATOR = '@';
 
-#if DEBUG
+        /// <summary>
+        /// символ-признак финала
+        /// </summary>
+        public const char FINAL_CHAR = '*';
 
-        private static int _id = 0;             // глобальный идентификатор вершины
+        /// <summary>
+        /// символ-признак финала
+        /// </summary>
+        public const string FINAL_STRING = "*";
+
+        /// <summary>
+        /// символ-признак не-финала
+        /// </summary>
+        public const char NON_FINAL_CHAR = '^';
+
+        /// <summary>
+        /// символ-признак не-финала
+        /// </summary>
+        public const string NON_FINAL_STRING = "^";
+
+        /// <summary>
+        /// глобальный идентификатор вершины
+        /// </summary>
+        private static int _id = 0;
 
         /// <summary>
         /// идентификатор
         /// </summary>
-        public int ID { get; set; } = _id++;
-
-#endif
+        public int ID = _id++;
 
         /// <summary>
         /// вес вершины
@@ -139,23 +159,48 @@ namespace Corpora.QuickDAWG
             {
                 int i = 0, count = this.Children.Count;
                 StringBuilder sb;
-                if (_imageBuilder == default) sb = _imageBuilder = new StringBuilder(count * 4 + 1);
+                if (_imageBuilder == default) sb = _imageBuilder = new StringBuilder();
                 else
                 {
                     sb = _imageBuilder;
                     sb.Clear();
                 }
-                sb.Append(IsFinal == 0 ? '^' : '*');
+                sb.Append(IsFinal == 0 ? NON_FINAL_CHAR : FINAL_CHAR);
                 foreach (var (key, value) in Children)
                 {
                     sb.Append(key);
                     sb.Append(value.ID);
-                    if (++i <= count) sb.Append(';');
+                    if (++i < count) sb.Append(';');
                 }
+                //sb.Append('.');
                 LastImage = sb.ToString();
                 _imageIsActual = 1;
             }
             return LastImage;
+        }
+
+        /// <summary>
+        /// полуить предварительный образ объекта для вершины
+        /// </summary>
+        /// <param name="isFinal"></param>
+        /// <param name="key"></param>
+        /// <param name="nodeID"></param>
+        /// <returns></returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static string GetObjectImage(bool isFinal, char key, int nodeID)
+        {
+            if (isFinal)
+            {
+                return FINAL_STRING;
+            }
+            else
+            {
+                var sb = new StringBuilder(8);
+                sb.Append(NON_FINAL_CHAR);
+                sb.Append(key);
+                sb.Append(nodeID);
+                return sb.ToString();
+            }
         }
 
         ///// <summary>
@@ -227,15 +272,11 @@ namespace Corpora.QuickDAWG
             return node;
         }
 
-#if DEBUG
         public override string ToString()
         {
             if (ID == 0) return "ROOT";
-            else return $"{ID}{(IsFinal == default ? "^" : "*")}";
+            else return $"{ID}{(IsFinal == default ? NON_FINAL_STRING : FINAL_STRING)}";
         }
-#else
-        public override string ToString() => $"{(IsFinal == default ? "0" : "*")}";
-#endif
 
         private static Encoding _encoding = Encoding.ASCII;
         //private static byte _buffer = new byte[1000];

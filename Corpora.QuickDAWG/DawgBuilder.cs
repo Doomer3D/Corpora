@@ -13,7 +13,7 @@ namespace Corpora.QuickDAWG
     {
         private Node _root;                                         // корневой элемент
 
-        private List<Node> _prefixNodes = new List<Node>();         // вспомогательный список для построения префикса
+        private Node[] prefix;                                      // вспомогательный массив для построения префикса
         private Dictionary<string, Node> _nodeHash;                 // хеш-таблица вершин
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace Corpora.QuickDAWG
         /// </summary>
         public DawgBuilder()
         {
-            _root = new Node();
+            _root = new Node() { ID = 0 };
 
             // инициализируем словари
             _prefixes = new Dictionary<string, WeightedString>();
@@ -35,6 +35,7 @@ namespace Corpora.QuickDAWG
             _paradigms = new Dictionary<string, Paradigm>();
 
             // вспомогательные структуры
+            prefix = new Node[1000];
             _nodeHash = new Dictionary<string, Node>();
         }
 
@@ -46,24 +47,25 @@ namespace Corpora.QuickDAWG
         /// <param name="index"> форма слова </param>
         public void Add(string key, Paradigm paradigm, int index)
         {
-            var prefix = GetPrefix(_root, key);
-            AddSuffix(key, prefix);
+            AddSuffix(key, GetPrefix(_root, key));
         }
 
         /// <summary>
         /// добавить суффикс
         /// </summary>
         /// <param name="key"> ключ </param>
-        /// <param name="prefix"> префикс </param>
-        private void AddSuffix(string key, List<Node> prefix)
+        /// <param name="prefixLength"> длина префикса </param>
+        private void AddSuffix(string key, int prefixLength)
         {
-            //if (key == "велиуллой") System.Diagnostics.Debugger.Break();
+            //if (key == "ёрничающими") System.Diagnostics.Debugger.Break();
 
-            int last = prefix.Count, len = key.Length, i, cloneIndex = -1;
+            int last = prefixLength, len = key.Length, i, j, k,
+                cloneIndex = -1,
+                lastActual;
 
             // последняя вершина
             Node node = last == 0 ? _root : prefix[last - 1],
-                newNode, parent;
+                newNode = null, parent;
 
             // выходим, если имел место дубль
             if (last == len && node.IsFinal != default) return;
@@ -89,25 +91,53 @@ namespace Corpora.QuickDAWG
 
                     prefix[i] = newNode;
                 }
-
-                // обновляем стартовую вершину
-                node = prefix[last - 1];
             }
 
             // добавляем новые вершины
+            string image;
+            lastActual = len - 1;
+            for (i = lastActual; i >= last; i--)
+            {
+                if (i == len - 1)
+                {
+                    // последняя вершина
+                    image = Node.FINAL_STRING;
+                }
+                else
+                {
+                    image = Node.GetObjectImage(false, key[i + 1], node.ID);
+                }
+
+                // ищем готовую вершину
+                if (_nodeHash.TryGetValue(image, out node))
+                {
+                    for (j = 0, k = 0; j < last; j++)
+                    {
+                        if (prefix[j] == node)
+                        {
+                            node = new Node();
+                            k = 1;
+                            break;
+                        }
+                    }
+                    if (k == 0) lastActual = i;
+                }
+                else
+                {
+                    node = new Node();
+                }
+                prefix[i] = node;
+            }
             for (i = last; i < len; i++)
             {
-                newNode = new Node();
-                node.Add(key[i], newNode);
-                prefix.Add(newNode);
-                node = newNode;
+                (i == 0 ? _root : prefix[i - 1]).Add(key[i], prefix[i]);
             }
 
-            // помечаем состояние как финальное
-            node.SetFinal();
+            // помечаем финальное состояние
+            prefix[len - 1].SetFinal();
 
             // обновляем хеш образов
-            for (i = len - 1; i >= 0; i--)
+            for (i = lastActual; i >= 0; i--)
             {
                 node = prefix[i];
 
@@ -125,17 +155,17 @@ namespace Corpora.QuickDAWG
 
             // схлопываем вершины
             bool isEnd = false;
-            for (i = len - 1; i >= 0; i--)
+            for (i = lastActual; i >= 0; i--)
             {
                 node = prefix[i];
-                if (_nodeHash.ContainsKey(node.LastImage))
+
+                if (_nodeHash.TryGetValue(node.LastImage, out newNode))
                 {
-                    if (!isEnd)
+                    if (!isEnd && node != newNode)
                     {
                         // схлопываем вершины
                         parent = i == 0 ? _root : prefix[i - 1];
                         node.Free();
-                        newNode = _nodeHash[node.LastImage] as Node;
                         parent.Add(key[i], newNode);
                         newNode.Weight += node.Weight;
 
@@ -175,17 +205,15 @@ namespace Corpora.QuickDAWG
         /// <param name="node"> начальная вершина </param>
         /// <param name="key"> ключ </param>
         /// <returns></returns>
-        private List<Node> GetPrefix(Node node, string key)
+        private int GetPrefix(Node node, string key)
         {
-            _prefixNodes.Clear();
-
-            foreach (char c in key)
+            int j = 0;
+            for (int i = 0; i < key.Length; i++)
             {
-                if (!node.Children.TryGetValue(c, out node)) break;
-                else _prefixNodes.Add(node);
+                if (!node.Children.TryGetValue(key[i], out node)) break;
+                else prefix[j++] = node;
             }
-
-            return _prefixNodes;
+            return j;
         }
 
         /// <summary>
