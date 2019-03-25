@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace Corpora.QuickDAWG
@@ -16,6 +14,9 @@ namespace Corpora.QuickDAWG
         private Node[] prefix;                                      // вспомогательный массив для построения префикса
         private Dictionary<string, Node> _nodeHash;                 // хеш-таблица вершин
 
+        private object _locker = new object();                      // блокировщик потока
+        private int _nextNodeID = 1;                                // идентификатор следующей вершины
+
         /// <summary>
         /// корневой элемент
         /// </summary>
@@ -26,7 +27,7 @@ namespace Corpora.QuickDAWG
         /// </summary>
         public DawgBuilder()
         {
-            _root = new Node() { ID = 0 };
+            _root = new Node(0);
 
             // инициализируем словари
             _prefixes = new Dictionary<string, WeightedString>();
@@ -35,7 +36,7 @@ namespace Corpora.QuickDAWG
             _paradigms = new Dictionary<string, Paradigm>();
 
             // вспомогательные структуры
-            prefix = new Node[1000];
+            prefix = new Node[128];
             _nodeHash = new Dictionary<string, Node>();
         }
 
@@ -47,7 +48,10 @@ namespace Corpora.QuickDAWG
         /// <param name="index"> форма слова </param>
         public void Add(string key, Paradigm paradigm, int index)
         {
-            AddSuffix(key, GetPrefix(_root, key));
+            lock (_locker)
+            {
+                AddSuffix(key, GetPrefix(_root, key));
+            }
         }
 
         /// <summary>
@@ -85,7 +89,7 @@ namespace Corpora.QuickDAWG
                     node = prefix[i];
                     parent = i == 0 ? _root : prefix[i - 1];
 
-                    newNode = node.Clone();
+                    newNode = node.Clone(_nextNodeID++);
                     node.Weight--;
                     parent.Add(key[i], newNode);
 
@@ -96,12 +100,13 @@ namespace Corpora.QuickDAWG
             // добавляем новые вершины
             string image;
             lastActual = len - 1;
+            bool updateLastActual = true;
             for (i = lastActual; i >= last; i--)
             {
                 if (i < lastActual - 1)
                 {
                     // схлопнуть пока нечего
-                    prefix[i] = new Node();
+                    prefix[i] = new Node(_nextNodeID++);
                 }
                 else
                 {
@@ -115,15 +120,16 @@ namespace Corpora.QuickDAWG
                         {
                             if (prefix[j] == node)
                             {
-                                node = new Node();
+                                node = new Node(_nextNodeID++);
+                                updateLastActual = false;
                                 break;
                             }
                         }
-                        lastActual = i;
+                        if (updateLastActual) lastActual = i;
                     }
                     else
                     {
-                        node = new Node();
+                        node = new Node(_nextNodeID++);
                     }
                     prefix[i] = node;
                 }
@@ -207,8 +213,13 @@ namespace Corpora.QuickDAWG
         /// <returns></returns>
         private int GetPrefix(Node node, string key)
         {
-            int j = 0;
-            for (int i = 0; i < key.Length; i++)
+            int j = 0, len = key.Length;
+            if (len > prefix.Length)
+            {
+                // необходимо расширить префиксный массив
+                Array.Resize(ref prefix, prefix.Length * 2);
+            }
+            for (int i = 0; i < len; i++)
             {
                 if (!node.Children.TryGetValue(key[i], out node)) break;
                 else prefix[j++] = node;

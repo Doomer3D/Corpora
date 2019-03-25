@@ -38,14 +38,9 @@ namespace Corpora.QuickDAWG
         public const string NON_FINAL_STRING = "^";
 
         /// <summary>
-        /// глобальный идентификатор вершины
-        /// </summary>
-        private static int _id = 0;
-
-        /// <summary>
         /// идентификатор
         /// </summary>
-        public int ID = _id++;
+        public int ID;
 
         /// <summary>
         /// вес вершины
@@ -80,8 +75,10 @@ namespace Corpora.QuickDAWG
         /// <summary>
         /// конструктор
         /// </summary>
-        public Node()
+        /// <param name="id"> идентификатор вершины </param>
+        public Node(int id)
         {
+            this.ID = id;
             this.Children = new SortedDictionary<char, Node>();
         }
 
@@ -292,10 +289,11 @@ namespace Corpora.QuickDAWG
         /// <summary>
         /// клонировать вершину
         /// </summary>
+        /// <param name="id"> идентификатор вершины </param>
         /// <returns></returns>
-        public Node Clone()
+        public Node Clone(int id)
         {
-            var node = new Node()
+            var node = new Node(id)
             {
                 IsFinal = this.IsFinal,
             };
