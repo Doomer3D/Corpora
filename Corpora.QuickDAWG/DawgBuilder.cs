@@ -59,7 +59,7 @@ namespace Corpora.QuickDAWG
         {
             //if (key == "ёрничающими") System.Diagnostics.Debugger.Break();
 
-            int last = prefixLength, len = key.Length, i, j, k,
+            int last = prefixLength, len = key.Length, i, j,
                 cloneIndex = -1,
                 lastActual;
 
@@ -98,35 +98,35 @@ namespace Corpora.QuickDAWG
             lastActual = len - 1;
             for (i = lastActual; i >= last; i--)
             {
-                if (i == len - 1)
+                if (i < lastActual - 1)
                 {
-                    // последняя вершина
-                    image = Node.FINAL_STRING;
+                    // схлопнуть пока нечего
+                    prefix[i] = new Node();
                 }
                 else
                 {
-                    image = Node.GetObjectImage(false, key[i + 1], node.ID);
-                }
+                    // строим предварительный образ вершины
+                    image = i == len - 1 ? Node.FINAL_STRING : Node.GetObjectImage(false, key[i + 1], node.ID);
 
-                // ищем готовую вершину
-                if (_nodeHash.TryGetValue(image, out node))
-                {
-                    for (j = 0, k = 0; j < last; j++)
+                    // ищем готовую вершину
+                    if (_nodeHash.TryGetValue(image, out node))
                     {
-                        if (prefix[j] == node)
+                        for (j = 0; j < last; j++)
                         {
-                            node = new Node();
-                            k = 1;
-                            break;
+                            if (prefix[j] == node)
+                            {
+                                node = new Node();
+                                break;
+                            }
                         }
+                        lastActual = i;
                     }
-                    if (k == 0) lastActual = i;
+                    else
+                    {
+                        node = new Node();
+                    }
+                    prefix[i] = node;
                 }
-                else
-                {
-                    node = new Node();
-                }
-                prefix[i] = node;
             }
             for (i = last; i < len; i++)
             {

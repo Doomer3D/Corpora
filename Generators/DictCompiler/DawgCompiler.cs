@@ -77,11 +77,11 @@ namespace Corpora
             });
 
 #if TEST
-            //add("fox");
-            //add("box");
-            //add("foxes");
-            //add("boxes");
-            //add("boxer");
+            add("fox");
+            add("box");
+            add("foxes");
+            add("boxes");
+            add("boxer");
             add("abd");
             add("bad");
             add("bae");
