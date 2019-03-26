@@ -1,4 +1,6 @@
-﻿using System;
+﻿#define ARRAY_BINARY_IMAGE                      // используем двоичный образ-массив
+
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
@@ -12,7 +14,11 @@ namespace Corpora.QuickDAWG
         private Node _root;                                         // корневой элемент
 
         private Node[] prefix;                                      // вспомогательный массив для построения префикса
+#if ARRAY_BINARY_IMAGE
+        private Dictionary<byte[], Node> _nodeHash;                 // хеш-таблица вершин
+#else
         private Dictionary<string, Node> _nodeHash;                 // хеш-таблица вершин
+#endif
 
         private object _locker = new object();                      // блокировщик потока
         private int _nextNodeID = 1;                                // идентификатор следующей вершины
@@ -37,7 +43,11 @@ namespace Corpora.QuickDAWG
 
             // вспомогательные структуры
             prefix = new Node[128];
+#if ARRAY_BINARY_IMAGE
+            _nodeHash = new Dictionary<byte[], Node>(ByteArrayComparer.Default);
+#else
             _nodeHash = new Dictionary<string, Node>();
+#endif
         }
 
         /// <summary>
@@ -98,7 +108,11 @@ namespace Corpora.QuickDAWG
             }
 
             // добавляем новые вершины
+#if ARRAY_BINARY_IMAGE
+            byte[] image;
+#else
             string image;
+#endif
             lastActual = len - 1;
             bool updateLastActual = true;
             for (i = lastActual; i >= last; i--)
@@ -111,7 +125,7 @@ namespace Corpora.QuickDAWG
                 else
                 {
                     // строим предварительный образ вершины
-                    image = i == len - 1 ? Node.FINAL_STRING : Node.GetObjectImage(false, key[i + 1], node.ID);
+                    image = i == len - 1 ? Node.FINAL_DATA : Node.GetObjectImage(false, key[i + 1], node.ID);
 
                     // ищем готовую вершину
                     if (_nodeHash.TryGetValue(image, out node))
@@ -147,7 +161,7 @@ namespace Corpora.QuickDAWG
             {
                 node = prefix[i];
 
-                if (node.LastImage == default)
+                if (node.LastImage == null)
                 {
                     // генерируем образ
                     node.GetObjectImage();

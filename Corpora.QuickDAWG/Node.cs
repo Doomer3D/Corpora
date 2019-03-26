@@ -1,4 +1,7 @@
 ﻿#define BINARY_IMAGE                            // используем двоичный образ
+#if BINARY_IMAGE
+#define ARRAY_BINARY_IMAGE                      // используем двоичный образ-массив
+#endif
 
 using System;
 using System.Collections.Generic;
@@ -17,6 +20,27 @@ namespace Corpora.QuickDAWG
         /// </summary>
         public const char SEPARATOR = '@';
 
+#if ARRAY_BINARY_IMAGE
+        /// <summary>
+        /// символ-признак финала
+        /// </summary>
+        public const byte FINAL_CHAR = 1;
+
+        /// <summary>
+        /// символ-признак финала
+        /// </summary>
+        public static readonly byte[] FINAL_DATA = new byte[] { FINAL_CHAR };
+
+        /// <summary>
+        /// символ-признак не-финала
+        /// </summary>
+        public const byte NON_FINAL_CHAR = 0;
+
+        /// <summary>
+        /// символ-признак не-финала
+        /// </summary>
+        public static readonly byte[] NON_FINAL_DATA = new byte[] { NON_FINAL_CHAR };
+#else
         /// <summary>
         /// символ-признак финала
         /// </summary>
@@ -25,7 +49,7 @@ namespace Corpora.QuickDAWG
         /// <summary>
         /// символ-признак финала
         /// </summary>
-        public const string FINAL_STRING = "*";
+        public const string FINAL_DATA = "*";
 
         /// <summary>
         /// символ-признак не-финала
@@ -35,7 +59,8 @@ namespace Corpora.QuickDAWG
         /// <summary>
         /// символ-признак не-финала
         /// </summary>
-        public const string NON_FINAL_STRING = "^";
+        public const string NON_FINAL_DATA = "^";
+#endif
 
         /// <summary>
         /// идентификатор
@@ -65,7 +90,11 @@ namespace Corpora.QuickDAWG
         /// <summary>
         /// предыдущее значение образа
         /// </summary>
+#if ARRAY_BINARY_IMAGE
+        public byte[] LastImage;
+#else
         public string LastImage;
+#endif
 
         private byte _imageIsActual = 0;        // признак актуальности образа
 #if !BINARY_IMAGE
@@ -156,19 +185,27 @@ namespace Corpora.QuickDAWG
         /// </summary>
         /// <param name="force"> признак принудительного обновления </param>
         /// <returns></returns>
+#if ARRAY_BINARY_IMAGE
+        public byte[] GetObjectImage(bool force = false)
+#else
         public string GetObjectImage(bool force = false)
+#endif
         {
             if (_imageIsActual == default || LastImage == default || force)
             {
                 int count = count = this.Children.Count;
                 if (count == 0)
                 {
-                    LastImage = FINAL_STRING;
+                    LastImage = IsFinal == default ? NON_FINAL_DATA : FINAL_DATA;
                 }
                 else
                 {
                     int i = 1, len = count * 6 + 1;
+#if ARRAY_BINARY_IMAGE
+                    byte[] buffer = LastImage == default || LastImage.Length != len ? new byte[len] : LastImage;
+#else
                     byte[] buffer = new byte[len];
+#endif
 
                     short keyID;
                     int id;
@@ -186,7 +223,11 @@ namespace Corpora.QuickDAWG
                         buffer[i++] = (byte)(id >> 8);
                         buffer[i++] = (byte)id;
                     }
-                    LastImage = Convert.ToBase64String(buffer, 0, len);
+#if ARRAY_BINARY_IMAGE
+                    LastImage = buffer;
+#else
+                    LastImage = Convert.ToBase64String(buffer);
+#endif
                     _imageIsActual = 1;
                 }
             }
@@ -201,11 +242,15 @@ namespace Corpora.QuickDAWG
         /// <param name="id"> идентификатор вершины </param>
         /// <returns></returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+#if ARRAY_BINARY_IMAGE
+        public static byte[] GetObjectImage(bool isFinal, char key, int id)
+#else
         public static string GetObjectImage(bool isFinal, char key, int id)
+#endif
         {
             if (isFinal)
             {
-                return FINAL_STRING;
+                return FINAL_DATA;
             }
             else
             {
@@ -223,7 +268,11 @@ namespace Corpora.QuickDAWG
                 buffer[5] = (byte)(id >> 8);
                 buffer[6] = (byte)id;
 
-                return Convert.ToBase64String(buffer, 0, 7);
+#if ARRAY_BINARY_IMAGE
+                return buffer;
+#else
+                return Convert.ToBase64String(buffer);
+#endif
             }
         }
 
@@ -310,7 +359,7 @@ namespace Corpora.QuickDAWG
         public override string ToString()
         {
             if (ID == 0) return "ROOT";
-            else return $"{ID}{(IsFinal == default ? NON_FINAL_STRING : FINAL_STRING)}";
+            else return $"{ID}{(IsFinal == default ? "^" : "*")}";
         }
     }
 }

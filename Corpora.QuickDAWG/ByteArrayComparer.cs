@@ -8,7 +8,7 @@ namespace Corpora.QuickDAWG
     /// <summary>
     /// компаратор образов вершин
     /// </summary>
-    public class ByteArrayComparer : IEqualityComparer<byte[]>, IEqualityComparer
+    public class ByteArrayComparer : IEqualityComparer<byte[]> //, IEqualityComparer
     {
         public bool Equals(byte[] left, byte[] right)
         {
@@ -43,19 +43,19 @@ namespace Corpora.QuickDAWG
             }
         }
 
-        public new bool Equals(object x, object y)
-        {
-            if (ReferenceEquals(x, y)) return true;
-            else if (x is byte[] ax && y is byte[] ay) return Equals(ax, ay);
-            else return false;
-        }
+        //public new bool Equals(object x, object y)
+        //{
+        //    if (ReferenceEquals(x, y)) return true;
+        //    else if (x is byte[] ax && y is byte[] ay) return Equals(ax, ay);
+        //    else return false;
+        //}
 
-        public int GetHashCode(object obj)
-        {
-            if (obj == default) return 0;
-            else if (obj is byte[] arr) return GetHashCode(arr);
-            else return obj.GetHashCode();
-        }
+        //public int GetHashCode(object obj)
+        //{
+        //    if (obj == default) return 0;
+        //    else if (obj is byte[] arr) return GetHashCode(arr);
+        //    else return obj.GetHashCode();
+        //}
 
         #region Default
 
